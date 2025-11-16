@@ -1,0 +1,7 @@
+Update these links in blog.html:
+1. reverse-mortgage-myths.html -> blog/reverse-mortgage-myths.html
+2. refinancing-signs.html -> blog/refinancing-signs.html  
+3. first-time-buyer-guide.html -> blog/first-time-buyer-guide.html
+4. renewal-tips.html -> blog/renewal-tips.html
+5. investment-property-financing.html -> blog/investment-property-financing.html
+6. mortgage-rate-news.html -> blog/mortgage-rate-news.html
