@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Blue Key Mortgage powered by BRX Mortgage - Get a free consultation for reverse mortgages, refinancing, and home purchase mortgages in Ontario.">
+    <title>Contact Us | Blue Key Mortgage - Powered by BRX Mortgage</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🏠</div>
+                <div class="logo-text">
+                    <span>Blue Key Mortgage</span>
+                    <span class="logo-subtitle">powered by BRX Mortgage</span>
+                </div>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="calculators.html">Calculators</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Ragini</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="cta-button">Get Free Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container text-center">
+            <h1>Get In Touch</h1>
+            <p>Have questions? We're here to help. Reach out to schedule your free consultation.</p>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <div class="card-grid" style="max-width: 1000px; margin: 0 auto 4rem;">
+                <div class="card">
+                    <div class="card-icon">📧</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a></p>
+                    <p style="font-size: 0.875rem;">We'll respond within 24 hours</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📍</div>
+                    <h3>Service Area</h3>
+                    <p>Ontario-Wide</p>
+                    <p style="font-size: 0.875rem;">Serving homeowners across Ontario</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <h2 class="text-center mb-3">Let's Talk About Your Mortgage Goals</h2>
+                
+                <form onsubmit="handleContactForm(event)" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" placeholder="Your city" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceType">Type of Help *</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">Select a service...</option>
+                            <option value="reverse-mortgage">Reverse Mortgage</option>
+                            <option value="refinancing">Refinancing</option>
+                            <option value="home-purchase">Home Purchase</option>
+                            <option value="first-time-buyer">First-Time Buyer</option>
+                            <option value="renewal">Mortgage Renewal</option>
+                            <option value="investment">Investment Property</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your situation..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label style="display: flex; align-items: start; gap: 0.5rem; font-weight: normal;">
+                            <input type="checkbox" name="newsletter" style="width: auto; margin-top: 0.25rem;">
+                            <span>I'd like to receive updates and mortgage tips via email</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="form-button">Request Free Consultation</button>
+                    
+                    <p class="form-disclaimer">By submitting this form, you agree to our privacy policy and consent to be contacted about your mortgage needs.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Blue Key Mortgage</h4>
+                <p>Your trusted mortgage advisor, powered by BRX Mortgage. FSRA-licensed and Ontario-based.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="reverse-mortgage.html">Reverse Mortgages</a>
+                <a href="refinancing.html">Refinancing</a>
+                <a href="home-purchase.html">Home Purchase</a>
+                <a href="first-time-buyers.html">First-Time Buyers</a>
+                <a href="renewals.html">Renewals</a>
+                <a href="investment-properties.html">Investment Properties</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="calculators.html">Calculators</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About Ragini</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a></p>
+                <p>Serving homeowners across Ontario</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Blue Key Mortgage. FSRA-licensed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
