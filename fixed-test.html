@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fixed Test</title>
+<style>
+/* Test the exact CSS we're using */
+:root {
+	--warm-cream: #FDF8F3;
+	--soft-cream: #F9F1E7;
+	--warm-gold: #C9952A;
+}
+
+.test-section {
+	margin: 20px;
+	padding: 30px;
+	border: 2px solid #ccc;
+}
+
+.hero-section {
+	background-color: var(--soft-cream) !important;
+}
+
+.cream-section {
+	background-color: var(--warm-cream) !important;
+}
+
+.white-section {
+	background-color: #ffffff !important;
+}
+
+.gold-button {
+	background-color: var(--warm-gold) !important;
+	border-color: var(--warm-gold) !important;
+	color: #ffffff !important;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+}
+
+.image-test {
+	background-color: var(--warm-cream) !important;
+	padding: 20px;
+	margin: 10px 0;
+}
+</style>
+</head>
+<body>
+<h1>Fixed CSS Test</h1>
+
+<div class="test-section hero-section">
+<h2>1. Hero Section (Soft Cream: #F9F1E7)</h2>
+<p>This should be soft cream background</p>
+<div class="image-test">
+<img src="images-approved/Hero.png" alt="Hero test" style="width: 200px; height: auto;">
+<p>Hero.png loaded</p>
+</div>
+<button class="gold-button">Gold Button</button>
+</div>
+
+<div class="test-section white-section">
+<h2>2. Reverse Mortgages (White)</h2>
+<p>This should be white background</p>
+<div class="image-test">
+<img src="images-approved/Reverse Mort.png" alt="Reverse Mort test" style="width: 200px; height: auto;">
+<p>Reverse Mort.png loaded</p>
+</div>
+<button class="gold-button">Gold Button</button>
+</div>
+
+<div class="test-section cream-section">
+<h2>3. Retirement Planning (Cream: #FDF8F3)</h2>
+<p>This should be warm cream background</p>
+<div class="image-test">
+<img src="images-approved/Ret Plan.png" alt="Ret Plan test" style="width: 200px; height: auto;">
+<p>Ret Plan.png loaded</p>
+</div>
+<button class="gold-button">Gold Button</button>
+</div>
+
+<div class="test-section white-section">
+<h2>4. Home Care (White)</h2>
+<p>This should be white background</p>
+<div class="image-test">
+<img src="images-approved/HomeCare.png" alt="HomeCare test" style="width: 200px; height: auto;">
+<p>HomeCare.png loaded</p>
+</div>
+<button class="gold-button">Gold Button</button>
+</div>
+
+<h3>All image paths should now be correct and alternating colors should work with !important overrides.</h3>
+</body>
+</html>
