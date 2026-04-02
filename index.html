@@ -19,11 +19,44 @@
 			}
 			
 			/* Warm cream alternating sections */
-			section.banner,
-			section.spotlight.style1.orient-right,
-			section.wrapper.style1.align-center:first-of-type,
-			footer.wrapper.style1.align-center {
+			/* Hero (1) - cream */
+			section.banner {
 				background-color: var(--warm-cream);
+			}
+			
+			/* Reverse Mortgages (2) - white */
+			section.spotlight.style1.orient-right:nth-of-type(1) {
+				background-color: #ffffff;
+			}
+			
+			/* Retirement Planning (3) - cream */
+			section.spotlight.style1.orient-left:nth-of-type(1) {
+				background-color: var(--warm-cream);
+			}
+			
+			/* Home Care (4) - white */
+			section.spotlight.style1.orient-right:nth-of-type(2) {
+				background-color: #ffffff;
+			}
+			
+			/* Services Gallery (5) - cream */
+			section.wrapper.style1.align-center:nth-of-type(1) {
+				background-color: var(--warm-cream);
+			}
+			
+			/* Why Choose Us (6) - white */
+			section.wrapper.style1.align-center:nth-of-type(2) {
+				background-color: #ffffff;
+			}
+			
+			/* Contact Form (7) - cream */
+			section.wrapper.style1.align-center:nth-of-type(3) {
+				background-color: var(--warm-cream);
+			}
+			
+			/* Footer - white */
+			footer.wrapper.style1.align-center {
+				background-color: #ffffff;
 			}
 			
 			/* Gold accent for buttons */
@@ -31,6 +64,33 @@
 				background-color: var(--warm-gold);
 				border-color: var(--warm-gold);
 				color: #ffffff !important;
+			}
+			
+			/* Ensure good contrast on cream background */
+			section[style*="background-color: var(--warm-cream)"],
+			section.banner,
+			section.spotlight.style1.orient-left:nth-of-type(1),
+			section.wrapper.style1.align-center:nth-of-type(1),
+			section.wrapper.style1.align-center:nth-of-type(3) {
+				color: #333333;
+			}
+			
+			section[style*="background-color: var(--warm-cream)"] h1,
+			section[style*="background-color: var(--warm-cream)"] h2,
+			section[style*="background-color: var(--warm-cream)"] h3,
+			section.banner h1,
+			section.banner h2,
+			section.banner h3,
+			section.spotlight.style1.orient-left:nth-of-type(1) h1,
+			section.spotlight.style1.orient-left:nth-of-type(1) h2,
+			section.spotlight.style1.orient-left:nth-of-type(1) h3,
+			section.wrapper.style1.align-center:nth-of-type(1) h1,
+			section.wrapper.style1.align-center:nth-of-type(1) h2,
+			section.wrapper.style1.align-center:nth-of-type(1) h3,
+			section.wrapper.style1.align-center:nth-of-type(3) h1,
+			section.wrapper.style1.align-center:nth-of-type(3) h2,
+			section.wrapper.style1.align-center:nth-of-type(3) h3 {
+				color: #222222;
 			}
 			
 			.button:hover {
