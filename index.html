@@ -14,14 +14,15 @@
 		<style>
 			:root {
 				--warm-cream: #FDF8F3;
+				--soft-cream: #F9F1E7; /* Softer cream for hero section */
 				--warm-gold: #C9952A;
 				--warm-gold-dark: #B08524;
 			}
 			
 			/* Warm cream alternating sections */
-			/* Hero (1) - cream */
+			/* Hero (1) - soft cream (different shade) */
 			section.banner {
-				background-color: var(--warm-cream);
+				background-color: var(--soft-cream);
 			}
 			
 			/* Reverse Mortgages (2) - white */
@@ -73,7 +74,7 @@
 			
 			/* Ensure good contrast on cream background */
 			section[style*="background-color: var(--warm-cream)"],
-			section.banner,
+			section[style*="background-color: var(--soft-cream)"],
 			section.spotlight.style1.orient-left:nth-of-type(1),
 			section.wrapper.style1.align-center:nth-of-type(1),
 			section.wrapper.style1.align-center:nth-of-type(3) {
@@ -83,9 +84,9 @@
 			section[style*="background-color: var(--warm-cream)"] h1,
 			section[style*="background-color: var(--warm-cream)"] h2,
 			section[style*="background-color: var(--warm-cream)"] h3,
-			section.banner h1,
-			section.banner h2,
-			section.banner h3,
+			section[style*="background-color: var(--soft-cream)"] h1,
+			section[style*="background-color: var(--soft-cream)"] h2,
+			section[style*="background-color: var(--soft-cream)"] h3,
 			section.spotlight.style1.orient-left:nth-of-type(1) h1,
 			section.spotlight.style1.orient-left:nth-of-type(1) h2,
 			section.spotlight.style1.orient-left:nth-of-type(1) h3,
