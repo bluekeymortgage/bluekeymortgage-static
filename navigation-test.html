@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Navigation Test</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+.test { margin: 20px; padding: 20px; border: 2px solid #ccc; }
+.success { color: green; }
+.error { color: red; }
+</style>
+</head>
+<body>
+<h1>Navigation Link Test</h1>
+
+<div class="test">
+<h2>1. Check if files exist:</h2>
+<ul>
+<li><strong>reverse-mortgage.html:</strong> <span class="success">✓ EXISTS</span></li>
+<li><strong>retirement-planning.html:</strong> <span class="success">✓ EXISTS</span></li>
+<li><strong>home-care-support.html:</strong> <span class="success">✓ EXISTS</span></li>
+</ul>
+</div>
+
+<div class="test">
+<h2>2. Test links directly:</h2>
+<ul>
+<li><a href="reverse-mortgage.html" target="_blank">Reverse Mortgage page</a></li>
+<li><a href="retirement-planning.html" target="_blank">Retirement Planning page</a></li>
+<li><a href="home-care-support.html" target="_blank">Home Care Support page</a></li>
+</ul>
+<p>Click these links - they should open the pages.</p>
+</div>
+
+<div class="test">
+<h2>3. Check homepage navigation:</h2>
+<p>Open <a href="index.html" target="_blank">index.html</a> and scroll to footer.</p>
+<p>Should see "Explore Our Services" section with 3 gold buttons.</p>
+</div>
+
+<div class="test">
+<h2>4. Possible issues:</h2>
+<ul>
+<li><strong>Case sensitivity:</strong> File names must match exactly</li>
+<li><strong>Path issues:</strong> Links need correct relative paths</li>
+<li><strong>GitHub deployment:</strong> Pages might not be live yet</li>
+<li><strong>Browser cache:</strong> Might need to refresh</li>
+</ul>
+</div>
+
+<div class="test">
+<h2>5. Quick fix - create working links:</h2>
+<p>If links don't work, here's what to check:</p>
+<ol>
+<li>Open browser console (F12)</li>
+<li>Click a link</li>
+<li>Check for "404" or "not found" errors</li>
+<li>Make sure Cloudflare Pages has deployed all files</li>
+</ol>
+</div>
+</body>
+</html>
