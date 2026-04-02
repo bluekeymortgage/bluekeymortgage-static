@@ -1,217 +1,308 @@
-// Blue Key Mortgage - Main JavaScript
+/**
+ * Blue Key Mortgage - Senior Resource Hub
+ * Main JavaScript file for interactive elements
+ * Designed with senior accessibility in mind
+ */
 
-// Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // ===========================================
+    // Mobile Navigation
+    // ===========================================
     const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
+    const mainNav = document.querySelector('.main-nav');
+    const navOverlay = document.querySelector('.nav-overlay');
     
-    if (menuToggle) {
+    if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', function() {
-            nav.classList.toggle('active');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            this.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            
+            if (navOverlay) {
+                navOverlay.classList.toggle('active');
+            }
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking overlay
+        if (navOverlay) {
+            navOverlay.addEventListener('click', function() {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+        
+        // Close menu when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mainNav.classList.contains('active')) {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (nav && nav.classList.contains('active')) {
-            if (!event.target.closest('nav') && !event.target.closest('.menu-toggle')) {
-                nav.classList.remove('active');
+    
+    // ===========================================
+    // Dropdown Menus (Desktop)
+    // ===========================================
+    const dropdownTriggers = document.querySelectorAll('.nav-link[aria-haspopup="true"]');
+    
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(event) {
+            // Only handle on desktop (screen width > 768px)
+            if (window.innerWidth <= 768) {
+                return; // Let mobile menu handle it
             }
-        }
-    });
-
-    // FAQ Accordion
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        if (question) {
-            question.addEventListener('click', function() {
-                // Close all other FAQ items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
+            
+            event.preventDefault();
+            event.stopPropagation();
+            
+            const dropdown = this.nextElementSibling;
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            // Close all other dropdowns
+            dropdownTriggers.forEach(otherTrigger => {
+                if (otherTrigger !== this) {
+                    otherTrigger.setAttribute('aria-expanded', 'false');
+                    const otherDropdown = otherTrigger.nextElementSibling;
+                    if (otherDropdown && otherDropdown.classList.contains('dropdown')) {
+                        otherDropdown.style.opacity = '0';
+                        otherDropdown.style.visibility = 'hidden';
+                        otherDropdown.style.transform = 'translateY(-10px)';
                     }
-                });
-                // Toggle current item
-                item.classList.toggle('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            this.setAttribute('aria-expanded', !isExpanded);
+            if (dropdown && dropdown.classList.contains('dropdown')) {
+                if (!isExpanded) {
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(0)';
+                } else {
+                    dropdown.style.opacity = '0';
+                    dropdown.style.visibility = 'hidden';
+                    dropdown.style.transform = 'translateY(-10px)';
+                }
+            }
+        });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+        if (window.innerWidth <= 768) return;
+        
+        const isDropdownTrigger = event.target.matches('.nav-link[aria-haspopup="true"]') || 
+                                  event.target.closest('.nav-link[aria-haspopup="true"]');
+        const isInsideDropdown = event.target.closest('.dropdown');
+        
+        if (!isDropdownTrigger && !isInsideDropdown) {
+            dropdownTriggers.forEach(trigger => {
+                trigger.setAttribute('aria-expanded', 'false');
+                const dropdown = trigger.nextElementSibling;
+                if (dropdown && dropdown.classList.contains('dropdown')) {
+                    dropdown.style.opacity = '0';
+                    dropdown.style.visibility = 'hidden';
+                    dropdown.style.transform = 'translateY(-10px)';
+                }
             });
         }
     });
+    
+    // Close dropdowns when pressing Escape
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && window.innerWidth > 768) {
+            dropdownTriggers.forEach(trigger => {
+                trigger.setAttribute('aria-expanded', 'false');
+                const dropdown = trigger.nextElementSibling;
+                if (dropdown && dropdown.classList.contains('dropdown')) {
+                    dropdown.style.opacity = '0';
+                    dropdown.style.visibility = 'hidden';
+                    dropdown.style.transform = 'translateY(-10px)';
+                }
+            });
+        }
+    });
+    
+    // ===========================================
+    // Smooth Scrolling for Anchor Links
+    // ===========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            const href = this.getAttribute('href');
+            
+            // Skip if it's just "#" or if it's a dropdown trigger
+            if (href === '#' || this.getAttribute('aria-haspopup') === 'true') {
+                return;
+            }
+            
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+                event.preventDefault();
+                
+                // Close mobile menu if open
+                if (mainNav && mainNav.classList.contains('active')) {
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    if (navOverlay) navOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                
+                // Calculate position (account for fixed header)
+                const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Update URL without jumping
+                history.pushState(null, null, href);
+            }
+        });
+    });
+    
+    // ===========================================
+    // Form Accessibility Enhancements
+    // ===========================================
+    // Add focus styles to form elements
+    const formInputs = document.querySelectorAll('input, textarea, select, button');
+    formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.classList.add('focused');
+        });
+        
+        input.addEventListener('blur', function() {
+            this.classList.remove('focused');
+        });
+    });
+    
+    // ===========================================
+    // Current Year in Footer
+    // ===========================================
+    const yearElements = document.querySelectorAll('#current-year, .current-year');
+    const currentYear = new Date().getFullYear();
+    yearElements.forEach(element => {
+        element.textContent = currentYear;
+    });
+    
+    // ===========================================
+    // Print Button (if needed)
+    // ===========================================
+    const printButtons = document.querySelectorAll('.print-button');
+    printButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            window.print();
+        });
+    });
+    
+    // ===========================================
+    // Font Size Adjuster (Accessibility)
+    // ===========================================
+    // Create font size controls if not present
+    if (!document.querySelector('.font-size-controls')) {
+        const fontSizeControls = document.createElement('div');
+        fontSizeControls.className = 'font-size-controls visually-hidden';
+        fontSizeControls.innerHTML = `
+            <button class="font-size-decrease" aria-label="Decrease text size">A-</button>
+            <button class="font-size-reset" aria-label="Reset text size">A</button>
+            <button class="font-size-increase" aria-label="Increase text size">A+</button>
+        `;
+        
+        // Insert at beginning of body
+        document.body.insertBefore(fontSizeControls, document.body.firstChild);
+        
+        // Add functionality
+        const root = document.documentElement;
+        const defaultFontSize = 18;
+        
+        document.querySelector('.font-size-decrease')?.addEventListener('click', function() {
+            let currentSize = parseInt(getComputedStyle(root).fontSize) || defaultFontSize;
+            root.style.fontSize = Math.max(currentSize - 2, 14) + 'px';
+            localStorage.setItem('preferredFontSize', root.style.fontSize);
+        });
+        
+        document.querySelector('.font-size-reset')?.addEventListener('click', function() {
+            root.style.fontSize = defaultFontSize + 'px';
+            localStorage.setItem('preferredFontSize', root.style.fontSize);
+        });
+        
+        document.querySelector('.font-size-increase')?.addEventListener('click', function() {
+            let currentSize = parseInt(getComputedStyle(root).fontSize) || defaultFontSize;
+            root.style.fontSize = Math.min(currentSize + 2, 24) + 'px';
+            localStorage.setItem('preferredFontSize', root.style.fontSize);
+        });
+        
+        // Load saved preference
+        const savedSize = localStorage.getItem('preferredFontSize');
+        if (savedSize) {
+            root.style.fontSize = savedSize;
+        }
+    }
+    
+    // ===========================================
+    // Lazy Loading Images (if needed)
+    // ===========================================
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        document.querySelectorAll('img.lazy').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+    
+    // ===========================================
+    // Console Welcome Message (Development)
+    // ===========================================
+    console.log(
+        '%c👵 Welcome to Blue Key Mortgage - Senior Resource Hub 👴\n' +
+        '%cThis website is designed with Ontario seniors in mind.\n' +
+        'Accessibility and warm, clear communication are our priorities.',
+        'color: #2A6BB0; font-size: 16px; font-weight: bold;',
+        'color: #666666; font-size: 14px;'
+    );
 });
 
-// Mortgage Payment Calculator
-function calculateMortgagePayment() {
-    const principal = parseFloat(document.getElementById('principal').value);
-    const annualRate = parseFloat(document.getElementById('interestRate').value);
-    const years = parseInt(document.getElementById('amortization').value);
-    
-    if (isNaN(principal) || isNaN(annualRate) || isNaN(years)) {
-        document.getElementById('paymentResult').innerHTML = '<p>Please fill in all fields</p>';
-        return;
-    }
-    
-    // Calculate monthly payment
-    const monthlyRate = (annualRate / 100) / 12;
-    const numPayments = years * 12;
-    
-    let monthlyPayment;
-    if (monthlyRate === 0) {
-        monthlyPayment = principal / numPayments;
-    } else {
-        monthlyPayment = principal * (monthlyRate * Math.pow(1 + monthlyRate, numPayments)) / 
-                        (Math.pow(1 + monthlyRate, numPayments) - 1);
-    }
-    
-    const totalPaid = monthlyPayment * numPayments;
-    const totalInterest = totalPaid - principal;
-    
-    document.getElementById('paymentResult').innerHTML = `
-        <h3>$${monthlyPayment.toFixed(2)}</h3>
-        <p>Monthly Payment</p>
-        <div style="margin-top: 1.5rem; text-align: left;">
-            <p><strong>Total Amount Paid:</strong> $${totalPaid.toLocaleString('en-CA', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
-            <p><strong>Total Interest:</strong> $${totalInterest.toLocaleString('en-CA', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
-        </div>
-    `;
-}
-
-// Affordability Calculator
-function calculateAffordability() {
-    const annualIncome = parseFloat(document.getElementById('annualIncome').value);
-    const monthlyDebts = parseFloat(document.getElementById('monthlyDebts').value);
-    const downPayment = parseFloat(document.getElementById('downPayment').value);
-    const interestRate = parseFloat(document.getElementById('affordInterestRate').value);
-    
-    if (isNaN(annualIncome) || isNaN(monthlyDebts) || isNaN(downPayment) || isNaN(interestRate)) {
-        document.getElementById('affordabilityResult').innerHTML = '<p>Please fill in all fields</p>';
-        return;
-    }
-    
-    // Use 39% Gross Debt Service Ratio (GDS)
-    const monthlyIncome = annualIncome / 12;
-    const maxMonthlyPayment = (monthlyIncome * 0.39) - monthlyDebts;
-    
-    if (maxMonthlyPayment <= 0) {
-        document.getElementById('affordabilityResult').innerHTML = `
-            <h3>Unable to Calculate</h3>
-            <p>Your current debt levels are too high relative to your income. Please contact us to discuss your options.</p>
-        `;
-        return;
-    }
-    
-    // Calculate maximum mortgage amount (assuming 25-year amortization)
-    const monthlyRate = (interestRate / 100) / 12;
-    const numPayments = 25 * 12;
-    
-    let maxMortgage;
-    if (monthlyRate === 0) {
-        maxMortgage = maxMonthlyPayment * numPayments;
-    } else {
-        maxMortgage = maxMonthlyPayment * (Math.pow(1 + monthlyRate, numPayments) - 1) / 
-                     (monthlyRate * Math.pow(1 + monthlyRate, numPayments));
-    }
-    
-    const maxHomePrice = maxMortgage + downPayment;
-    
-    document.getElementById('affordabilityResult').innerHTML = `
-        <h3>$${maxHomePrice.toLocaleString('en-CA', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</h3>
-        <p>Estimated Home Price You Can Afford</p>
-        <div style="margin-top: 1.5rem; text-align: left;">
-            <p><strong>Maximum Mortgage:</strong> $${maxMortgage.toLocaleString('en-CA', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</p>
-            <p><strong>Down Payment:</strong> $${downPayment.toLocaleString('en-CA', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</p>
-            <p><strong>Estimated Monthly Payment:</strong> $${maxMonthlyPayment.toLocaleString('en-CA', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
-        </div>
-    `;
-}
-
-// Reverse Mortgage Calculator
-function calculateReverseMortgage() {
-    const age = parseInt(document.getElementById('age').value);
-    const homeValue = parseFloat(document.getElementById('homeValue').value);
-    const mortgageBalance = parseFloat(document.getElementById('mortgageBalance').value) || 0;
-    
-    if (isNaN(age) || isNaN(homeValue)) {
-        document.getElementById('reverseMortgageResult').innerHTML = '<p>Please fill in all required fields</p>';
-        return;
-    }
-    
-    if (age < 55) {
-        document.getElementById('reverseMortgageResult').innerHTML = `
-            <h3>Not Eligible</h3>
-            <p>You must be at least 55 years old to qualify for a reverse mortgage in Canada.</p>
-        `;
-        return;
-    }
-    
-    // Calculate percentage based on age (scales from 20% at 55 to 55% at 80+)
-    let percentage;
-    if (age >= 80) {
-        percentage = 0.55;
-    } else if (age >= 55) {
-        // Linear scale from 20% to 55%
-        percentage = 0.20 + ((age - 55) / (80 - 55)) * (0.55 - 0.20);
-    }
-    
-    const availableEquity = homeValue - mortgageBalance;
-    const maxAmount = Math.min(availableEquity * percentage, availableEquity);
-    
-    if (availableEquity <= 0) {
-        document.getElementById('reverseMortgageResult').innerHTML = `
-            <h3>Insufficient Equity</h3>
-            <p>Your current mortgage balance exceeds or equals your home value. Please contact us to discuss your options.</p>
-        `;
-        return;
-    }
-    
-    document.getElementById('reverseMortgageResult').innerHTML = `
-        <h3>$${maxAmount.toLocaleString('en-CA', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</h3>
-        <p>Estimated Equity You Could Access</p>
-        <div style="margin-top: 1.5rem; text-align: left;">
-            <p><strong>Your Age:</strong> ${age} years</p>
-            <p><strong>Home Value:</strong> $${homeValue.toLocaleString('en-CA', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</p>
-            <p><strong>Available Equity:</strong> $${availableEquity.toLocaleString('en-CA', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</p>
-            <p><strong>Percentage Available:</strong> ${(percentage * 100).toFixed(0)}%</p>
-        </div>
-    `;
-}
-
-// Form Submission Handler (using Formspree - free form service)
-function handleContactForm(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const formData = new FormData(form);
-    
-    // Formspree endpoint for ragini@bluekeymortgage.ca
-    fetch('https://formspree.io/f/xpwkoqjd', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
+// ===========================================
+// Window Resize Handler
+// ===========================================
+let resizeTimer;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        // Close mobile menu if switching to desktop
+        if (window.innerWidth > 768) {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            const navOverlay = document.querySelector('.nav-overlay');
+            
+            if (menuToggle && mainNav && mainNav.classList.contains('active')) {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         }
-    })
-    .then(response => {
-        if (response.ok) {
-            form.reset();
-            alert('Thank you for your message! We will get back to you within 24 hours.');
-        } else {
-            alert('There was a problem submitting your form. Please try again or email us directly at ragini@bluekeymortgage.ca');
-        }
-    })
-    .catch(error => {
-        alert('There was a problem submitting your form. Please try again or email us directly at ragini@bluekeymortgage.ca');
-    });
-}
-
-// Smooth Scrolling for Anchor Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && document.querySelector(href)) {
-            e.preventDefault();
-            document.querySelector(href).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
+    }, 250);
 });

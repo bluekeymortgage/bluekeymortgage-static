@@ -3,143 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Meet Ragini - Your trusted Ontario mortgage broker with over 15 years of experience, specializing in reverse mortgages and refinancing. FSRA-licensed, powered by BRX Mortgage.">
-    <title>About Ragini | Blue Key Mortgage - Powered by BRX Mortgage</title>
+    <meta name="description" content="Meet Ragini Domenichini - Your trusted mortgage guide and senior resource advocate in Ontario. Learn about my mission to provide warm, clear financial guidance to seniors.">
+    <meta name="keywords" content="about Ragini Domenichini, mortgage agent Ontario, senior financial guide, reverse mortgage expert, Ontario mortgage broker">
+    <title>About Ragini | Your Trusted Senior Resource Guide - Blue Key Mortgage</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <a href="index.html" class="logo">
-                <img src="images/brx-logo-circle.png" alt="BRX Mortgage" class="logo-icon">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header class="site-header" role="banner">
+        <div class="container header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo" aria-label="Blue Key Mortgage - Home">
+                <div class="logo-image" style="background-color: #2A6BB0; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">BK</div>
                 <div class="logo-text">
-                    <span>Blue Key Mortgage</span>
-                    <span class="logo-subtitle">powered by BRX Mortgage</span>
+                    <span class="logo-primary">Blue Key Mortgage</span>
+                    <span class="logo-subtitle">Senior Resource Hub | FSRA #13549 | Powered by BRX Mortgage</span>
                 </div>
             </a>
-            <button class="menu-toggle"><span></span><span></span><span></span></button>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="calculators.html">Calculators</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About Ragini</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="contact.html" class="cta-button">Get Free Consultation</a></li>
+
+            <!-- Mobile menu toggle -->
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    
+                    <!-- Senior Resources Dropdown -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Senior Resources ▽</a>
+                        <div class="dropdown" role="menu">
+                            <a href="retirement-planning.html" class="dropdown-link" role="menuitem">Retirement Planning Guide</a>
+                            <a href="senior-living-options.html" class="dropdown-link" role="menuitem">Senior Living Options</a>
+                            <a href="home-care-support.html" class="dropdown-link" role="menuitem">Home Care & Support</a>
+                            <a href="referral-partners.html" class="dropdown-link" role="menuitem">Referral Partners</a>
+                            <a href="resources-links.html" class="dropdown-link" role="menuitem">Resources & Links</a>
+                        </div>
+                    </li>
+                    
+                    <!-- Mortgage Services Dropdown -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Mortgage Services ▽</a>
+                        <div class="dropdown" role="menu">
+                            <a href="reverse-mortgages.html" class="dropdown-link" role="menuitem">Reverse Mortgages</a>
+                            <a href="home-equity-options.html" class="dropdown-link" role="menuitem">Home Equity Options</a>
+                            <a href="refinancing-seniors.html" class="dropdown-link" role="menuitem">Refinancing for Seniors</a>
+                            <a href="home-purchase-seniors.html" class="dropdown-link" role="menuitem">Home Purchase (55+)</a>
+                            <a href="first-time-buyers-55.html" class="dropdown-link" role="menuitem">First-Time Buyers (55+)</a>
+                            <a href="investment-properties-retirement.html" class="dropdown-link" role="menuitem">Investment Properties</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About Ragini</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="contact.html" class="btn btn-primary btn-sm">Free Consultation</a></li>
                 </ul>
             </nav>
+            
+            <!-- Overlay for mobile menu -->
+            <div class="nav-overlay"></div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container text-center">
-            <h1>About Ragini</h1>
-            <p>Your trusted mortgage advisor with a passion for helping homeowners achieve their goals</p>
-        </div>
-    </section>
-
-    <section class="section-light">
-        <div class="container">
-            <div class="content-grid">
-                <div>
-                    <img src="images/ragini-headshot.png" alt="Ragini - Blue Key Mortgage" class="content-image">
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" style="background: linear-gradient(135deg, #E8F1F9 0%, #FDF2E9 100%);">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Hi, I'm Ragini — Your Trusted Guide for Senior Financial Decisions</h1>
+                    <p class="larger-text">I believe financial guidance should feel like a conversation with a trusted friend, not a meeting with a banker. My mission is to provide Ontario seniors with warm, clear, and pressure-free advice about their homes and retirement.</p>
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary btn-lg">Let's Have a Chat</a>
+                        <a href="senior-resources.html" class="btn btn-secondary btn-lg">Explore Senior Resources</a>
+                    </div>
                 </div>
-                <div>
-                    <h2>Meet Ragini</h2>
-                    <p>With over 15 years of experience in the mortgage industry, Ragini has helped thousands of Ontarians navigate their mortgage journey. Her passion is making complex financial concepts simple and accessible.</p>
-                    <p>Ragini specializes in helping seniors unlock home equity through reverse mortgages, assisting first-time buyers in achieving homeownership, and providing refinancing strategies that save families money. She believes every homeowner deserves personalized, transparent advice without pressure or hidden fees.</p>
-                    <p>When she's not helping clients, Ragini enjoys volunteering in her community and mentoring young professionals in the mortgage industry.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-gray">
-        <div class="container">
-            <h2 class="text-center mb-4">Credentials & Licensing</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>FSRA Licensed</h3>
-                    <p>Licensed by the Financial Services Regulatory Authority (FSRA) as a mortgage broker. This ensures I operate under strict regulatory standards and maintain the highest ethical practices.</p>
-                </div>
-                <div class="card">
-                    <h3>BRX Mortgage Partnership</h3>
-                    <p>Backed by BRX Mortgage, one of Canada's leading mortgage brokerages. This partnership gives my clients access to competitive rates and comprehensive mortgage solutions.</p>
-                </div>
-                <div class="card">
-                    <h3>Certified Professional</h3>
-                    <p>Holds multiple certifications in mortgage origination, financial planning, and consumer protection. Committed to ongoing education to stay current with industry changes.</p>
-                </div>
-                <div class="card">
-                    <h3>Ontario-Based</h3>
-                    <p>Operating in Ontario for over 15 years, with deep knowledge of local real estate market, provincial regulations, and community needs.</p>
+                <div class="hero-image">
+                    <!-- Profile image placeholder -->
+                    <div style="background-color: #E8F1F9; border-radius: 1rem; height: 400px; display: flex; align-items: center; justify-content: center; color: #2A6BB0; font-size: 1.5rem;">
+                        <div style="text-align: center; padding: 2rem;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">👩‍💼</div>
+                            <p>Photo of Ragini - warm, friendly, approachable</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section-light">
-        <div class="container">
-            <h2 class="text-center mb-4">My Core Values</h2>
-            <div class="content-section" style="max-width: 800px; margin: 0 auto;">
-                <div class="card" style="margin-bottom: 1.5rem;">
-                    <h3>Transparency</h3>
-                    <p>No hidden fees, no pressure. You'll always know exactly what you're getting and why.</p>
+        <!-- My Story -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My Story & Mission</h2>
+                    <p>Why I'm passionate about helping Ontario seniors navigate their financial decisions.</p>
                 </div>
-                <div class="card" style="margin-bottom: 1.5rem;">
-                    <h3>Education</h3>
-                    <p>I believe informed clients make better decisions. I take time to explain everything in plain language.</p>
-                </div>
+                
                 <div class="card">
-                    <h3>Integrity</h3>
-                    <p>Your interests come first, always. I recommend solutions that are right for you, not just profitable for me.</p>
+                    <div class="card-content">
+                        <h3>From Financial Professional to Senior Advocate</h3>
+                        <p>With years of experience in the mortgage industry, I noticed a gap: many seniors were receiving generic financial advice that didn't address their unique needs and concerns. They were often overwhelmed by complex terminology and pressured into decisions that didn't feel right.</p>
+                        
+                        <p>I decided to focus exclusively on serving homeowners 55+ in Ontario. My goal is to provide the kind of guidance I'd want for my own parents: clear, patient, and focused on their wellbeing—not just the numbers.</p>
+                        
+                        <h3>Why Seniors Deserve Better</h3>
+                        <p>Seniors face unique financial challenges:</p>
+                        <ul>
+                            <li>Fixed incomes that need to stretch further</li>
+                            <li>Concerns about preserving home equity for heirs</li>
+                            <li>Need for home modifications or care as they age</li>
+                            <li>Desire to stay in their homes and communities</li>
+                            <li>Confusion about government benefits and programs</li>
+                        </ul>
+                        
+                        <p>These aren't just financial issues—they're deeply personal. That's why I take a holistic approach, considering your entire situation, not just your mortgage.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="hero" style="padding: 3rem 2rem;">
-        <div class="container text-center">
-            <h2 style="color: white; margin-bottom: 1rem;">Have questions? I'd love to hear from you.</h2>
-            <p style="color: white; font-size: 1.125rem; margin-bottom: 2rem;">Schedule a free consultation to discuss your mortgage goals.</p>
-            <a href="contact.html" class="button-primary">Contact Ragini</a>
-        </div>
-    </section>
+        <!-- My Approach -->
+        <section class="section section-light">
+            <div class="container">
+                <h2 class="text-center mb-5">My Approach: What Makes Me Different</h2>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">👂</div>
+                        <h3 class="card-title">Listen First</h3>
+                        <p class="card-content">I start by understanding your story, concerns, and goals. You won't get a "one-size-fits-all" solution.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📚</div>
+                        <h3 class="card-title">Educate & Empower</h3>
+                        <p class="card-content">I explain options in plain English, so you feel confident making decisions that are right for you.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⏳</div>
+                        <h3 class="card-title">No Pressure, No Rush</h3>
+                        <p class="card-content">Take all the time you need. I'm here when you're ready, not when a sales quota demands it.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🤝</div>
+                        <h3 class="card-title">Beyond Mortgages</h3>
+                        <p class="card-content">I connect you with trusted resources for retirement planning, home care, and senior living.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <div class="footer-content">
+        <!-- Credentials -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My Credentials & Commitment</h2>
+                    <p>Professional qualifications and my promise to you.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Professional Qualifications</h3>
+                        <ul>
+                            <li><strong>FSRA Licensed Mortgage Agent</strong> (#13549) - Fully licensed and regulated by the Financial Services Regulatory Authority of Ontario</li>
+                            <li><strong>Powered by BRX Mortgage</strong> - Backed by one of Ontario's leading mortgage brokerages</li>
+                            <li><strong>Senior Mortgage Specialist</strong> - Focused exclusively on serving homeowners 55+</li>
+                            <li><strong>Continuous Education</strong> - Regular training on reverse mortgages, senior financial planning, and accessibility</li>
+                        </ul>
+                        
+                        <h3>My Promise to You</h3>
+                        <ul>
+                            <li><strong>Clear Communication:</strong> No jargon, no surprises. I explain everything in plain English.</li>
+                            <li><strong>Ethical Guidance:</strong> I'll only recommend options that genuinely benefit your situation.</li>
+                            <li><strong>Respect for Your Time:</strong> Email-first communication if you prefer, no pressure for phone calls.</li>
+                            <li><strong>Ongoing Support:</strong> I'm here for questions even after we've worked together.</li>
+                            <li><strong>Confidentiality:</strong> Your personal and financial information is always protected.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Touch -->
+        <section class="section section-accent">
+            <div class="container">
+                <div class="section-header">
+                    <h2>A Bit About Me Personally</h2>
+                    <p>Because trust is built on more than just credentials.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <p>When I'm not helping seniors navigate financial decisions, you might find me:</p>
+                        <ul>
+                            <li>Spending time with family and friends (including my own senior parents who inspire my work)</li>
+                            <li>Exploring Toronto's diverse neighborhoods and restaurants</li>
+                            <li>Creating puzzle books (I love word searches!)</li>
+                            <li>Learning about new ways to make financial information more accessible</li>
+                            <li>Volunteering with local senior community centers</li>
+                        </ul>
+                        
+                        <p class="mt-4">I believe that good financial guidance should leave you feeling empowered, not overwhelmed. My goal is to be the trusted resource I wish existed for my own parents as they navigate retirement.</p>
+                        
+                        <div class="text-center mt-5">
+                            <a href="contact.html" class="btn btn-primary btn-lg">Let's Start a Conversation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section section-dark">
+            <div class="container text-center">
+                <h2 class="mb-3">Ready to Chat?</h2>
+                <p class="larger-text mb-4">Whether you have questions about reverse mortgages, retirement planning, or just want to learn more about your options, I'm here to listen.</p>
+                <div class="btn-group justify-center">
+                    <a href="contact.html" class="btn btn-primary btn-lg">Book a Free Consultation</a>
+                    <a href="senior-resources.html" class="btn btn-secondary btn-lg">Browse Senior Resources</a>
+                </div>
+                <p class="mt-4"><small>Prefer email? Contact me at <a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a></small></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-container">
             <div class="footer-section">
                 <h4>Blue Key Mortgage</h4>
-                <img src="images/brx-logo-license.png" alt="BRX Mortgage Lic#13463" style="max-width: 200px; margin: 1rem 0;">
-                <p>Your trusted mortgage advisor, powered by BRX Mortgage. FSRA-licensed and Ontario-based.</p>
+                <p>Your trusted senior resource hub and mortgage guide in Ontario.</p>
+                <p class="compliance-disclaimer">
+                    FSRA Licensed Mortgage Agent #13549<br>
+                    Powered by BRX Mortgage Inc.<br>
+                    Serving homeowners across Ontario
+                </p>
             </div>
+            
             <div class="footer-section">
-                <h4>Services</h4>
-                <a href="reverse-mortgage.html">Reverse Mortgages</a>
-                <a href="refinancing.html">Refinancing</a>
-                <a href="home-purchase.html">Home Purchase</a>
-                <a href="first-time-buyers.html">First-Time Buyers</a>
-                <a href="renewals.html">Renewals</a>
-                <a href="investment-properties.html">Investment Properties</a>
+                <h4>Senior Resources</h4>
+                <a href="retirement-planning.html">Retirement Planning</a>
+                <a href="senior-living-options.html">Senior Living Options</a>
+                <a href="home-care-support.html">Home Care & Support</a>
+                <a href="referral-partners.html">Referral Partners</a>
+                <a href="resources-links.html">Government Resources</a>
             </div>
+            
             <div class="footer-section">
-                <h4>Resources</h4>
-                <a href="calculators.html">Calculators</a>
-                <a href="blog.html">Blog</a>
+                <h4>Mortgage Services</h4>
+                <a href="reverse-mortgages.html">Reverse Mortgages</a>
+                <a href="home-equity-options.html">Home Equity Options</a>
+                <a href="refinancing-seniors.html">Refinancing for Seniors</a>
+                <a href="home-purchase-seniors.html">Home Purchase (55+)</a>
+                <a href="first-time-buyers-55.html">First-Time Buyers (55+)</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact & Legal</h4>
                 <a href="about.html">About Ragini</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Legal Disclaimer</a>
                 <p>Email: <a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a></p>
-                <p>Serving homeowners across Ontario</p>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2024 Blue Key Mortgage. FSRA-licensed. All rights reserved.</p>
+            <div class="container">
+                <p>© <span id="current-year">2026</span> Blue Key Mortgage. All rights reserved.</p>
+                <p class="compliance-disclaimer">
+                    *Reverse mortgage and home equity solutions are subject to lender approval. Not all applicants will qualify. 
+                    Interest rates and terms are subject to change without notice. This website is for informational purposes only 
+                    and does not constitute financial advice. Consult with a qualified financial advisor before making any financial decisions.
+                </p>
+            </div>
         </div>
     </footer>
+
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
