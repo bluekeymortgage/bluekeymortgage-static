@@ -1,455 +1,322 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blue Key Mortgage - Your trusted senior resource hub in Ontario. Get warm, clear guidance on reverse mortgages, retirement planning, home care, and senior living options. FSRA-licensed mortgage agent Ragini Domenichini.">
-    <meta name="keywords" content="reverse mortgage Ontario, senior home equity, retirement planning Toronto, home care services Ontario, senior living options, mortgage agent Ontario, FSRA licensed">
-    <title>Blue Key Mortgage | Senior Resource Hub & Mortgage Guidance in Ontario</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>
-<body>
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Blue Key Mortgage | Your Trusted Senior Resource Hub</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			:root {
+				--warm-cream: #FDF8F3;
+				--warm-gold: #C9952A;
+				--warm-gold-dark: #B08524;
+			}
+			
+			/* Warm cream alternating sections */
+			section.banner,
+			section.spotlight.style1.orient-right,
+			section.wrapper.style1.align-center:first-of-type,
+			footer.wrapper.style1.align-center {
+				background-color: var(--warm-cream);
+			}
+			
+			/* Gold accent for buttons */
+			.button {
+				background-color: var(--warm-gold);
+				border-color: var(--warm-gold);
+				color: #ffffff !important;
+			}
+			
+			.button:hover {
+				background-color: var(--warm-gold-dark);
+				border-color: var(--warm-gold-dark);
+			}
+			
+			.button.big.wide {
+				background-color: var(--warm-gold);
+				border-color: var(--warm-gold);
+			}
+			
+			.button.big.wide:hover {
+				background-color: var(--warm-gold-dark);
+				border-color: var(--warm-gold-dark);
+			}
+			
+			.button.small {
+				background-color: var(--warm-gold);
+				border-color: var(--warm-gold);
+			}
+			
+			.button.small:hover {
+				background-color: var(--warm-gold-dark);
+				border-color: var(--warm-gold-dark);
+			}
+			
+			/* Gold accent for icons */
+			.icon.style2 {
+				color: var(--warm-gold);
+			}
+			
+			/* Image styling */
+			.image img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+			
+			/* Ensure good contrast on cream background */
+			section.banner h1,
+			section.banner p,
+			section.spotlight.style1.orient-right h2,
+			section.spotlight.style1.orient-right p {
+				color: #333333;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-    <!-- Header & Navigation -->
-    <header class="site-header" role="banner">
-        <div class="container header-container">
-            <!-- Logo -->
-            <a href="index.html" class="logo" aria-label="Blue Key Mortgage - Home">
-                <!-- Logo image placeholder - replace with actual logo -->
-                <div class="logo-image" style="background-color: #2A6BB0; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem;">BK</div>
-                <div class="logo-text">
-                    <span class="logo-primary">Blue Key Mortgage</span>
-                    <span class="logo-subtitle">Senior Resource Hub | FSRA #13549 | Powered by BRX Mortgage</span>
-                </div>
-            </a>
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-            <!-- Mobile menu toggle -->
-            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+				<!-- Hero Section -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Your Trusted Senior Resource Hub</h1>
+							<p class="major">I'm Ragini — your friendly guide to navigating retirement finances, home equity, and senior living options. Think of me as a trusted friend who happens to be a mortgage agent.</p>
+							<p>No pressure, no jargon. Just clear, warm guidance to help you make confident decisions about your home and retirement.</p>
+							<ul class="actions stacked">
+								<li><a href="#services" class="button big wide smooth-scroll-middle">Explore Your Options</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images-approved/Senior1.png" alt="Happy senior couple enjoying retirement at home" />
+						</div>
+					</section>
 
-            <!-- Main Navigation -->
-            <nav class="main-nav" role="navigation" aria-label="Main Navigation">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                    
-                    <!-- Senior Resources Dropdown -->
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Senior Resources ▽</a>
-                        <div class="dropdown" role="menu">
-                            <a href="retirement-planning.html" class="dropdown-link" role="menuitem">Retirement Planning Guide</a>
-                            <a href="senior-living-options.html" class="dropdown-link" role="menuitem">Senior Living Options</a>
-                            <a href="home-care-support.html" class="dropdown-link" role="menuitem">Home Care & Support</a>
-                            <a href="referral-partners.html" class="dropdown-link" role="menuitem">Referral Partners</a>
-                            <a href="resources-links.html" class="dropdown-link" role="menuitem">Resources & Links</a>
-                        </div>
-                    </li>
-                    
-                    <!-- Mortgage Services Dropdown -->
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Mortgage Services ▽</a>
-                        <div class="dropdown" role="menu">
-                            <a href="reverse-mortgages.html" class="dropdown-link" role="menuitem">Reverse Mortgages</a>
-                            <a href="home-equity-options.html" class="dropdown-link" role="menuitem">Home Equity Options</a>
-                            <a href="refinancing-seniors.html" class="dropdown-link" role="menuitem">Refinancing for Seniors</a>
-                            <a href="home-purchase-seniors.html" class="dropdown-link" role="menuitem">Home Purchase (55+)</a>
-                            <a href="first-time-buyers-55.html" class="dropdown-link" role="menuitem">First-Time Buyers (55+)</a>
-                            <a href="investment-properties-retirement.html" class="dropdown-link" role="menuitem">Investment Properties</a>
-                        </div>
-                    </li>
-                    
-                    <li class="nav-item"><a href="about.html" class="nav-link">About Ragini</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="contact.html" class="btn btn-primary btn-sm">Free Consultation</a></li>
-                </ul>
-            </nav>
-            
-            <!-- Overlay for mobile menu -->
-            <div class="nav-overlay"></div>
-        </div>
-    </header>
+				<!-- Reverse Mortgages -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Reverse Mortgages Made Clear</h2>
+							<p>Access your home's equity without monthly payments. Stay in the home you love while creating financial flexibility for retirement, home care, or travel.</p>
+							<ul class="actions stacked">
+								<li><a href="#" class="button">Learn How It Works</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images-approved/Senior2.png" alt="Senior couple reviewing documents together at home" />
+						</div>
+					</section>
 
-    <!-- Main Content -->
-    <main id="main-content" role="main">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <h1>Welcome to Your Trusted Senior Resource Hub in Ontario</h1>
-                    <p class="larger-text">I'm Ragini — your friendly guide to navigating retirement finances, home equity, and senior living options. Think of me as a trusted friend who happens to be a mortgage agent.</p>
-                    <p class="large-text">No pressure, no jargon. Just clear, warm guidance to help you make confident decisions about your home and retirement.</p>
-                    <div class="btn-group">
-                        <a href="contact.html" class="btn btn-primary btn-lg">Book a Free, No-Obligation Chat</a>
-                        <a href="about.html" class="btn btn-secondary btn-lg">Meet Ragini</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <!-- Hero image placeholder - replace with warm senior-friendly image -->
-                    <div style="background-color: #E8F1F9; border-radius: 1rem; height: 400px; display: flex; align-items: center; justify-content: center; color: #2A6BB0; font-size: 1.5rem;">
-                        <div style="text-align: center; padding: 2rem;">
-                            <div style="font-size: 3rem; margin-bottom: 1rem;">👵👴</div>
-                            <p>Warm, welcoming image of Ragini with seniors</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<!-- Retirement Planning -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Retirement Planning Guidance</h2>
+							<p>Practical steps for financial security, government benefits, tax considerations, and creating a retirement budget that works for your lifestyle.</p>
+							<ul class="actions stacked">
+								<li><a href="#" class="button">Start Planning</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images-approved/Senior3.png" alt="Senior couple walking together enjoying retirement" />
+						</div>
+					</section>
 
-        <!-- Meet Ragini Section -->
-        <section class="section section-light">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Your Trusted Friend & Mortgage Guide</h2>
-                    <p>I believe financial guidance should feel like a conversation with a trusted friend, not a meeting with a banker.</p>
-                </div>
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-icon">👋</div>
-                        <h3 class="card-title">Warm & Approachable</h3>
-                        <p class="card-content">No financial jargon, no pressure. I speak plain English and take time to truly understand your situation.</p>
-                        <a href="about.html" class="dropdown-link">Read my story →</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">🏡</div>
-                        <h3 class="card-title">Senior-Focused Expertise</h3>
-                        <p class="card-content">I specialize in helping Ontario seniors navigate reverse mortgages, home equity options, and retirement planning.</p>
-                        <a href="reverse-mortgages.html" class="dropdown-link">Explore services →</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">💙</div>
-                        <h3 class="card-title">Beyond Mortgages</h3>
-                        <p class="card-content">I connect you with trusted resources for retirement planning, home care, and senior living options.</p>
-                        <a href="senior-resources.html" class="dropdown-link">Browse resources →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<!-- Home Care & Support -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Home Care & Support Services</h2>
+							<p>Connecting you with trusted resources for aging in place, home modifications, and professional care services to help you stay safely at home.</p>
+							<ul class="actions stacked">
+								<li><a href="#" class="button">Find Support</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images-approved/Senior4.png" alt="Woman assisting senior mother with care at home" />
+						</div>
+					</section>
 
-        <!-- Senior Resource Hub -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Your Ontario Senior Resource Hub</h2>
-                    <p>Access trusted information and resources to help you navigate retirement living and planning.</p>
-                </div>
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-icon">📈</div>
-                        <h3 class="card-title">Retirement Planning Guide</h3>
-                        <p class="card-content">Practical steps for financial security, government benefits, tax considerations, and creating a retirement budget.</p>
-                        <a href="retirement-planning.html" class="btn btn-secondary">Learn More</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">🏠</div>
-                        <h3 class="card-title">Senior Living Options</h3>
-                        <p class="card-content">Information on aging in place, retirement homes, assisted living, and navigating senior living decisions.</p>
-                        <p class="compliance-disclaimer"><small><em>Information only - I am a mortgage agent, not a senior living advisor.</em></small></p>
-                        <a href="senior-living-options.html" class="btn btn-secondary">Explore Options</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">❤️</div>
-                        <h3 class="card-title">Home Care & Support</h3>
-                        <p class="card-content">Understanding home care services, funding options, and how to access support while staying in your home.</p>
-                        <a href="home-care-support.html" class="btn btn-secondary">Get Information</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">🤝</div>
-                        <h3 class="card-title">Referral Partners</h3>
-                        <p class="card-content">Trusted professionals I work with, including home care providers like First Class Home Care Inc.</p>
-                        <a href="referral-partners.html" class="btn btn-secondary">Meet Our Partners</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<!-- Services Gallery -->
+					<section class="wrapper style1 align-center" id="services">
+						<div class="inner">
+							<h2>How Blue Key Mortgage Can Help You</h2>
+							<p>Comprehensive support for Ontario seniors navigating home equity, retirement planning, and living options.</p>
+						</div>
 
-        <!-- Mortgage Services for Seniors -->
-        <section class="section section-accent">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Mortgage Services Tailored for Seniors</h2>
-                    <p>Specialized mortgage solutions designed with Ontario seniors' unique needs in mind.</p>
-                </div>
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-icon">🔓</div>
-                        <h3 class="card-title">Reverse Mortgages</h3>
-                        <p class="card-content">Access your home equity without monthly payments. Learn how reverse mortgages work, common myths, and if it's right for you.</p>
-                        <a href="reverse-mortgages.html" class="btn btn-primary">Explore Reverse Mortgages</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">💰</div>
-                        <h3 class="card-title">Home Equity Options</h3>
-                        <p class="card-content">Compare reverse mortgages, HELOCs, and refinancing to find the best way to access your home's equity.</p>
-                        <a href="home-equity-options.html" class="btn btn-primary">Compare Options</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">📉</div>
-                        <h3 class="card-title">Refinancing for Seniors</h3>
-                        <p class="card-content">Lower monthly payments, consolidate debt, or access equity through refinancing tailored to senior homeowners.</p>
-                        <a href="refinancing-seniors.html" class="btn btn-primary">Learn About Refinancing</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">🔑</div>
-                        <h3 class="card-title">Home Purchase (55+)</h3>
-                        <p class="card-content">Financing for downsizing, rightsizing, or purchasing a retirement property with senior-friendly mortgage solutions.</p>
-                        <a href="home-purchase-seniors.html" class="btn btn-primary">Purchase Guidance</a>
-                    </div>
-                </div>
-                <div class="text-center mt-5">
-                    <a href="mortgage-services.html" class="btn btn-accent btn-lg">View All Mortgage Services</a>
-                </div>
-            </div>
-        </section>
+						<!-- Gallery -->
+							<div class="gallery style2 medium lightbox onscroll-fade-in">
+								<article>
+									<a href="images-approved/Senior5.png" class="image">
+										<img src="images-approved/Senior5.png" alt="Senior reviewing financial documents with advisor" />
+									</a>
+									<div class="caption">
+										<h3>Reverse Mortgages</h3>
+										<p>Access home equity without monthly payments</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Learn More</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images-approved/Senior7.png" class="image">
+										<img src="images-approved/Senior7.png" alt="Senior couple discussing finances and planning" />
+									</a>
+									<div class="caption">
+										<h3>Retirement Planning</h3>
+										<p>Create a secure financial future</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Start Planning</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images-approved/Senior8.png" class="image">
+										<img src="images-approved/Senior8.png" alt="Caregiver assisting senior with home care" />
+									</a>
+									<div class="caption">
+										<h3>Home Care Support</h3>
+										<p>Resources for aging in place</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Find Support</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images-approved/Senior9.png" class="image">
+										<img src="images-approved/Senior9.png" alt="Senior couple discussing home equity options" />
+									</a>
+									<div class="caption">
+										<h3>Home Equity Options</h3>
+										<p>HELOC, refinancing, equity access</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Explore Options</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images-approved/Senior10.png" class="image">
+										<img src="images-approved/Senior10.png" alt="Senior couple considering downsizing options" />
+									</a>
+									<div class="caption">
+										<h3>Downsizing & Rightsizing</h3>
+										<p>Guidance for your next chapter</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Learn More</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images-approved/Senior11.png" class="image">
+										<img src="images-approved/Senior11.png" alt="Senior accessing community resources and support" />
+									</a>
+									<div class="caption">
+										<h3>Senior Resources</h3>
+										<p>Government programs & community support</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Browse Resources</span></li>
+										</ul>
+									</div>
+								</article>
+							</div>
+					</section>
 
-        <!-- Why Choose Us -->
-        <section class="section section-light">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Why Ontario Seniors Trust Blue Key Mortgage</h2>
-                </div>
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-icon">✅</div>
-                        <h3 class="card-title">FSRA Licensed & Protected</h3>
-                        <p class="card-content">I'm licensed by the Financial Services Regulatory Authority of Ontario (FSRA #13549). Your protection and ethical service are my top priorities.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">👵</div>
-                        <h3 class="card-title">Senior-Specific Expertise</h3>
-                        <p class="card-content">I focus exclusively on serving seniors 55+. I understand your unique financial situation and retirement goals.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">💬</div>
-                        <h3 class="card-title">No-Pressure, Email-First Approach</h3>
-                        <p class="card-content">Prefer email? No problem. I respect your communication preferences and never pressure you into phone calls.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">🏢</div>
-                        <h3 class="card-title">Backed by BRX Mortgage</h3>
-                        <p class="card-content">Access to competitive rates and comprehensive mortgage solutions through BRX Mortgage, one of Ontario's leading brokerages.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<!-- Service Features -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Why Choose Blue Key Mortgage</h2>
+							<p>Warm, personalized guidance from someone who truly understands the unique needs of Ontario seniors.</p>
+							<div class="items style1 medium onscroll-fade-in">
+								<section>
+									<span class="icon solid style2 major fa-heart"></span>
+									<h3>Compassionate Approach</h3>
+									<p>No pressure, no jargon. I take time to truly understand your situation and provide guidance that puts your wellbeing first.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-home"></span>
+									<h3>Senior-Focused Expertise</h3>
+									<p>Specialized knowledge in reverse mortgages, home equity options, and retirement planning specifically for seniors.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-hands-helping"></span>
+									<h3>Beyond Mortgages</h3>
+									<p>Connections to trusted resources for home care, senior living options, and community support services.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-shield-alt"></span>
+									<h3>FSRA Licensed</h3>
+									<p>Licensed mortgage agent with BRX Mortgage Inc. (FSRA #13549). Your protection and compliance are my priority.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-comments"></span>
+									<h3>Clear Communication</h3>
+									<p>Plain English explanations, no hidden fees, transparent process from start to finish.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-map-marker-alt"></span>
+									<h3>Ontario Focused</h3>
+									<p>Deep understanding of Ontario-specific programs, regulations, and senior resources across the province.</p>
+								</section>
+							</div>
+						</div>
+					</section>
 
-        <!-- Lead Magnet: Free Senior Resource Guide -->
-        <section class="section section-accent">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get Your Free Ontario Senior Resource Guide</h2>
-                    <p>Download my free guide to retirement planning, home equity options, and senior living resources in Ontario.</p>
-                </div>
-                
-                <div class="card" style="max-width: 800px; margin: 0 auto;">
-                    <div class="card-content">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-                            <div>
-                                <h3 class="mb-3">What's Inside:</h3>
-                                <ul>
-                                    <li><strong>Retirement Planning Checklist</strong> for Ontario seniors</li>
-                                    <li><strong>Understanding Reverse Mortgages</strong> - myths vs. facts</li>
-                                    <li><strong>Home Equity Options Comparison</strong> (HELOC vs. Reverse Mortgage vs. Refinancing)</li>
-                                    <li><strong>Government Resources Directory</strong> - FSRA, CARP, CHIP, and more</li>
-                                    <li><strong>Senior Living Options Overview</strong> (informational only)</li>
-                                    <li><strong>Financial Planning Worksheets</strong> for retirement budgeting</li>
-                                </ul>
-                                <p class="mt-4"><small>Your email is safe with me. I'll send the guide immediately and occasional helpful resources (1-2 emails/month max). Unsubscribe anytime.</small></p>
-                            </div>
-                            
-                            <div>
-                                <form id="lead-magnet-form" style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                                    <h4 class="mb-3" style="color: #2A6BB0;">Download Your Free Guide</h4>
-                                    
-                                    <div class="form-group">
-                                        <label for="guide-name" class="form-label">Your Name</label>
-                                        <input type="text" id="guide-name" class="form-input" placeholder="First and last name" required>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="guide-email" class="form-label">Email Address</label>
-                                        <input type="email" id="guide-email" class="form-input" placeholder="your.email@example.com" required>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="form-checkbox">
-                                            <input type="checkbox" id="guide-consent" required>
-                                            <label for="guide-consent">I consent to receive the guide and occasional helpful resources (1-2 emails/month). I can unsubscribe anytime.</label>
-                                        </div>
-                                    </div>
-                                    
-                                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Get My Free Guide →</button>
-                                    
-                                    <p class="mt-3" style="font-size: 0.875rem; color: #666; text-align: center;">
-                                        <small>By downloading, you agree to our <a href="privacy.html">Privacy Policy</a>.</small>
-                                    </p>
-                                </form>
-                                
-                                <div id="guide-success" class="hidden" style="display: none; background: #E8F9F0; border: 2px solid #27AE60; border-radius: 0.5rem; padding: 2rem; margin-top: 1rem; text-align: center;">
-                                    <h4 style="color: #27AE60;">Check Your Email!</h4>
-                                    <p>Your guide is on its way. Please check your inbox (and spam folder).</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<!-- Contact Form -->
+					<section class="wrapper style1 align-center">
+						<div class="inner medium">
+							<h2>Let's Start a Conversation</h2>
+							<p>Have questions about reverse mortgages, retirement planning, or senior resources? Blue Key Mortgage is here to help.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" value="" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" value="" />
+									</div>
+									<div class="field">
+										<label for="message">How can I help you?</label>
+										<textarea name="message" id="message" rows="6" placeholder="Tell me about your situation or questions..."></textarea>
+									</div>
+								</div>
+								<ul class="actions special">
+									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+								</ul>
+							</form>
 
-        <!-- CTA Section -->
-        <section class="section section-dark">
-            <div class="container text-center">
-                <h2 class="mb-3">Ready for a Friendly Chat?</h2>
-                <p class="larger-text mb-4">Let's talk about your retirement goals, home equity questions, or any senior living topics on your mind. No obligation, no pressure.</p>
-                <div class="btn-group justify-center">
-                    <a href="contact.html" class="btn btn-primary btn-lg">Book a Free Consultation</a>
-                    <a href="tel:+1-XXX-XXX-XXXX" class="btn btn-secondary btn-lg">Call Me</a>
-                </div>
-                <p class="mt-4"><small>Prefer email? Contact me at <a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a></small></p>
-            </div>
-        </section>
-    </main>
+						</div>
+					</section>
 
-    <!-- Footer -->
-    <footer class="site-footer" role="contentinfo">
-        <div class="container footer-container">
-            <div class="footer-section">
-                <h4>Blue Key Mortgage</h4>
-                <p>Your trusted senior resource hub and mortgage guide in Ontario.</p>
-                <p class="compliance-disclaimer">
-                    FSRA Licensed Mortgage Agent #13549<br>
-                    Powered by BRX Mortgage Inc.<br>
-                    Serving homeowners across Ontario
-                </p>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Senior Resources</h4>
-                <a href="retirement-planning.html">Retirement Planning</a>
-                <a href="senior-living-options.html">Senior Living Options</a>
-                <a href="home-care-support.html">Home Care & Support</a>
-                <a href="referral-partners.html">Referral Partners</a>
-                <a href="resources-links.html">Government Resources</a>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Mortgage Services</h4>
-                <a href="reverse-mortgages.html">Reverse Mortgages</a>
-                <a href="home-equity-options.html">Home Equity Options</a>
-                <a href="refinancing-seniors.html">Refinancing for Seniors</a>
-                <a href="home-purchase-seniors.html">Home Purchase (55+)</a>
-                <a href="first-time-buyers-55.html">First-Time Buyers (55+)</a>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Contact & Legal</h4>
-                <a href="about.html">About Ragini</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="disclaimer.html">Legal Disclaimer</a>
-                <p>Email: <a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a></p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="container">
-                <p>© <span id="current-year">2026</span> Blue Key Mortgage. All rights reserved.</p>
-                <p class="compliance-disclaimer">
-                    *Reverse mortgage and home equity solutions are subject to lender approval. Not all applicants will qualify. 
-                    Interest rates and terms are subject to change without notice. This website is for informational purposes only 
-                    and does not constitute financial advice. Consult with a qualified financial advisor before making any financial decisions.
-                </p>
-            </div>
-        </div>
-    </footer>
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<p><strong>Blue Key Mortgage</strong> | Powered by BRX Mortgage Inc. (FSRA #13549)</p>
+							<p>Not a government agency. Loan must be repaid. Terms and conditions apply. Consult an independent legal advisor for complete information.</p>
+							<ul class="icons">
+								<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p>&copy; Blue Key Mortgage. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						</div>
+					</footer>
 
-    <!-- JavaScript for interactive elements -->
-    <script src="js/main.js"></script>
-    <script>
-        // Simple JavaScript for mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mainNav = document.querySelector('.main-nav');
-            const navOverlay = document.querySelector('.nav-overlay');
-            
-            if (menuToggle) {
-                menuToggle.addEventListener('click', function() {
-                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                    this.setAttribute('aria-expanded', !isExpanded);
-                    this.classList.toggle('active');
-                    mainNav.classList.toggle('active');
-                    navOverlay.classList.toggle('active');
-                });
-            }
-            
-            // Close menu when clicking overlay
-            if (navOverlay) {
-                navOverlay.addEventListener('click', function() {
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    menuToggle.classList.remove('active');
-                    mainNav.classList.remove('active');
-                    this.classList.remove('active');
-                });
-            }
-            
-            // Update current year in footer
-            const currentYear = new Date().getFullYear();
-            const yearElement = document.getElementById('current-year');
-            if (yearElement) {
-                yearElement.textContent = currentYear;
-            }
-            
-            // Close dropdowns when clicking outside (for desktop)
-            document.addEventListener('click', function(event) {
-                if (!event.target.matches('.nav-link[aria-haspopup="true"]')) {
-                    const dropdowns = document.querySelectorAll('.dropdown');
-                    dropdowns.forEach(dropdown => {
-                        dropdown.style.opacity = '0';
-                        dropdown.style.visibility = 'hidden';
-                        dropdown.style.transform = 'translateY(-10px)';
-                    });
-                }
-            });
-            
-            // Lead Magnet Form Handler
-            const leadMagnetForm = document.getElementById('lead-magnet-form');
-            const guideSuccess = document.getElementById('guide-success');
-            
-            if (leadMagnetForm && guideSuccess) {
-                leadMagnetForm.addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    
-                    const name = document.getElementById('guide-name').value.trim();
-                    const email = document.getElementById('guide-email').value.trim();
-                    const consent = document.getElementById('guide-consent').checked;
-                    
-                    if (!name || !email || !consent) {
-                        alert('Please fill in all fields and provide consent.');
-                        return;
-                    }
-                    
-                    // In a real implementation, this would submit to your email service
-                    // For now, show success message
-                    leadMagnetForm.style.display = 'none';
-                    guideSuccess.style.display = 'block';
-                    
-                    // Log for debugging
-                    console.log('Lead magnet submitted:', { name, email });
-                    
-                    // Optional: Scroll to success message
-                    guideSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                });
-            }
-        });
-    </script>
-</body>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
