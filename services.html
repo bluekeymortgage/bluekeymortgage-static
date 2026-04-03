@@ -1,126 +1,439 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive mortgage services in Ontario - Reverse mortgages, refinancing, home purchase, first-time buyers, renewals, and investment properties.">
-    <title>Our Mortgage Solutions | Blue Key Mortgage - Powered by BRX Mortgage</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <a href="index.html" class="logo">
-                <img src="images/brx-logo-circle.png" alt="BRX Mortgage" class="logo-icon">
-                <div class="logo-text">
-                    <span>Blue Key Mortgage</span>
-                    <span class="logo-subtitle">powered by BRX Mortgage</span>
-                </div>
-            </a>
-            <button class="menu-toggle"><span></span><span></span><span></span></button>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="calculators.html">Calculators</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About Ragini</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="contact.html" class="cta-button">Get Free Consultation</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section class="hero">
-        <div class="container text-center">
-            <h1>Our Mortgage Solutions</h1>
-            <p>Comprehensive mortgage services tailored to your unique needs and goals</p>
-        </div>
-    </section>
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Services for Ontario Seniors | Blue Key Mortgage</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Complete services for Ontario seniors: reverse mortgages, retirement planning, home care support, and senior resource navigation." />
+		<meta name="keywords" content="Ontario senior services, reverse mortgage specialist, retirement planning advisor, home care resources, senior financial services" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* ===== EXACT SAME STYLES ===== */
+			:root {
+				--warm-cream: #FDF8F3;
+				--soft-cream: #F9F1E7;
+				--warm-gold: #C9952A;
+				--warm-gold-dark: #B08524;
+			}
+			
+			/* SECTION BACKGROUNDS */
+			section.banner.style1 {
+				background-color: var(--soft-cream) !important;
+			}
+			
+			section.spotlight.style1.orient-right:nth-of-type(1) {
+				background-color: #ffffff !important;
+			}
+			
+			section.spotlight.style1.orient-left:nth-of-type(1) {
+				background-color: var(--warm-cream) !important;
+			}
+			
+			section.spotlight.style1.orient-right:nth-of-type(2) {
+				background-color: #ffffff !important;
+			}
+			
+			section.wrapper.style1.align-center:nth-of-type(1),
+			section.wrapper.style1.align-center:nth-of-type(3),
+			section.wrapper.style1.align-center:nth-of-type(5) {
+				background-color: var(--warm-cream) !important;
+			}
+			
+			section.wrapper.style1.align-center:nth-of-type(2),
+			section.wrapper.style1.align-center:nth-of-type(4),
+			section.wrapper.style1.align-center:nth-of-type(6) {
+				background-color: #ffffff !important;
+			}
+			
+			footer.wrapper.style1.align-center {
+				background-color: #ffffff !important;
+			}
+			
+			/* GOLD BUTTONS */
+			.button {
+				background-color: var(--warm-gold) !important;
+				border-color: var(--warm-gold) !important;
+				color: #ffffff !important;
+			}
+			
+			.button:hover {
+				background-color: var(--warm-gold-dark) !important;
+				border-color: var(--warm-gold-dark) !important;
+			}
+			
+			.button.big.wide {
+				background-color: var(--warm-gold) !important;
+				border-color: var(--warm-gold) !important;
+			}
+			
+			.button.big.wide:hover {
+				background-color: var(--warm-gold-dark) !important;
+				border-color: var(--warm-gold-dark) !important;
+			}
+			
+			.button.small {
+				background-color: var(--warm-gold) !important;
+				border-color: var(--warm-gold) !important;
+			}
+			
+			.button.small:hover {
+				background-color: var(--warm-gold-dark) !important;
+				border-color: var(--warm-gold-dark) !important;
+			}
+			
+			/* IMAGE STYLING */
+			.image img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+			
+			/* TEXT CONTRAST */
+			section.banner.style1,
+			section.spotlight.style1.orient-left:nth-of-type(1),
+			section.wrapper.style1.align-center:nth-of-type(1),
+			section.wrapper.style1.align-center:nth-of-type(3),
+			section.wrapper.style1.align-center:nth-of-type(5) {
+				color: #333333 !important;
+			}
+			
+			section.banner.style1 h1,
+			section.banner.style1 h2,
+			section.banner.style1 h3,
+			section.spotlight.style1.orient-left:nth-of-type(1) h1,
+			section.spotlight.style1.orient-left:nth-of-type(1) h2,
+			section.spotlight.style1.orient-left:nth-of-type(1) h3,
+			section.wrapper.style1.align-center:nth-of-type(1) h1,
+			section.wrapper.style1.align-center:nth-of-type(1) h2,
+			section.wrapper.style1.align-center:nth-of-type(1) h3,
+			section.wrapper.style1.align-center:nth-of-type(3) h1,
+			section.wrapper.style1.align-center:nth-of-type(3) h2,
+			section.wrapper.style1.align-center:nth-of-type(3) h3,
+			section.wrapper.style1.align-center:nth-of-type(5) h1,
+			section.wrapper.style1.align-center:nth-of-type(5) h2,
+			section.wrapper.style1.align-center:nth-of-type(5) h3 {
+				color: #222222 !important;
+			}
+			
+			/* SERVICE CARDS */
+			.service-card {
+				background-color: white;
+				border-radius: 8px;
+				padding: 2em;
+				margin: 1em 0;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+				transition: transform 0.3s ease;
+			}
+			
+			.service-card:hover {
+				transform: translateY(-5px);
+			}
+			
+			.service-card.featured {
+				border-top: 4px solid var(--warm-gold);
+			}
+			
+			.service-icon {
+				font-size: 2.5em;
+				color: var(--warm-gold);
+				margin-bottom: 0.5em;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-    <section class="section-light">
-        <div class="container">
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-icon">🏡</div>
-                    <h3>Home Purchase Mortgages</h3>
-                    <p>Whether you're buying your first home, upgrading to a larger property, or refinancing your existing mortgage, we help you find the right financing solution with competitive rates and flexible terms.</p>
-                    <a href="home-purchase.html" class="button-primary" style="margin-top: 1rem;">Learn More</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Reverse Mortgages</h3>
-                    <p>For homeowners 55 and older, a reverse mortgage allows you to access the equity you've built in your home without selling it or making monthly payments.</p>
-                    <a href="reverse-mortgage.html" class="button-primary" style="margin-top: 1rem;">Learn More</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">💰</div>
-                    <h3>Refinancing</h3>
-                    <p>Refinancing allows you to leverage your home's equity to access cash for renovations, debt consolidation, investments, or simply to lower your monthly payments.</p>
-                    <a href="refinancing.html" class="button-primary" style="margin-top: 1rem;">Learn More</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔑</div>
-                    <h3>First-Time Buyers</h3>
-                    <p>Buying your first home is exciting and complex. We guide you through every step, from pre-approval to closing, ensuring you get the best mortgage for your situation.</p>
-                    <a href="first-time-buyers.html" class="button-primary" style="margin-top: 1rem;">Learn More</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔄</div>
-                    <h3>Mortgage Renewals</h3>
-                    <p>Don't accept your lender's renewal offer automatically. We shop the market and negotiate the best rate for you, potentially saving thousands over your mortgage term.</p>
-                    <a href="renewals.html" class="button-primary" style="margin-top: 1rem;">Learn More</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🏢</div>
-                    <h3>Investment Properties</h3>
-                    <p>Build wealth through real estate investing. We specialize in helping investors access the capital they need to build their real estate portfolios.</p>
-                    <a href="investment-properties.html" class="button-primary" style="margin-top: 1rem;">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-    <section class="hero" style="padding: 3rem 2rem;">
-        <div class="container text-center">
-            <h2 style="color: white; margin-bottom: 1rem;">Ready to explore your options?</h2>
-            <p style="color: white; font-size: 1.125rem; margin-bottom: 2rem;">Schedule a free consultation with Ragini to discuss which solution is right for you.</p>
-            <a href="contact.html" class="button-primary">Get Your Free Consultation</a>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Blue Key Mortgage</h4>
-                <img src="images/brx-logo-license.png" alt="BRX Mortgage Lic#13463" style="max-width: 200px; margin: 1rem 0;">
-                <p>Your trusted mortgage advisor, powered by BRX Mortgage. FSRA-licensed and Ontario-based.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Services</h4>
-                <a href="reverse-mortgage.html">Reverse Mortgages</a>
-                <a href="refinancing.html">Refinancing</a>
-                <a href="home-purchase.html">Home Purchase</a>
-                <a href="first-time-buyers.html">First-Time Buyers</a>
-                <a href="renewals.html">Renewals</a>
-                <a href="investment-properties.html">Investment Properties</a>
-            </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <a href="calculators.html">Calculators</a>
-                <a href="blog.html">Blog</a>
-                <a href="about.html">About Ragini</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: <a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a></p>
-                <p>Serving homeowners across Ontario</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Blue Key Mortgage. FSRA-licensed. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="js/main.js"></script>
-</body>
+				<!-- Hero Section -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Complete Services for Ontario Seniors</h1>
+							<p class="major">From reverse mortgages to retirement planning and home care resources - everything you need to navigate your senior years with confidence.</p>
+							<p>I provide comprehensive support tailored to Ontario seniors' unique needs. No matter what financial or lifestyle question you have, I'm here to help.</p>
+							<ul class="actions stacked">
+								<li><a href="#featured" class="button big wide smooth-scroll-middle">Explore Services</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images-approved/Senior couple on porch2.png" alt="Ontario seniors enjoying comprehensive support services" />
+						</div>
+					</section>
+
+				<!-- Featured Services -->
+					<section class="wrapper style1 align-center" id="featured">
+						<div class="inner">
+							<h2>Featured Services</h2>
+							<p>My most-requested services for Ontario seniors and their families.</p>
+						</div>
+
+						<div class="items style1 medium onscroll-fade-in">
+							<section class="service-card featured">
+								<div class="service-icon">🏠</div>
+								<h3>Reverse Mortgages</h3>
+								<p>Access home equity without monthly payments. Stay in your home while creating financial flexibility.</p>
+								<ul>
+									<li>Ontario-specific eligibility assessment</li>
+									<li>Non-recourse protection explained</li>
+									<li>Government benefit impact analysis</li>
+									<li>Family inheritance planning</li>
+								</ul>
+								<a href="reverse-mortgage.html" class="button small">Learn More</a>
+							</section>
+							
+							<section class="service-card featured">
+								<div class="service-icon">📊</div>
+								<h3>Retirement Planning</h3>
+								<p>Create a secure financial future with Ontario-specific guidance.</p>
+								<ul>
+									<li>Government benefits optimization</li>
+									<li>Retirement budget creation</li>
+									<li>Tax planning for seniors</li>
+									<li>Income source coordination</li>
+								</ul>
+								<a href="retirement-planning.html" class="button small">Learn More</a>
+							</section>
+							
+							<section class="service-card featured">
+								<div class="service-icon">🤝</div>
+								<h3>Home Care Support</h3>
+								<p>Resources and connections for aging in place safely.</p>
+								<ul>
+									<li>Ontario Home Care Program guidance</li>
+									<li>Home modification recommendations</li>
+									<li>Caregiver support resources</li>
+									<li>Financing care options</li>
+								</ul>
+								<a href="home-care-support.html" class="button small">Learn More</a>
+							</section>
+						</div>
+					</section>
+
+				<!-- All Services -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Complete Service List</h2>
+							<p>Everything I offer to support Ontario seniors and their families.</p>
+							
+							<div class="items style1 medium onscroll-fade-in">
+								<section class="service-card">
+									<h3>Home Equity Assessment</h3>
+									<p>Evaluate all options: reverse mortgages, HELOCs, refinancing, downsizing.</p>
+								</section>
+								<section class="service-card">
+									<h3>Government Benefits Navigation</h3>
+									<p>Help accessing CPP, OAS, GIS, and Ontario-specific senior programs.</p>
+								</section>
+								<section class="service-card">
+									<h3>Retirement Budget Planning</h3>
+									<p>Create sustainable budgets that match your Ontario lifestyle.</p>
+								</section>
+								<section class="service-card">
+									<h3>Tax Planning for Seniors</h3>
+									<p>Strategies to minimize taxes on retirement income in Ontario.</p>
+								</section>
+								<section class="service-card">
+									<h3>Aging-in-Place Planning</h3>
+									<p>Home modification advice and community resource connections.</p>
+								</section>
+								<section class="service-card">
+									<h3>Family Financial Meetings</h3>
+									<p>Facilitate conversations between seniors and their adult children.</p>
+								</section>
+								<section class="service-card">
+									<h3>Downsizing Guidance</h3>
+									<p>Planning and resources for moving to a more suitable home.</p>
+								</section>
+								<section class="service-card">
+									<h3>Estate Planning Coordination</h3>
+									<p>Work with your legal team on inheritance considerations.</p>
+								</section>
+								<section class="service-card">
+									<h3>Senior Resource Navigation</h3>
+									<p>Connections to local Ontario programs and community services.</p>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- How I Work -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>How I Work With Ontario Seniors</h2>
+							<p>My process is designed to be clear, pressure-free, and focused on your unique needs.</p>
+							
+							<div style="background-color: var(--warm-cream); padding: 2em; border-radius: 8px; max-width: 800px; margin: 0 auto;">
+								<h3>My 5-Step Process</h3>
+								<ol style="text-align: left;">
+									<li><strong>Initial Conversation</strong> - We talk about your situation, goals, and concerns</li>
+									<li><strong>Needs Assessment</strong> - I help identify what services would benefit you most</li>
+									<li><strong>Options Exploration</strong> - We review all available options together</li>
+									<li><strong>Action Plan</strong> - Clear steps forward with my guidance</li>
+									<li><strong>Ongoing Support</strong> - I'm here for questions anytime</li>
+								</ol>
+								<p><em>No pressure, no obligation - just honest guidance.</em></p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Service Packages -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Service Packages</h2>
+							<p>Choose the level of support that matches your needs.</p>
+							
+							<div class="items style1 medium onscroll-fade-in">
+								<section class="service-card">
+									<h3>Single Service</h3>
+									<p><strong>Perfect for:</strong> Specific questions or one-time needs</p>
+									<ul>
+										<li>Reverse mortgage consultation</li>
+										<li>Retirement budget review</li>
+										<li>Home care resource connection</li>
+									</ul>
+									<p><em>Pay only for what you need</em></p>
+								</section>
+								
+								<section class="service-card featured">
+									<h3>Comprehensive Planning</h3>
+									<p><strong>Perfect for:</strong> Holistic retirement planning</p>
+									<ul>
+										<li>Full financial assessment</li>
+										<li>Multiple service coordination</li>
+										<li>Ongoing support for 6 months</li>
+										<li>Family meeting facilitation</li>
+									</ul>
+									<p><em>Most popular option</em></p>
+								</section>
+								
+								<section class="service-card">
+									<h3>Resource Navigation</h3>
+									<p><strong>Perfect for:</strong> Connecting to Ontario programs</p>
+									<ul>
+										<li>Government benefit applications</li>
+										<li>Local program connections</li>
+										<li>Community resource mapping</li>
+										<li>Follow-up support</li>
+									</ul>
+									<p><em>Access Ontario's senior programs</em></p>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Next Steps -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Ready to Get Started?</h2>
+							<p>Choose how you'd like to begin working together.</p>
+							
+							<div class="items style1 medium onscroll-fade-in">
+								<section>
+									<h3>Free Initial Consultation</h3>
+									<p>15-minute phone call to discuss your situation and see how I can help.</p>
+									<a href="contact.html" class="button small">Schedule Call</a>
+								</section>
+								<section>
+									<h3>Service Assessment</h3>
+									<p>Complete questionnaire to identify which services would benefit you most.</p>
+									<a href="contact.html" class="button small">Start Assessment</a>
+								</section>
+								<section>
+									<h3>Direct Service Booking</h3>
+									<p>Already know what you need? Book a specific service directly.</p>
+									<a href="contact.html" class="button small">Book Service</a>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Contact Form -->
+					<section class="wrapper style1 align-center">
+						<div class="inner medium">
+							<h2>Questions About Services?</h2>
+							<p>Not sure which service is right for you? Let's discuss your situation.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="service-interest">Which services interest you?</label>
+										<select name="service-interest" id="service-interest" multiple style="height: 100px;">
+											<option value="reverse-mortgage">Reverse Mortgages</option>
+											<option value="retirement-planning">Retirement Planning</option>
+											<option value="home-care">Home Care Support</option>
+											<option value="equity-assessment">Home Equity Assessment</option>
+											<option value="benefits-navigation">Government Benefits</option>
+											<option value="budget-planning">Retirement Budget</option>
+											<option value="tax-planning">Tax Planning</option>
+											<option value="aging-in-place">Aging in Place</option>
+											<option value="family-meetings">Family Financial Meetings</option>
+											<option value="downsizing">Downsizing Guidance</option>
+											<option value="estate-planning">Estate Planning</option>
+											<option value="resource-navigation">Senior Resources</option>
+											<option value="not-sure">Not Sure - Need Guidance</option>
+										</select>
+									</div>
+									<div class="field">
+										<label for="service-message">Tell me about your situation</label>
+										<textarea name="service-message" id="service-message" rows="6" placeholder="What's your current situation? What questions or concerns do you have? What outcomes are you hoping for?"></textarea>
+									</div>
+								</div>
+								<ul class="actions special">
+									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<!-- SITE MAP -->
+							<div class="site-map" style="margin-bottom: 2em;">
+								<h3>Site Navigation</h3>
+								<ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1em;">
+									<li><a href="index.html">Home</a></li>
+									<li><a href="reverse-mortgage.html">Reverse Mortgages</a></li>
+									<li><a href="retirement-planning.html">Retirement Planning</a></li>
+									<li><a href="home-care-support.html">Home Care Support</a></li>
+									<li><a href="about.html">About Ragini</a></li>
+									<li><a href="resources.html">Resources & Links</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
+								</ul>
+							</div>
+							
+							<p><strong>Blue Key Mortgage</strong> | Powered by BRX Mortgage Inc. (FSRA #13549)</p>
+							<p>Not a government agency. Services involve personal financial decisions. Consult appropriate professionals for complete information.</p>
+							
+							<ul class="icons">
+								<li><a href="index.html" class="icon solid style2 fa-home"><span class="label">Home</span></a></li>
+								<li><a href="reverse-mortgage.html" class="icon solid style2 fa-university"><span class="label">Reverse Mortgages</span></a></li>
+								<li><a href="retirement-planning.html" class="icon solid style2 fa-chart-line"><span class="label">Retirement Planning</span></a></li>
+								<li><a href="home-care-support.html" class="icon solid style2 fa-hands-helping"><span class="label">Home Care Support</span></a></li>
+								<li><a href="about.html" class="icon solid style2 fa-user"><span class="label">About</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p>&copy; Blue Key Mortgage. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
