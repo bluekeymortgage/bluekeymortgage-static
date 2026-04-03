@@ -48,7 +48,7 @@
 				"geoRadius": "100000"
 			},
 			"sameAs": [
-				"https://www.instagram.com/bluekeymortgage on"
+				"https://www.instagram.com/bluekeymortgage_on"
 			]
 		}
 		</script>
@@ -293,9 +293,9 @@
 							</div>
 							
 							<form method="POST" action="https://formspree.io/f/xwvwrrjd" id="contact-form">
-								<input type="hidden" name=" subject" value="Blue Key Mortgage Website Inquiry" />
-								<input type="hidden" name=" replyto" id=" replyto" />
-								<input type="hidden" name=" gotcha" style="display:none">
+								<input type="hidden" name="_subject" value="Blue Key Mortgage Website Inquiry" />
+								<input type="hidden" name="_replyto" id="_replyto" />
+								<input type="hidden" name="_gotcha" style="display:none">
 								<div class="fields">
 									<div class="field half">
 										<label for="name">Name *</label>
@@ -434,9 +434,9 @@
 		document.addEventListener('DOMContentLoaded', function() {
 			const contactForm = document.getElementById('contact-form');
 			if (contactForm) {
-				// Set  replyto field from email input
+				// Set _replyto field from email input
 				const emailField = document.getElementById('email');
-				const replyToField = document.getElementById(' replyto');
+				const replyToField = document.getElementById('_replyto');
 				
 				if (emailField && replyToField) {
 					emailField.addEventListener('input', function() {

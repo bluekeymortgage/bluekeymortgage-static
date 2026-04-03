@@ -18,7 +18,7 @@ body { font-family: Arial; padding: 20px; }
 <h2>1. Check if images exist at these paths:</h2>
 <ul>
 <li><strong>images-approved/Hero.png</strong>: 
-<?php echo file exists('images-approved/Hero.png') ? '✓ EXISTS' : '✗ MISSING'; ?>
+<?php echo file_exists('images-approved/Hero.png') ? '✓ EXISTS' : '✗ MISSING'; ?>
 <img src="images-approved/Hero.png" style="width: 100px; height: auto; border: 2px solid red;" alt="Test Hero">
 </li>
 <li><strong>images-approved/Reverse Mort.png</strong>:
