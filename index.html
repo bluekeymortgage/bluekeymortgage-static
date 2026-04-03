@@ -14,89 +14,49 @@
 		<style>
 			:root {
 				--warm-cream: #FDF8F3;
-				--soft-cream: #F9F1E7; /* Softer cream for hero section */
+				--soft-cream: #F9F1E7;
 				--warm-gold: #C9952A;
 				--warm-gold-dark: #B08524;
 			}
 			
-			/* Warm cream alternating sections */
-			/* Hero (1) - soft cream (different shade) */
-			#wrapper > section.banner {
+			/* SECTION BACKGROUNDS */
+			section.banner.style1 {
 				background-color: var(--soft-cream) !important;
 			}
 			
-			/* Reverse Mortgages (2) - white */
-			#wrapper > section.spotlight.style1.orient-right:nth-of-type(1) {
+			section.spotlight.style1.orient-right:nth-of-type(1) {
 				background-color: #ffffff !important;
 			}
 			
-			/* Retirement Planning (3) - cream */
-			#wrapper > section.spotlight.style1.orient-left:nth-of-type(1) {
+			section.spotlight.style1.orient-left:nth-of-type(1) {
 				background-color: var(--warm-cream) !important;
 			}
 			
-			/* Home Care (4) - white */
-			#wrapper > section.spotlight.style1.orient-right:nth-of-type(2) {
+			section.spotlight.style1.orient-right:nth-of-type(2) {
 				background-color: #ffffff !important;
 			}
 			
-			/* Services Gallery (5) - cream */
-			#wrapper > section.wrapper.style1.align-center:nth-of-type(1) {
+			section.wrapper.style1.align-center:nth-of-type(1),
+			section.wrapper.style1.align-center:nth-of-type(3),
+			section.wrapper.style1.align-center:nth-of-type(5) {
 				background-color: var(--warm-cream) !important;
 			}
 			
-			/* Why Choose Us (6) - white */
-			#wrapper > section.wrapper.style1.align-center:nth-of-type(2) {
+			section.wrapper.style1.align-center:nth-of-type(2),
+			section.wrapper.style1.align-center:nth-of-type(4),
+			section.wrapper.style1.align-center:nth-of-type(6) {
 				background-color: #ffffff !important;
 			}
 			
-			/* Contact Form (7) - cream */
-			#wrapper > section.wrapper.style1.align-center:nth-of-type(3) {
-				background-color: var(--warm-cream) !important;
-			}
-			
-			/* Footer - white */
-			#wrapper > footer.wrapper.style1.align-center {
+			footer.wrapper.style1.align-center {
 				background-color: #ffffff !important;
 			}
 			
-			/* Gold accent for buttons */
+			/* GOLD BUTTONS */
 			.button {
 				background-color: var(--warm-gold) !important;
 				border-color: var(--warm-gold) !important;
 				color: #ffffff !important;
-			}
-			
-			/* Background color for image areas - warm soft cream */
-			#wrapper div.image {
-				background-color: var(--warm-cream) !important;
-			}
-			
-			/* Ensure good contrast on cream background */
-			section[style*="background-color: var(--warm-cream)"],
-			section[style*="background-color: var(--soft-cream)"],
-			section.spotlight.style1.orient-left:nth-of-type(1),
-			section.wrapper.style1.align-center:nth-of-type(1),
-			section.wrapper.style1.align-center:nth-of-type(3) {
-				color: #333333;
-			}
-			
-			section[style*="background-color: var(--warm-cream)"] h1,
-			section[style*="background-color: var(--warm-cream)"] h2,
-			section[style*="background-color: var(--warm-cream)"] h3,
-			section[style*="background-color: var(--soft-cream)"] h1,
-			section[style*="background-color: var(--soft-cream)"] h2,
-			section[style*="background-color: var(--soft-cream)"] h3,
-			section.spotlight.style1.orient-left:nth-of-type(1) h1,
-			section.spotlight.style1.orient-left:nth-of-type(1) h2,
-			section.spotlight.style1.orient-left:nth-of-type(1) h3,
-			section.wrapper.style1.align-center:nth-of-type(1) h1,
-			section.wrapper.style1.align-center:nth-of-type(1) h2,
-			section.wrapper.style1.align-center:nth-of-type(1) h3,
-			section.wrapper.style1.align-center:nth-of-type(3) h1,
-			section.wrapper.style1.align-center:nth-of-type(3) h2,
-			section.wrapper.style1.align-center:nth-of-type(3) h3 {
-				color: #222222;
 			}
 			
 			.button:hover {
@@ -124,24 +84,66 @@
 				border-color: var(--warm-gold-dark) !important;
 			}
 			
-			/* Gold accent for icons */
-			.icon.style2 {
-				color: var(--warm-gold) !important;
-			}
-			
-			/* Image styling */
+			/* IMAGE STYLING */
 			.image img {
 				object-fit: cover;
 				width: 100%;
 				height: 100%;
 			}
 			
-			/* Ensure good contrast on cream background */
-			section.banner h1,
-			section.banner p,
-			section.spotlight.style1.orient-right h2,
-			section.spotlight.style1.orient-right p {
-				color: #333333;
+			/* TEXT CONTRAST */
+			section.banner.style1,
+			section.spotlight.style1.orient-left:nth-of-type(1),
+			section.wrapper.style1.align-center:nth-of-type(1),
+			section.wrapper.style1.align-center:nth-of-type(3),
+			section.wrapper.style1.align-center:nth-of-type(5) {
+				color: #333333 !important;
+			}
+			
+			section.banner.style1 h1,
+			section.banner.style1 h2,
+			section.banner.style1 h3,
+			section.spotlight.style1.orient-left:nth-of-type(1) h1,
+			section.spotlight.style1.orient-left:nth-of-type(1) h2,
+			section.spotlight.style1.orient-left:nth-of-type(1) h3,
+			section.wrapper.style1.align-center:nth-of-type(1) h1,
+			section.wrapper.style1.align-center:nth-of-type(1) h2,
+			section.wrapper.style1.align-center:nth-of-type(1) h3,
+			section.wrapper.style1.align-center:nth-of-type(3) h1,
+			section.wrapper.style1.align-center:nth-of-type(3) h2,
+			section.wrapper.style1.align-center:nth-of-type(3) h3,
+			section.wrapper.style1.align-center:nth-of-type(5) h1,
+			section.wrapper.style1.align-center:nth-of-type(5) h2,
+			section.wrapper.style1.align-center:nth-of-type(5) h3 {
+				color: #222222 !important;
+			}
+			
+			/* SITE MAP STYLING */
+			.site-map {
+				margin-top: 2em;
+				padding: 1em;
+				background-color: var(--warm-cream);
+				border-radius: 8px;
+			}
+			
+			.site-map ul {
+				list-style: none;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+				gap: 1em;
+			}
+			
+			.site-map li {
+				margin-bottom: 0.5em;
+			}
+			
+			.site-map a {
+				color: var(--warm-gold);
+				text-decoration: none;
+			}
+			
+			.site-map a:hover {
+				text-decoration: underline;
 			}
 		</style>
 	</head>
@@ -157,7 +159,8 @@
 							<p class="major">I'm Ragini — your friendly guide to navigating retirement finances, home equity, and senior living options. Think of me as a trusted friend who happens to be a mortgage agent.</p>
 							<p>No pressure, no jargon. Just clear, warm guidance to help you make confident decisions about your home and retirement.</p>
 							<ul class="actions stacked">
-								<li><a href="#services" class="button big wide smooth-scroll-middle">Explore Your Options</a></li>
+								<li><a href="reverse-mortgage.html" class="button big wide">Explore Reverse Mortgages</a></4></li>
+								<li><a href="retirement-planning.html" class="button">Retirement Planning</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -171,7 +174,7 @@
 							<h2>Reverse Mortgages Made Clear</h2>
 							<p>Access your home's equity without monthly payments. Stay in the home you love while creating financial flexibility for retirement, home care, or travel.</p>
 							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn How It Works</a></li>
+								<li><a href="reverse-mortgage.html" class="button">Learn How It Works</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -185,7 +188,7 @@
 							<h2>Retirement Planning Guidance</h2>
 							<p>Practical steps for financial security, government benefits, tax considerations, and creating a retirement budget that works for your lifestyle.</p>
 							<ul class="actions stacked">
-								<li><a href="#" class="button">Start Planning</a></li>
+								<li><a href="retirement-planning.html" class="button">Start Planning</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -199,7 +202,7 @@
 							<h2>Home Care & Support Services</h2>
 							<p>Connecting you with trusted resources for aging in place, home modifications, and professional care services to help you stay safely at home.</p>
 							<ul class="actions stacked">
-								<li><a href="#" class="button">Find Support</a></li>
+								<li><a href="home-care-support.html" class="button">Find Support</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -224,7 +227,7 @@
 										<h3>Reverse Mortgages</h3>
 										<p>Access home equity without monthly payments</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Learn More</span></li>
+											<li><a href="reverse-mortgage.html" class="button small">Learn More</a></li>
 										</ul>
 									</div>
 								</article>
@@ -236,7 +239,7 @@
 										<h3>Retirement Planning</h3>
 										<p>Create a secure financial future</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Start Planning</span></li>
+											<li><a href="retirement-planning.html" class="button small">Start Planning</a></li>
 										</ul>
 									</div>
 								</article>
@@ -248,7 +251,7 @@
 										<h3>Home Care Support</h3>
 										<p>Resources for aging in place</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Find Support</span></li>
+											<li><a href="home-care-support.html" class="button small">Find Support</a></li>
 										</ul>
 									</div>
 								</article>
@@ -260,7 +263,7 @@
 										<h3>Home Equity Options</h3>
 										<p>HELOC, refinancing, equity access</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Explore Options</span></li>
+											<li><a href="reverse-mortgage.html" class="button small">Explore Options</a></li>
 										</ul>
 									</div>
 								</article>
@@ -272,7 +275,7 @@
 										<h3>Downsizing & Rightsizing</h3>
 										<p>Guidance for your next chapter</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Learn More</span></li>
+											<li><a href="#contact" class="button small">Learn More</a></li>
 										</ul>
 									</div>
 								</article>
@@ -284,7 +287,7 @@
 										<h3>Senior Resources</h3>
 										<p>Government programs & community support</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Browse Resources</span></li>
+											<li><a href="resources.html" class="button small">Browse Resources</a></li>
 										</ul>
 									</div>
 								</article>
@@ -355,19 +358,34 @@
 									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
 								</ul>
 							</form>
-
 						</div>
 					</section>
 
-				<!-- Footer -->
+				<!-- Footer with Site Map -->
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
+							<!-- SITE MAP -->
+							<div class="site-map">
+								<h3>Site Navigation</h3>
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="reverse-mortgage.html">Reverse Mortgages</a></li>
+									<li><a href="retirement-planning.html">Retirement Planning</a></li>
+									<li><a href="home-care-support.html">Home Care Support</a></li>
+									<li><a href="about.html">About Ragini</a></li>
+									<li><a href="services.html">Services Overview</a></li>
+									<li><a href="resources.html">Resources & Links</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
+								</ul>
+							</div>
+							
 							<div class="page-links" style="margin-bottom: 2em;">
 								<h3>Explore Our Services</h3>
 								<ul style="list-style: none; display: flex; gap: 1em; justify-content: center; flex-wrap: wrap;">
 									<li><a href="reverse-mortgage.html" class="button small">Reverse Mortgages</a></li>
 									<li><a href="retirement-planning.html" class="button small">Retirement Planning</a></li>
 									<li><a href="home-care-support.html" class="button small">Home Care Support</a></li>
+									<li><a href="services.html" class="button small">All Services</a></li>
 								</ul>
 							</div>
 							
@@ -378,6 +396,7 @@
 								<li><a href="reverse-mortgage.html" class="icon solid style2 fa-university"><span class="label">Reverse Mortgages</span></a></li>
 								<li><a href="retirement-planning.html" class="icon solid style2 fa-chart-line"><span class="label">Retirement Planning</span></a></li>
 								<li><a href="home-care-support.html" class="icon solid style2 fa-hands-helping"><span class="label">Home Care Support</span></a></li>
+								<li><a href="about.html" class="icon solid style2 fa-user"><span class="label">About</span></a></li>
 								<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
 								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
 								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
