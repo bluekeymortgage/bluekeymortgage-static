@@ -28,8 +28,8 @@
 				"latitude": 43.6532,
 				"longitude": -79.3832
 			},
-			"telephone": "+1-416-555-0123",
-			"email": "info@bluekeymortgage.ca",
+			"telephone": "+1-647-231-3910",
+			"email": "ragini@bluekeymortgage.ca",
 			"url": "https://bluekeymortgage.ca",
 			"openingHoursSpecification": {
 				"@type": "OpeningHoursSpecification",
@@ -213,7 +213,7 @@
 								<h3>Booking Instructions</h3>
 								<p>To schedule a call with me:</p>
 								<ol style="text-align: left; max-width: 600px; margin: 0 auto;">
-									<li><strong>Email me</strong> at [your-email@bluekeymortgage.ca] with your preferred times</li>
+									<li><strong>Email me</strong> at ragini@bluekeymortgage.ca with your preferred times</li>
 									<li><strong>Include</strong> your name, phone number, and brief description of what you'd like to discuss</li>
 									<li><strong>I'll respond</strong> within 24 hours to confirm a time</li>
 									<li><strong>We'll talk</strong> for 15-30 minutes - no pressure, just information</li>
@@ -233,14 +233,14 @@
 								<section class="contact-card">
 									<div class="contact-icon">📧</div>
 									<h3>Email</h3>
-									<p>[your-email@bluekeymortgage.ca]</p>
+									<p>ragini@bluekeymortgage.ca</p>
 									<p><em>Response within 24 hours</em></p>
 								</section>
 								
 								<section class="contact-card">
 									<div class="contact-icon">📱</div>
 									<h3>Phone</h3>
-									<p>[Your Phone Number]</p>
+									<p>647-231-3910</p>
 									<p><em>Leave a message for callback</em></p>
 								</section>
 								
@@ -283,27 +283,39 @@
 						<div class="inner medium">
 							<h2>Send a Message</h2>
 							<p>Have questions about reverse mortgages, retirement planning, or senior resources? Fill out this form and I'll get back to you.</p>
-							<form method="post" action="#">
+							
+							<div style="background-color: var(--warm-cream); padding: 1.5em; border-radius: 8px; margin-bottom: 2em;">
+								<h4>How the Contact Form Works</h4>
+								<p><strong>Step 1:</strong> Fill out the form below with your details and questions</p>
+								<p><strong>Step 2:</strong> Click "Send Message" to submit your inquiry directly through our secure form</p>
+								<p><strong>Step 3:</strong> You'll receive a confirmation and I'll respond within 24 hours</p>
+								<p><strong>Alternative:</strong> For immediate contact, call <strong>647-231-3910</strong> or email <strong>ragini@bluekeymortgage.ca</strong> directly</p>
+							</div>
+							
+							<form method="POST" action="https://formspree.io/f/xwvwrrjd" id="contact-form">
+								<input type="hidden" name="_subject" value="Blue Key Mortgage Website Inquiry" />
+								<input type="hidden" name="_replyto" id="_replyto" />
+								<input type="hidden" name="_gotcha" style="display:none">
 								<div class="fields">
 									<div class="field half">
-										<label for="contact-name">Name *</label>
-										<input type="text" name="contact-name" id="contact-name" value="" required />
+										<label for="name">Name *</label>
+										<input type="text" name="name" id="name" value="" required />
 									</div>
 									<div class="field half">
-										<label for="contact-email">Email *</label>
-										<input type="email" name="contact-email" id="contact-email" value="" required />
+										<label for="email">Email *</label>
+										<input type="email" name="email" id="email" value="" required />
 									</div>
 									<div class="field half">
-										<label for="contact-phone">Phone (Optional)</label>
-										<input type="tel" name="contact-phone" id="contact-phone" value="" />
+										<label for="phone">Phone (Optional)</label>
+										<input type="tel" name="phone" id="phone" value="" />
 									</div>
 									<div class="field half">
-										<label for="contact-location">Ontario Location</label>
-										<input type="text" name="contact-location" id="contact-location" value="" placeholder="e.g., Toronto, Ottawa, Hamilton" />
+										<label for="location">Ontario Location</label>
+										<input type="text" name="location" id="location" value="" placeholder="e.g., Toronto, Ottawa, Hamilton" />
 									</div>
 									<div class="field">
-										<label for="contact-topic">What would you like to discuss? *</label>
-										<select name="contact-topic" id="contact-topic" required>
+										<label for="topic">What would you like to discuss? *</label>
+										<select name="topic" id="topic" required>
 											<option value="">Select a topic...</option>
 											<option value="reverse-mortgage">Reverse Mortgages</option>
 											<option value="retirement-planning">Retirement Planning</option>
@@ -313,12 +325,12 @@
 										</select>
 									</div>
 									<div class="field">
-										<label for="contact-message">Your Message *</label>
-										<textarea name="contact-message" id="contact-message" rows="6" placeholder="Please tell me about your situation, questions, or what you'd like to discuss..." required></textarea>
+										<label for="message">Your Message *</label>
+										<textarea name="message" id="message" rows="6" placeholder="Please tell me about your situation, questions, or what you'd like to discuss..." required></textarea>
 									</div>
 									<div class="field">
 										<label>
-											<input type="checkbox" name="contact-newsletter" id="contact-newsletter" />
+											<input type="checkbox" name="newsletter" id="newsletter" value="Yes" />
 											Send me occasional updates about Ontario senior resources (optional)
 										</label>
 									</div>
@@ -327,6 +339,13 @@
 									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
 								</ul>
 							</form>
+							
+							<!-- Formspree Status -->
+							<div style="margin-top: 2em; padding: 1em; background-color: #e8f5e9; border-radius: 5px; font-size: 0.9em;">
+								<h4>✅ Contact Form Active</h4>
+								<p>This form is now connected to Formspree and ready to receive inquiries.</p>
+								<p><strong>Alternative contact methods:</strong> You can also contact me directly at <strong>ragini@bluekeymortgage.ca</strong> or call <strong>647-231-3910</strong>.</p>
+							</div>
 						</div>
 					</section>
 
@@ -409,6 +428,30 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		
+		<!-- Formspree Form Handler -->
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const contactForm = document.getElementById('contact-form');
+			if (contactForm) {
+				// Set _replyto field from email input
+				const emailField = document.getElementById('email');
+				const replyToField = document.getElementById('_replyto');
+				
+				if (emailField && replyToField) {
+					emailField.addEventListener('input', function() {
+						replyToField.value = this.value;
+					});
+				}
+				
+				// Optional: Add form submission confirmation
+				contactForm.addEventListener('submit', function() {
+					// Form will submit to Formspree
+					// You can add additional validation or confirmation here
+				});
+			}
+		});
+		</script>
 
 	</body>
 </html>
