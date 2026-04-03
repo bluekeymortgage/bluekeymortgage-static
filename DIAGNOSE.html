@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DIAGNOSE - Images & Colors</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+.test { margin: 20px; padding: 20px; border: 2px solid #000; }
+.cream { background-color: #FDF8F3; }
+.white { background-color: #ffffff; }
+.soft-cream { background-color: #F9F1E7; }
+.gold { background-color: #C9952A; color: white; padding: 10px; }
+</style>
+</head>
+<body>
+<h1>DIAGNOSE - What's Wrong?</h1>
+
+<div class="test">
+<h2>1. Check if images exist at these paths:</h2>
+<ul>
+<li><strong>images-approved/Hero.png</strong>: 
+<?php echo file_exists('images-approved/Hero.png') ? '✓ EXISTS' : '✗ MISSING'; ?>
+<img src="images-approved/Hero.png" style="width: 100px; height: auto; border: 2px solid red;" alt="Test Hero">
+</li>
+<li><strong>images-approved/Reverse Mort.png</strong>:
+<img src="images-approved/Reverse Mort.png" style="width: 100px; height: auto; border: 2px solid red;" alt="Test Reverse">
+</li>
+<li><strong>images-approved/Ret Plan.png</strong>:
+<img src="images-approved/Ret Plan.png" style="width: 100px; height: auto; border: 2px solid red;" alt="Test Ret">
+</li>
+</ul>
+</div>
+
+<div class="test cream">
+<h2>2. Test CREAM color (#FDF8F3)</h2>
+<p>This should be cream background.</p>
+</div>
+
+<div class="test white">
+<h2>3. Test WHITE color (#ffffff)</h2>
+<p>This should be white background.</p>
+</div>
+
+<div class="test soft-cream">
+<h2>4. Test SOFT CREAM color (#F9F1E7)</h2>
+<p>This should be soft cream (hero section).</p>
+</div>
+
+<div class="test">
+<h2>5. Test GOLD color (#C9952A)</h2>
+<button class="gold">Gold Button</button>
+</div>
+
+<div class="test">
+<h2>6. Open browser console and check:</h2>
+<ul>
+<li>Press F12 → Console tab</li>
+<li>Look for "Failed to load resource" errors</li>
+<li>Check if images are 404 (not found)</li>
+</ul>
+</div>
+
+<div class="test" style="background-color: #FDF8F3;">
+<h2>7. Current CSS Issues:</h2>
+<p>The CSS selectors might be wrong. The template uses:</p>
+<ul>
+<li><code>section.banner</code> - Hero section</li>
+<li><code>section.spotlight</code> - Content sections</li>
+<li><code>section.wrapper</code> - Other sections</li>
+</ul>
+<p>But our CSS might be targeting the wrong elements.</p>
+</div>
+</body>
+</html>
