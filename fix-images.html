@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fix Image References</title>
+</head>
+<body>
+    <h1>Fixed Image References</h1>
+    
+    <h2>Current references in index.html:</h2>
+    <pre id="current"></pre>
+    
+    <h2>Available images:</h2>
+    <pre id="available"></pre>
+    
+    <script>
+    // Current image references
+    const currentRefs = [
+        "images-approved/Diverse_senior_couple_202604031711.png",
+        "images-approved/Senior_couple_discussing_202604031706 (1).png",
+        "images-approved/East_Asian_senior_202604031656.png",
+        "images-approved/HomeCare.png",
+        "images-approved/HomeCare2.png",
+        "images-approved/Ret Plan2.png",
+        "images-approved/Reverse Mort alt.png",
+        "images-approved/Senior couple on porch1.png",
+        "images-approved/Seniors Gardening.png",
+        "images-approved/Downsizing.png"
+    ];
+    
+    // Available images (without duplicates)
+    const availableImages = [
+        "images-approved/African_Canadian_senior_202604031649.png",
+        "images-approved/Diverse_senior_couple_202604031711.png",
+        "images-approved/East_Asian_senior_202604031656.png",
+        "images-approved/Senior_couple_discussing_202604031706.png",
+        "images-approved/Middle_Eastern_senior_202604031656.png",
+        "images-approved/HomeCare.png",
+        "images-approved/HomeCare3.png",
+        "images-approved/Ret Plan3.png",
+        "images-approved/Senior_woman_doing_202604031708.png",
+        "images-approved/Downsizing.png",
+        "images-approved/Senior_couple_with_202604031702.png"
+    ];
+    
+    document.getElementById('current').textContent = currentRefs.join('\\n');
+    document.getElementById('available').textContent = availableImages.join('\\n');
+    </script>
+</body>
+</html>
