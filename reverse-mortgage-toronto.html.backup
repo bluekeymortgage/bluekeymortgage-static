@@ -6,40 +6,45 @@
 -->
 <html>
 	<head>
-		<title>Reverse Mortgage Mississauga & Oakville | West GTA Reverse Mortgage Specialist</title>
+		<title>Reverse Mortgage Toronto | Toronto Reverse Mortgage Specialist | Blue Key Mortgage</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<style>
-		.button.small { min-width: 160px; text-align: center; }
-		.button { min-width: 160px; }
-		</style>		<meta name="description" content="Mississauga and Oakville reverse mortgage specialist helping seniors in West GTA access home equity for retirement, healthcare, and lifestyle needs without monthly payments." />
-		<meta name="keywords" content="reverse mortgage Mississauga, reverse mortgage Oakville, Mississauga reverse mortgage specialist, Oakville senior home equity, West GTA reverse mortgage" />
-		<link rel="canonical" href="https://bluekeymortgage.ca/reverse-mortgage-mississauga-oakville.html" />
-		<!-- Local Business Schema for West GTA -->
+tt<style>
+tt.button.small { min-width: 160px; text-align: center; }
+tt</style>		<meta name="description" content="Toronto reverse mortgage specialist helping seniors in Toronto, North York, Scarborough, Etobicoke, and surrounding areas access home equity without monthly payments." />
+		<meta name="keywords" content="reverse mortgage Toronto, Toronto reverse mortgage specialist, reverse mortgage North York, Scarborough reverse mortgage, Etobicoke reverse mortgage, Toronto senior home equity" />
+		<link rel="canonical" href="https://bluekeymortgage.ca/reverse-mortgage-toronto.html" />
+		<!-- Local Business Schema for Toronto -->
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@type": "LocalBusiness",
-			"name": "Blue Key Mortgage - Mississauga & Oakville Reverse Mortgage Specialist",
+			"name": "Blue Key Mortgage - Toronto Reverse Mortgage Specialist",
 			"image": "https://bluekeymortgage.ca/images/ragini-headshot.png",
-			"description": "Mississauga and Oakville reverse mortgage specialist helping West GTA seniors access home equity.",
+			"description": "Toronto reverse mortgage specialist helping seniors in Toronto, North York, Scarborough, Etobicoke access home equity.",
 			"address": {
 				"@type": "PostalAddress",
+				"addressLocality": "Toronto",
 				"addressRegion": "ON",
 				"addressCountry": "CA"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": 43.6532,
+				"longitude": -79.3832
 			},
 			"areaServed": {
 				"@type": "GeoCircle",
 				"geoMidpoint": {
 					"@type": "GeoCoordinates",
-					"latitude": 43.5890,
-					"longitude": -79.6441
+					"latitude": 43.6532,
+					"longitude": -79.3832
 				},
-				"geoRadius": "30000",
-				"name": "West Greater Toronto Area"
+				"geoRadius": "25000",
+				"name": "Greater Toronto Area (GTA)"
 			},
-			"serviceArea": ["Mississauga", "Oakville", "Burlington", "Milton", "Halton Hills", "West GTA"],
-			"url": "https://bluekeymortgage.ca/reverse-mortgage-mississauga-oakville.html"
+			"serviceArea": ["Toronto", "North York", "Scarborough", "Etobicoke", "York", "East York"],
+			"url": "https://bluekeymortgage.ca/reverse-mortgage-toronto.html"
 		}
 		</script>
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -154,36 +159,35 @@
 			
 			/* LOCAL HIGHLIGHT STYLING */
 			.local-highlight {
-				background-color: #f0f8ff;
-				border-left: 4px solid #4a90e2;
+				background-color: #e8f4fd;
+				border-left: 4px solid #2a8bc9;
 				padding: 1em;
 				margin: 1em 0;
 				border-radius: 4px;
 			}
 			
 			.local-highlight h4 {
-				color: #4a90e2;
+				color: #2a8bc9;
 				margin-top: 0;
 			}
 			
-			/* AREA GRID */
-			.area-grid {
+			/* TORONTO NEIGHBORHOODS GRID */
+			.neighborhood-grid {
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 				gap: 1em;
 				margin: 1.5em 0;
 			}
 			
-			.area-item {
+			.neighborhood-item {
 				background: white;
 				padding: 1em;
 				border-radius: 8px;
 				box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 				text-align: center;
-				border-top: 3px solid var(--warm-gold);
 			}
 			
-			.area-item h4 {
+			.neighborhood-item h4 {
 				color: var(--warm-gold);
 				margin-bottom: 0.5em;
 			}
@@ -197,136 +201,82 @@
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
-							<h1>Reverse Mortgage Specialist for Mississauga & Oakville Seniors</h1>
-							<p class="major">Helping West GTA homeowners 55+ in Mississauga, Oakville, Burlington, and surrounding areas access home equity for retirement security and lifestyle enhancement.</p>
+							<h1>Reverse Mortgage Specialist Serving Toronto Seniors</h1>
+							<p class="major">Helping Toronto homeowners 55+ access home equity to fund retirement, home renovations, healthcare, and lifestyle goals – all without monthly mortgage payments.</p>
 							<div class="local-highlight">
-								<h4>West GTA Home Values: $800,000 - $1,500,000+</h4>
-								<p>Mississauga and Oakville seniors can typically access $250,000 - $500,000+ in home equity through a reverse mortgage, preserving their quality of life in these desirable communities.</p>
+								<h4>Toronto Home Values: $750,000 - $2,000,000+</h4>
+								<p>Toronto seniors can typically access $200,000 - $600,000+ in home equity through a reverse mortgage, depending on neighborhood and property value.</p>
 							</div>
 							<ul class="actions stacked">
-								<li><a href="#contact" class="button big wide smooth-scroll-middle">Get Your West GTA Reverse Mortgage Quote</a></li>
+								<li><a href="#contact" class="button big wide smooth-scroll-middle">Get Your Toronto Reverse Mortgage Quote</a></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images-approved/Middle_Eastern_senior_202604031656.png" alt="Mississauga Oakville senior couple enjoying their community with reverse mortgage options" />
+							<img src="images-approved/Senior_couple_discussing_202604031706.png" alt="Toronto senior couple discussing reverse mortgage options for their home" />
 						</div>
 					</section>
 
 				<!-- Two -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
-							<h2>Serving West GTA Communities</h2>
-							<p>The Mississauga and Oakville areas offer unique opportunities for seniors to leverage substantial home equity while maintaining their active lifestyles in these vibrant communities.</p>
-							<div class="area-grid">
-								<div class="area-item">
-									<h4>Mississauga</h4>
-									<p>Port Credit, Streetsville, Meadowvale</p>
+							<h2>Why Toronto Seniors Choose Reverse Mortgages</h2>
+							<p>With Toronto's high property values and rising cost of living, many seniors are "house rich but cash poor." A reverse mortgage lets you tap into your home's equity while staying in the neighborhood you love.</p>
+							<div class="neighborhood-grid">
+								<div class="neighborhood-item">
+									<h4>Downtown Toronto</h4>
+									<p>Condos & Heritage Homes</p>
 								</div>
-								<div class="area-item">
-									<h4>Oakville</h4>
-									<p>Bronte, Old Oakville, Glen Abbey</p>
+								<div class="neighborhood-item">
+									<h4>North York</h4>
+									<p>Family Homes & Bungalows</p>
 								</div>
-								<div class="area-item">
-									<h4>Burlington</h4>
-									<p>Lakeshore, Aldershot</p>
+								<div class="neighborhood-item">
+									<h4>Scarborough</h4>
+									<p>Bungalows & Detached Homes</p>
 								</div>
-								<div class="area-item">
-									<h4>Milton</h4>
-									<p>Newer developments</p>
+								<div class="neighborhood-item">
+									<h4>Etobicoke</h4>
+									<p>Waterfront Properties</p>
 								</div>
-								<div class="area-item">
-									<h4>Halton Hills</h4>
-									<p>Georgetown, Acton</p>
+								<div class="neighborhood-item">
+									<h4>East York</h4>
+									<p>Character Homes</p>
+								</div>
+								<div class="neighborhood-item">
+									<h4>York</h4>
+									<p>Urban Family Homes</p>
 								</div>
 							</div>
-							<p>Each community has unique property characteristics and equity potential that I understand as a West GTA specialist.</p>
 							<ul class="actions stacked">
-								<li><a href="contact.html" class="button">Book West GTA Consultation</a></li>
+								<li><a href="contact.html" class="button">Book Toronto Consultation</a></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images-approved/Senior_woman_doing_202604031708.png" alt="Mississauga Oakville senior enjoying outdoor activity funded by reverse mortgage" />
+							<img src="images-approved/Senior_couple_discussing_202604031706.png" alt="Toronto senior couple discussing reverse mortgage options together" />
 						</div>
 					</section>
 
 				<!-- Three -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>West GTA Reverse Mortgage Advantages</h2>
-							<p>Mississauga and Oakville seniors benefit from:</p>
+							<h2>Toronto-Specific Reverse Mortgage Considerations</h2>
+							<p>Toronto's unique real estate market requires specialized knowledge. As a Toronto-based reverse mortgage specialist, I understand:</p>
 							<ul>
-								<li><strong>High Property Values:</strong> Substantial equity built up in desirable neighborhoods</li>
-								<li><strong>Active Senior Communities:</strong> Funding for clubs, travel, hobbies</li>
-								<li><strong>Waterfront Properties:</strong> Special considerations for lakeside homes</li>
-								<li><strong>Newer Developments:</strong> Different equity calculations for newer vs established areas</li>
-								<li><strong>Transit Access:</strong> Proximity to GO stations and highways maintains property values</li>
+								<li><strong>Property Tax Deferral Programs:</strong> How reverse mortgages interact with Toronto property tax relief</li>
+								<li><strong>Condominium Rules:</strong> Special considerations for Toronto condo owners</li>
+								<li><strong>Heritage Designations:</strong> Navigating reverse mortgages for heritage homes</li>
+								<li><strong>TCHC & Co-op Housing:</strong> Alternative options for non-traditional ownership</li>
+								<li><strong>Toronto Market Trends:</strong> Current valuations and equity access projections</li>
 							</ul>
-							<p>I work with lenders who understand the premium values in Mississauga's established neighborhoods and Oakville's waterfront communities.</p>
+							<p>I work with all major lenders who understand Toronto's unique market dynamics.</p>
 						</div>
 						<div class="image">
-							<img src="images-approved/Ret Plan3.png" alt="West GTA seniors planning retirement with reverse mortgage options" />
+							<img src="images-approved/HomeCare3.png" alt="Toronto senior receiving home care support funded by reverse mortgage" />
 						</div>
 					</section>
 
 				<!-- Four -->
 					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Mississauga & Oakville Reverse Mortgage Estimates</h2>
-							<p>Get a personalized estimate based on West GTA home values and your specific situation.</p>
-							<div class="items style1 medium onscroll-fade-in">
-								<section>
-									<span class="icon solid style2 major fa-home"></span>
-									<h3>Average Home Values</h3>
-									<p>Mississauga: $900,000+<br>Oakville: $1,200,000+</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-university"></span>
-									<h3>Typical Equity Access</h3>
-									<p>$300,000 - $600,000+</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-calendar"></span>
-									<h3>Maintain Lifestyle</h3>
-									<p>No monthly payments required</p>
-								</section>
-							</div>
-							<p><strong>Example:</strong> A $1.1M home in Oakville with homeowners aged 72 could access approximately $400,000 - $550,000 to fund retirement goals.</p>
-							<p><em>Contact me for a personalized reverse mortgage quote based on your specific West GTA property and financial situation.</em></p>
-							<div style="background-color: var(--warm-cream); padding: 1.5em; border-radius: 8px; margin-top: 2em;">
-								<h4>Need a more accurate estimate?</h4>
-								<p>Contact me for a free, no-obligation reverse mortgage assessment specific to your Mississauga or Oakville home. I'll provide detailed information on available equity, terms, and how it can fit your financial goals.</p>
-								<a href="contact.html" class="button">Contact for Detailed Quote</a>
-							</div>
-						</div>
-					</section>
-
-				<!-- Five -->
-					<section class="wrapper style1 align-center" id="contact">
-						<div class="inner">
-							<h2>Contact Your West GTA Reverse Mortgage Specialist</h2>
-							<p>As a licensed mortgage agent serving the West GTA, I understand the unique market dynamics of Mississauga, Oakville, and surrounding communities.</p>
-							<div class="items style1 medium onscroll-fade-in">
-								<section>
-									<h3>Free West GTA Consultation</h3>
-									<p>Phone, video, or in-person meetings available</p>
-								</section>
-								<section>
-									<h3>Local Market Knowledge</h3>
-									<p>Understanding of West GTA property values and trends</p>
-								</section>
-								<section>
-									<h3>Community Focused</h3>
-									<p>Helping seniors stay in the communities they love</p>
-								</section>
-							</div>
-							<ul class="actions stacked">
-								<li><a href="contact.html" class="button big wide">Schedule West GTA Consultation</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
 						<div class="inner">
 							<div class="page-links" style="margin-bottom: 2em;">
 								<h3>Explore Our Services</h3>
@@ -337,18 +287,74 @@
 									<li><a href="home-care-support.html" class="button small">Home Care Support</a></li>
 								</ul>
 							</div>
+							<h2>Toronto Reverse Mortgage Calculator Estimate</h2>
+							<p>Get a personalized estimate based on Toronto home values and your specific situation.</p>
+							<div class="items style1 medium onscroll-fade-in">
+								<section>
+									<span class="icon style2 major fa-home"></span>
+									<h3>Average Toronto Home Value</h3>
+									<p>$950,000+</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-university"></span>
+									<h3>Typical Equity Access</h3>
+									<p>$300,000 - $500,000+</p>
+								</section>
+								<section>
+									<span class="icon style2 major fa-calendar"></span>
+									<h3>No Monthly Payments</h3>
+									<p>Stay in your Toronto home</p>
+								</section>
+							</div>
+							<p><strong>Example:</strong> A $1.2M home in North York with homeowners aged 70 could access approximately $400,000 - $550,000.</p>
+							<p><em>Contact me for a personalized reverse mortgage quote based on your specific Toronto property and financial situation.</em></p>
+							<div style="background-color: var(--warm-cream); padding: 1.5em; border-radius: 8px; margin-top: 2em;">
+								<h4>Need a more accurate estimate?</h4>
+								<p>Contact me for a free, no-obligation reverse mortgage assessment specific to your Toronto home. I'll provide detailed information on available equity, terms, and how it can fit your financial goals.</p>
+								<a href="contact.html" class="button">Contact for Detailed Quote</a>
+							</div>
+						</div>
+					</section>
+
+				<!-- Five -->
+					<section class="wrapper style1 align-center" id="contact">
+						<div class="inner">
+							<h2>Contact Your Toronto Reverse Mortgage Specialist</h2>
+							<p>As a licensed mortgage agent based in the GTA, I understand Toronto's unique market and can help you navigate the reverse mortgage process specific to our city.</p>
+							<div class="items style1 medium onscroll-fade-in">
+								<section>
+									<h3>Free Toronto Consultation</h3>
+									<p>Phone, video, or in-person meeting available across Toronto</p>
+								</section>
+								<section>
+									<h3>Neighborhood Expertise</h3>
+									<p>Knowledge of all Toronto neighborhoods and property types</p>
+								</section>
+								<section>
+									<h3>Local Lender Network</h3>
+									<p>Access to lenders who understand Toronto real estate</p>
+								</section>
+							</div>
+							<ul class="actions stacked">
+								<li><a href="contact.html" class="button big wide">Schedule Toronto Consultation</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
 							<ul class="icons">
-								<li><a href="contact.html" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-								<li><a href="contact.html" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="contact.html" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+								<li><a href="contact.html" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
 							<p>&copy; Blue Key Mortgage. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 							<div class="site-map">
 								<h4>Site Navigation</h4>
-								<ul style="list-style: none;">
+								<ul>
 									<li><a href="index.html">Home</a></li>
 									<li><a href="reverse-mortgage.html">Reverse Mortgages</a></li>
 									<li><a href="reverse-mortgage-toronto.html">Toronto Reverse Mortgage</a></li>
-									<li><a href="reverse-mortgage-mississauga-oakville.html">Mississauga & Oakville</a></li>
 									<li><a href="retirement-planning.html">Retirement Planning</a></li>
 									<li><a href="home-care-support.html">Home Care Support</a></li>
 									<li><a href="about.html">About Ragini</a></li>
