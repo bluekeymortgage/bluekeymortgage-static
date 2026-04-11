@@ -163,6 +163,22 @@
 				color: #2a8bc9;
 				margin-top: 0;
 			}
+
+			/* Keep Legal & Advocacy card links aligned */
+			#legal-links .items.style1.medium.onscroll-fade-in {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.5em;
+			}
+
+			#legal-links .items.style1.medium.onscroll-fade-in > section {
+				display: flex;
+				flex-direction: column;
+			}
+
+			#legal-links .items.style1.medium.onscroll-fade-in > section p:last-child {
+				margin-top: auto;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -346,7 +362,7 @@
 					</section>
 
 				<!-- Legal & Advocacy -->
-					<section class="wrapper style1 align-center">
+					<section class="wrapper style1 align-center" id="legal-links">
 						<div class="inner">
 							<h2>Legal & Advocacy Resources</h2>
 							<p>Protecting seniors' rights and providing legal support.</p>

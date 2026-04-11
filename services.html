@@ -147,6 +147,33 @@
 				color: var(--warm-gold);
 				margin-bottom: 0.5em;
 			}
+
+			.service-card ul {
+				text-align: left;
+				margin: 1em 0 1.5em;
+				padding-left: 1.25em;
+			}
+
+			.service-card .button.small {
+				display: inline-block;
+			}
+
+			#next-steps .items.style1.medium.onscroll-fade-in {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.5em;
+			}
+
+			#next-steps .items.style1.medium.onscroll-fade-in > section {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				min-height: 100%;
+			}
+
+			#next-steps .items.style1.medium.onscroll-fade-in > section .button.small {
+				margin-top: auto;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -178,7 +205,7 @@
 
 						<div class="items style1 medium onscroll-fade-in">
 							<section class="service-card featured">
-								<div class="service-icon">🏠</div>
+								<span class="icon solid style2 major fa-university"></span>
 								<h3>Reverse Mortgages</h3>
 								<p>Access home equity without monthly payments. Stay in your home while creating financial flexibility.</p>
 								<ul>
@@ -191,7 +218,7 @@
 							</section>
 							
 							<section class="service-card featured">
-								<div class="service-icon">📊</div>
+								<span class="icon solid style2 major fa-chart-line"></span>
 								<h3>Retirement Planning</h3>
 								<p>Create a secure financial future with Ontario-specific guidance.</p>
 								<ul>
@@ -204,7 +231,7 @@
 							</section>
 							
 							<section class="service-card featured">
-								<div class="service-icon">🤝</div>
+								<span class="icon solid style2 major fa-hands-helping"></span>
 								<h3>Home Care Support</h3>
 								<p>Resources and connections for aging in place safely.</p>
 								<ul>
@@ -302,7 +329,7 @@
 									</section>
 									<section>
 										<h4>Trusted Partner Referrals</h4>
-										<p>I've partnered with trusted, proven resources to connect clients with attorneys, financial planners, home care providers, and other specialists. Referrals are always free of charge to you.</p>
+										<p>I connect clients with trusted attorneys, financial planners, home care providers, and other specialists when needed. These introductions are made to support your goals and come at no direct cost to you.</p>
 									</section>
 									<section>
 										<h4>Information & Guidance</h4>
@@ -334,24 +361,20 @@
 								<section class="service-card featured">
 									<h3>Comprehensive Support</h3>
 									<p><strong>Ideal for:</strong> Holistic retirement planning</p>
-									<ul>
-										<li>Full financial assessment</li>
-										<li>Multiple resource coordination</li>
-										<li>Ongoing guidance as needed</li>
-										<li>Family meeting facilitation</li>
-									</ul>
+									<div class="checklist-item">Full financial assessment</div>
+									<div class="checklist-item">Multiple resource coordination</div>
+									<div class="checklist-item">Ongoing guidance as needed</div>
+									<div class="checklist-item">Family meeting facilitation</div>
 									<p><em>Most requested support level</em></p>
 								</section>
 								
 								<section class="service-card">
 									<h3>Resource Navigation</h3>
 									<p><strong>Ideal for:</strong> Connecting to Ontario programs</p>
-									<ul>
-										<li>Government benefit guidance</li>
-										<li>Local program connections</li>
-										<li>Community resource assistance</li>
-										<li>Follow-up support</li>
-									</ul>
+									<div class="checklist-item">Government benefit guidance</div>
+									<div class="checklist-item">Local program connections</div>
+									<div class="checklist-item">Community resource assistance</div>
+									<div class="checklist-item">Follow-up support</div>
 									<p><em>Helping access Ontario's senior programs</em></p>
 								</section>
 							</div>
@@ -359,7 +382,7 @@
 					</section>
 
 				<!-- Next Steps -->
-					<section class="wrapper style1 align-center">
+					<section class="wrapper style1 align-center" id="next-steps">
 						<div class="inner">
 							<h2>Ready to Get Started?</h2>
 							<p>Choose how you'd like to begin working together.</p>
