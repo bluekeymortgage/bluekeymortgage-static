@@ -202,8 +202,8 @@
 							<h2>How Reverse Mortgages Work in Ontario</h2>
 							<p>A reverse mortgage (Home Equity Conversion Mortgage) lets Ontario homeowners 55+ convert home equity into cash without selling or making monthly payments. You keep 100% ownership of your home.</p>
 							<ul class="actions stacked">
-								<li><a href="contact.html" class="button smooth-scroll-middle">Check Your Eligibility</a></li>
-								<li><a href="#calculator" class="button smooth-scroll-middle">Estimate Your Equity</a></li>
+								<li><a href="contact.html" class="button small smooth-scroll-middle">Check Your Eligibility</a></li>
+								<li><a href="#calculator" class="button small smooth-scroll-middle">Estimate Your Equity</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -351,8 +351,16 @@
 								<input type="hidden" name="_gotcha" style="display:none">
 								<div class="fields">
 									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" value="" />
+										<label for="name">Name *</label>
+										<input type="text" name="name" id="name" value="" required />
+									</div>
+									<div class="field half">
+										<label for="email">Email *</label>
+										<input type="email" name="email" id="email" value="" required />
+									</div>
+									<div class="field half">
+										<label for="phone">Phone (Optional)</label>
+										<input type="tel" name="phone" id="phone" value="" />
 									</div>
 									<div class="field half">
 										<label for="city">City in Ontario</label>

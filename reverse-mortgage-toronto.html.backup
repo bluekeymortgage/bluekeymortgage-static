@@ -9,10 +9,12 @@
 		<title>Reverse Mortgage Toronto | Toronto Reverse Mortgage Specialist | Blue Key Mortgage</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-tt<style>
-tt.button.small { min-width: 160px; text-align: center; }
-tt</style>		<meta name="description" content="Toronto reverse mortgage specialist helping seniors in Toronto, North York, Scarborough, Etobicoke, and surrounding areas access home equity without monthly payments." />
+		<style>
+		.button.small { min-width: 160px; text-align: center; }
+		.button { min-width: 160px; }
+		</style>		<meta name="description" content="Toronto reverse mortgage specialist helping seniors in Toronto, North York, Scarborough, Etobicoke, and surrounding areas access home equity without monthly payments." />
 		<meta name="keywords" content="reverse mortgage Toronto, Toronto reverse mortgage specialist, reverse mortgage North York, Scarborough reverse mortgage, Etobicoke reverse mortgage, Toronto senior home equity" />
+		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 		<link rel="canonical" href="https://bluekeymortgage.ca/reverse-mortgage-toronto.html" />
 		<!-- Local Business Schema for Toronto -->
 		<script type="application/ld+json">
@@ -278,30 +280,21 @@ tt</style>		<meta name="description" content="Toronto reverse mortgage specialis
 				<!-- Four -->
 					<section class="wrapper style1 align-center">
 						<div class="inner">
-							<div class="page-links" style="margin-bottom: 2em;">
-								<h3>Explore Our Services</h3>
-								<ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1em; justify-items: center;">
-									<li><a href="index.html" class="button small">Home</a></li>
-									<li><a href="reverse-mortgage.html" class="button small">Reverse Mortgages</a></li>
-									<li><a href="retirement-planning.html" class="button small">Retirement Planning</a></li>
-									<li><a href="home-care-support.html" class="button small">Home Care Support</a></li>
-								</ul>
-							</div>
 							<h2>Toronto Reverse Mortgage Calculator Estimate</h2>
 							<p>Get a personalized estimate based on Toronto home values and your specific situation.</p>
 							<div class="items style1 medium onscroll-fade-in">
 								<section>
-									<span class="icon style2 major fa-home"></span>
+									<span class="icon solid style2 major fa-home"></span>
 									<h3>Average Toronto Home Value</h3>
 									<p>$950,000+</p>
 								</section>
 								<section>
-									<span class="icon style2 major fa-university"></span>
+									<span class="icon solid style2 major fa-chart-line"></span>
 									<h3>Typical Equity Access</h3>
 									<p>$300,000 - $500,000+</p>
 								</section>
 								<section>
-									<span class="icon style2 major fa-calendar"></span>
+									<span class="icon solid style2 major fa-calendar"></span>
 									<h3>No Monthly Payments</h3>
 									<p>Stay in your Toronto home</p>
 								</section>
@@ -335,23 +328,29 @@ tt</style>		<meta name="description" content="Toronto reverse mortgage specialis
 									<p>Access to lenders who understand Toronto real estate</p>
 								</section>
 							</div>
-							<ul class="actions stacked">
-								<li><a href="contact.html" class="button big wide">Schedule Toronto Consultation</a></li>
-							</ul>
 						</div>
 					</section>
 
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
+							<div class="page-links" style="margin-bottom: 2em;">
+								<h3>Explore Our Services</h3>
+								<ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1em; justify-items: center;">
+									<li><a href="index.html" class="button small">Home</a></li>
+									<li><a href="reverse-mortgage.html" class="button small">Reverse Mortgages</a></li>
+									<li><a href="retirement-planning.html" class="button small">Retirement Planning</a></li>
+									<li><a href="home-care-support.html" class="button small">Home Care Support</a></li>
+								</ul>
+							</div>
 							<ul class="icons">
-								<li><a href="contact.html" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
-								<li><a href="contact.html" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="contact.html" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+								<li><a href="contact.html" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
 							<p>&copy; Blue Key Mortgage. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 							<div class="site-map">
 								<h4>Site Navigation</h4>
-								<ul>
+								<ul style="list-style: none; padding-left: 0;">
 									<li><a href="index.html">Home</a></li>
 									<li><a href="reverse-mortgage.html">Reverse Mortgages</a></li>
 									<li><a href="reverse-mortgage-toronto.html">Toronto Reverse Mortgage</a></li>
@@ -360,6 +359,7 @@ tt</style>		<meta name="description" content="Toronto reverse mortgage specialis
 									<li><a href="about.html">About Ragini</a></li>
 									<li><a href="services.html">Services</a></li>
 									<li><a href="resources.html">Resources</a></li>
+									<li><a href="referral-partners.html">Trusted Partners</a></li>
 									<li><a href="contact.html">Contact</a></li>
 								</ul>
 							</div>

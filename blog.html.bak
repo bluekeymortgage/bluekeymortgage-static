@@ -1,0 +1,366 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mortgage Blog | Blue Key Mortgage</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Mortgage education and insights — Stay informed with articles and tips to help you make smart mortgage decisions." />
+		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+		<link rel="canonical" href="https://bluekeymortgage.ca/blog.html" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			:root {
+				--warm-cream: #FDF8F3;
+				--soft-cream: #F9F1E7;
+				--warm-gold: #C9952A;
+				--warm-gold-dark: #B08524;
+			}
+
+			section.banner.style1 {
+				background-color: var(--soft-cream) !important;
+			}
+
+			section.wrapper.style1.align-center:nth-of-type(1),
+			section.wrapper.style1.align-center:nth-of-type(3) {
+				background-color: var(--warm-cream) !important;
+			}
+
+			section.wrapper.style1.align-center:nth-of-type(2),
+			section.wrapper.style1.align-center:nth-of-type(4) {
+				background-color: #ffffff !important;
+			}
+
+			footer.wrapper.style1.align-center {
+				background-color: #ffffff !important;
+			}
+
+			.button {
+				background-color: var(--warm-gold) !important;
+				border-color: var(--warm-gold) !important;
+				color: #ffffff !important;
+			}
+
+			.button:hover {
+				background-color: var(--warm-gold-dark) !important;
+				border-color: var(--warm-gold-dark) !important;
+			}
+
+			.button.small {
+				background-color: var(--warm-gold) !important;
+				border-color: var(--warm-gold) !important;
+			}
+
+			.button.small:hover {
+				background-color: var(--warm-gold-dark) !important;
+				border-color: var(--warm-gold-dark) !important;
+			}
+
+			.image img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+
+			section.banner.style1,
+			section.wrapper.style1.align-center:nth-of-type(1),
+			section.wrapper.style1.align-center:nth-of-type(3) {
+				color: #333333 !important;
+			}
+
+			section.banner.style1 h1,
+			section.banner.style1 h2,
+			section.banner.style1 h3,
+			section.wrapper.style1.align-center:nth-of-type(1) h1,
+			section.wrapper.style1.align-center:nth-of-type(1) h2,
+			section.wrapper.style1.align-center:nth-of-type(1) h3,
+			section.wrapper.style1.align-center:nth-of-type(3) h1,
+			section.wrapper.style1.align-center:nth-of-type(3) h2,
+			section.wrapper.style1.align-center:nth-of-type(3) h3 {
+				color: #222222 !important;
+			}
+
+			/* Blog card styling */
+			.blog-cards {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+				gap: 2em;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 1em;
+			}
+
+			.blog-card {
+				background: #ffffff;
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+				transition: transform 0.2s, box-shadow 0.2s;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.blog-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+			}
+
+			.blog-card-image {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+
+			.blog-card-body {
+				padding: 1.5em;
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.blog-card-tag {
+				display: inline-block;
+				background-color: var(--warm-gold);
+				color: #ffffff;
+				padding: 0.25em 0.75em;
+				border-radius: 4px;
+				font-size: 0.8rem;
+				font-weight: 600;
+				margin-bottom: 0.75em;
+				width: fit-content;
+			}
+
+			.blog-card-date {
+				font-size: 0.85rem;
+				color: #888;
+				margin-bottom: 0.5em;
+			}
+
+			.blog-card h3 {
+				font-size: 1.15em;
+				margin-bottom: 0.5em;
+				color: #222 !important;
+				line-height: 1.3;
+			}
+
+			.blog-card p {
+				font-size: 0.95em;
+				color: #555;
+				flex: 1;
+			}
+
+			.blog-card .read-more {
+				display: inline-block;
+				color: var(--warm-gold);
+				font-weight: 600;
+				margin-top: 1em;
+				text-decoration: none;
+			}
+
+			.blog-card .read-more:hover {
+				color: var(--warm-gold-dark);
+			}
+
+			@media (max-width: 768px) {
+				.blog-cards {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+
+				<!-- Hero Section -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Mortgage Education & Insights</h1>
+							<p class="major">Stay informed with articles and tips to help you make smart mortgage decisions — from reverse mortgages to first-time buying, renewals, and more.</p>
+							<ul class="actions stacked">
+								<li><a href="#articles" class="button big wide smooth-scroll-middle">Browse Articles</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images-approved/Senior_meeting_with_202604031708.png" alt="Ontario couple reviewing mortgage options" />
+						</div>
+					</section>
+
+				<!-- Blog Cards -->
+					<section class="wrapper style1 align-center" id="articles">
+						<div class="inner" style="max-width: 1200px;">
+							<h2>Latest Articles</h2>
+							<p>Practical mortgage guidance for Ontario homeowners and families.</p>
+						</div>
+
+						<div class="blog-cards">
+                            <!-- Card 0 -->
+                            <a href="blog/aging-at-home.html" class="blog-card" style="text-decoration: none; color: inherit;">
+                                <img src="https://images.unsplash.com/photo-1580589750116-1d6c6432f2b3?w=400&h=250&fit=crop" alt="Senior couple enjoying time together at home" class="blog-card-image" />
+                                <div class="blog-card-body">
+                                    <span class="blog-card-tag">Home Care & Family</span>
+                                    <div class="blog-card-date">April 13, 2026</div>
+                                    <h3>Aging at Home with Confidence: How Reverse Mortgages and Home Care Work Together</h3>
+                                    <p>Discover how combining reverse mortgage financing with professional in-home care creates a sustainable path for seniors to age safely and comfortably in their own homes.</p>
+                                    <span class="read-more">Read More →</span>
+                                </div>
+                            </a>
+							<!-- Card 1 -->
+							<a href="blog/5-signs-parents-need-help.html" class="blog-card" style="text-decoration: none; color: inherit;">
+								<img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=400&h=250&fit=crop" alt="Adult child helping elderly parent at home" class="blog-card-image" />
+								<div class="blog-card-body">
+									<span class="blog-card-tag">Home Care & Family</span>
+									<div class="blog-card-date">April 7, 2026</div>
+									<h3>5 Signs Your Parents Need Help at Home (And How to Start the Conversation)</h3>
+									<p>Noticed changes in your aging parents? Learn to recognize the signs and start the conversation with care, not panic.</p>
+									<span class="read-more">Read More →</span>
+								</div>
+							</a>
+
+							<!-- Card 2 -->
+							<a href="blog/how-to-pay-for-home-care-ontario.html" class="blog-card" style="text-decoration: none; color: inherit;">
+								<img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=250&fit=crop" alt="Senior reviewing financial documents" class="blog-card-image" />
+								<div class="blog-card-body">
+									<span class="blog-card-tag">Home Care & Finances</span>
+									<div class="blog-card-date">April 7, 2026</div>
+									<h3>How to Pay for Home Care in Ontario: A Complete Guide</h3>
+									<p>From OHIP-funded care to reverse mortgages, every option to fund in-home care — explained clearly and honestly.</p>
+									<span class="read-more">Read More →</span>
+								</div>
+							</a>
+
+							<!-- Card 3 -->
+							<a href="blog/reverse-mortgage-myths.html" class="blog-card" style="text-decoration: none; color: inherit;">
+								<img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=250&fit=crop" alt="Seniors at home" class="blog-card-image" />
+								<div class="blog-card-body">
+									<span class="blog-card-tag">Reverse Mortgages</span>
+									<div class="blog-card-date">November 10, 2024</div>
+									<h3>5 Myths About Reverse Mortgages—Debunked!</h3>
+									<p>Many seniors have misconceptions about reverse mortgages. Let's clear up the most common myths and show you the real benefits.</p>
+									<span class="read-more">Read More →</span>
+								</div>
+							</a>
+
+							<!-- Card 4 -->
+							<a href="blog/refinancing-signs.html" class="blog-card" style="text-decoration: none; color: inherit;">
+								<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=250&fit=crop" alt="Couple reviewing documents" class="blog-card-image" />
+								<div class="blog-card-body">
+									<span class="blog-card-tag">Refinancing</span>
+									<div class="blog-card-date">November 5, 2024</div>
+									<h3>Is It Time to Refinance? Signs You Should Consider It</h3>
+									<p>Refinancing isn't just about getting a lower rate. Discover when refinancing makes financial sense for your situation.</p>
+									<span class="read-more">Read More →</span>
+								</div>
+							</a>
+
+							<!-- Card 5 -->
+							<a href="blog/first-time-buyer-guide.html" class="blog-card" style="text-decoration: none; color: inherit;">
+								<img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=400&h=250&fit=crop" alt="Happy first-time buyers" class="blog-card-image" />
+								<div class="blog-card-body">
+									<span class="blog-card-tag">First-Time Buyers</span>
+									<div class="blog-card-date">October 28, 2024</div>
+									<h3>First-Time Buyer's Guide: From Pre-Approval to Closing</h3>
+									<p>Buying your first home can feel overwhelming. We break down the entire process into manageable steps.</p>
+									<span class="read-more">Read More →</span>
+								</div>
+							</a>
+
+							<!-- Card 6 -->
+							<a href="blog/renewal-tips.html" class="blog-card" style="text-decoration: none; color: inherit;">
+								<img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=250&fit=crop" alt="Mortgage renewal meeting" class="blog-card-image" />
+								<div class="blog-card-body">
+									<span class="blog-card-tag">Renewals</span>
+									<div class="blog-card-date">October 20, 2024</div>
+									<h3>Don't Accept Your Renewal Offer—Shop Around!</h3>
+									<p>Your lender's renewal offer isn't your only option. Here's why shopping around can save you thousands.</p>
+									<span class="read-more">Read More →</span>
+								</div>
+							</a>
+
+							<!-- Card 7 -->
+							<a href="blog/investment-property-financing.html" class="blog-card" style="text-decoration: none; color: inherit;">
+								<img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=400&h=250&fit=crop" alt="Investment property" class="blog-card-image" />
+								<div class="blog-card-body">
+									<span class="blog-card-tag">Investment Properties</span>
+									<div class="blog-card-date">October 15, 2024</div>
+									<h3>Investment Property Financing: What You Need to Know</h3>
+									<p>Financing a rental property is different from financing your primary residence. Learn what lenders look for.</p>
+									<span class="read-more">Read More →</span>
+								</div>
+							</a>
+
+							<!-- Card 8 -->
+							<a href="blog/mortgage-rate-news.html" class="blog-card" style="text-decoration: none; color: inherit;">
+								<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop" alt="Mortgage news" class="blog-card-image" />
+								<div class="blog-card-body">
+									<span class="blog-card-tag">Mortgage News</span>
+									<div class="blog-card-date">October 10, 2024</div>
+									<h3>Mortgage News: What Recent Rate Changes Mean for You</h3>
+									<p>Stay informed about the latest mortgage market trends and how they might affect your financial planning.</p>
+									<span class="read-more">Read More →</span>
+								</div>
+							</a>
+						</div>
+					</section>
+
+				<!-- CTA Section -->
+					<section class="wrapper style1 align-center">
+						<div class="inner medium">
+							<h2>Have Questions?</h2>
+							<p>Get personalized mortgage advice for your situation. No pressure, no obligation — just clear guidance.</p>
+							<ul class="actions stacked">
+								<li><a href="contact.html" class="button big wide">Contact Us</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<div class="page-links" style="margin-bottom: 2em;">
+								<h3>Explore Our Services</h3>
+								<ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1em; justify-items: center;">
+									<li><a href="index.html" class="button small">Home</a></li>
+									<li><a href="reverse-mortgage.html" class="button small">Reverse Mortgages</a></li>
+									<li><a href="retirement-planning.html" class="button small">Retirement Planning</a></li>
+									<li><a href="home-care-support.html" class="button small">Home Care Support</a></li>
+									<li><a href="contact.html" class="button small">Contact</a></li>
+								</ul>
+							</div>
+							
+							<p><strong>Blue Key Mortgage</strong> | Powered by BRX Mortgage Inc. (FSRA #13549)</p>
+							<p>Not a government agency. Loan must be repaid. Terms and conditions apply. Consult an independent legal advisor for complete information about reverse mortgages in Ontario.</p>
+							
+							<ul class="icons">
+								<li><a href="index.html" class="icon solid style2 fa-home"><span class="label">Home</span></a></li>
+								<li><a href="reverse-mortgage.html" class="icon solid style2 fa-university"><span class="label">Reverse Mortgages</span></a></li>
+								<li><a href="retirement-planning.html" class="icon solid style2 fa-chart-line"><span class="label">Retirement Planning</span></a></li>
+								<li><a href="referral-partners.html" class="icon solid style2 fa-user-friends"><span class="label">Trusted Partners</span></a></li>
+								<li><a href="home-care-support.html" class="icon solid style2 fa-hands-helping"><span class="label">Home Care Support</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p>&copy; Blue Key Mortgage. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

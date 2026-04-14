@@ -9,9 +9,10 @@
 		<title>Reverse Mortgages in Ontario | Blue Key Mortgage</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-tt<style>
-tt.button.small { min-width: 160px; text-align: center; }
-tt</style>		<meta name="description" content="Learn how Ontario seniors can access home equity without monthly payments. Reverse mortgages explained clearly for Toronto, Mississauga, Oakville, and all Ontario homeowners 55+." />
+		<style>
+		.button.small { min-width: 160px; text-align: center; }
+		.button { min-width: 160px; }
+		</style>		<meta name="description" content="Learn how Ontario seniors can access home equity without monthly payments. Reverse mortgages explained clearly for Toronto, Mississauga, Oakville, and all Ontario homeowners 55+." />
 		<meta name="keywords" content="reverse mortgage Ontario, Toronto reverse mortgage, home equity conversion mortgage, senior home equity Ontario, no monthly payment mortgage, aging in place financing" />
 		<link rel="canonical" href="https://bluekeymortgage.ca/reverse-mortgage.html" />
 		<!-- FAQ Schema for Reverse Mortgage Questions -->
@@ -201,7 +202,7 @@ tt</style>		<meta name="description" content="Learn how Ontario seniors can acce
 							<h2>How Reverse Mortgages Work in Ontario</h2>
 							<p>A reverse mortgage (Home Equity Conversion Mortgage) lets Ontario homeowners 55+ convert home equity into cash without selling or making monthly payments. You keep 100% ownership of your home.</p>
 							<ul class="actions stacked">
-								<li><a href="contact.html" class="button">Check Your Eligibility</a></li>
+								<li><a href="contact.html" class="button small smooth-scroll-middle">Check Your Eligibility</a></li>
 								<li><a href="#calculator" class="button small smooth-scroll-middle">Estimate Your Equity</a></li>
 							</ul>
 						</div>
@@ -281,11 +282,9 @@ tt</style>		<meta name="description" content="Learn how Ontario seniors can acce
 							<div style="background-color: var(--warm-cream); padding: 2em; border-radius: 8px; max-width: 600px; margin: 0 auto;">
 								<h3>Estimated Accessible Equity</h3>
 								<p>Homeowners 55+ in Ontario can typically access:</p>
-								<ul>
-									<li><strong>Age 55-64:</strong> Up to 30% of home value</li>
-									<li><strong>Age 65-74:</strong> Up to 45% of home value</li>
-									<li><strong>Age 75+:</strong> Up to 55% of home value</li>
-								</ul>
+								<p><strong>Age 55-64:</strong> Up to 30% of home value</p>
+								<p><strong>Age 65-74:</strong> Up to 45% of home value</p>
+								<p><strong>Age 75+:</strong> Up to 55% of home value</p>
 								<p><strong>Example:</strong> A $800,000 home in Toronto with homeowners aged 72 could access approximately $360,000.</p>
 								<p><em>Actual amounts depend on property location, type, and lender criteria.</em></p>
 							</div>
@@ -390,6 +389,7 @@ tt</style>		<meta name="description" content="Learn how Ontario seniors can acce
 							<ul class="icons">
 								<li><a href="index.html" class="icon solid style2 fa-home"><span class="label">Home</span></a></li>
 								<li><a href="retirement-planning.html" class="icon solid style2 fa-chart-line"><span class="label">Retirement Planning</span></a></li>
+								<li><a href="referral-partners.html" class="icon solid style2 fa-user-friends"><span class="label">Trusted Partners</span></a></li>
 								<li><a href="home-care-support.html" class="icon solid style2 fa-hands-helping"><span class="label">Home Care Support</span></a></li>
 								<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
 								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>

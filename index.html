@@ -400,12 +400,16 @@
 								<input type="hidden" name="_gotcha" style="display:none">
 								<div class="fields">
 									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" value="" />
+										<label for="name">Name *</label>
+										<input type="text" name="name" id="name" value="" required />
 									</div>
 									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" value="" />
+										<label for="email">Email *</label>
+										<input type="email" name="email" id="email" value="" required />
+									</div>
+									<div class="field half">
+										<label for="phone">Phone (Optional)</label>
+										<input type="tel" name="phone" id="phone" value="" />
 									</div>
 									<div class="field">
 										<label for="message">How can I help you?</label>
