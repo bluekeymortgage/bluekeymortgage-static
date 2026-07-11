@@ -134,6 +134,12 @@ section.band.navy a { color: #F5DFA8; }
 .brand svg { flex: none; }
 .brand .name { font-family: var(--serif); font-weight: 700; font-size: 1.35rem; color: var(--navy); line-height: 1.1; }
 .brand .tag { display: block; font-family: var(--sans); font-size: 0.78rem; font-weight: 400; color: var(--ink-soft); letter-spacing: 0.02em; }
+.brand .brx-badge {
+  display: flex; align-items: center; gap: 0.32rem; margin-top: 0.25rem;
+  font-family: var(--sans); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.03em; color: var(--ink-soft);
+}
+.brand .brx-badge img { height: 13px; width: auto; display: block; }
 .header-cta { display: flex; align-items: center; gap: 0.9rem; }
 .call-link {
   display: flex; flex-direction: column; align-items: flex-end; text-decoration: none;
@@ -153,7 +159,7 @@ section.band.navy a { color: #F5DFA8; }
 .nav-toggle { display: none; }
 
 @media (max-width: 820px) {
-  .brand .tag { display: none; }
+  .brand .tag, .brand .brx-badge { display: none; }
   .call-link .call-label { display: none; }
   .site-header .bar { gap: 0.6rem; }
   .header-cta { gap: 0.6rem; }
