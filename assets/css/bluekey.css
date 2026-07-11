@@ -40,6 +40,7 @@ img { max-width: 100%; height: auto; display: block; }
 main { display: block; }
 
 h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.2; color: var(--navy); margin: 0 0 0.5em; font-weight: 700; }
+h1, h2 { text-wrap: balance; }
 h1 { font-size: clamp(2.1rem, 1.5rem + 2.2vw, 3.1rem); letter-spacing: -0.01em; }
 h2 { font-size: clamp(1.7rem, 1.35rem + 1.2vw, 2.2rem); }
 h3 { font-size: clamp(1.3rem, 1.15rem + 0.5vw, 1.5rem); }
@@ -90,7 +91,10 @@ section.band.navy a { color: #F5DFA8; }
 .card {
   background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
   padding: clamp(1.3rem, 3vw, 1.8rem); box-shadow: var(--shadow);
+  display: flex; flex-direction: column;
 }
+.card > .btn { margin-top: auto; align-self: flex-start; }
+.card > .btn + .btn { margin-top: 0.6rem; }
 .card h3 { margin-top: 0.2rem; }
 .card .icon { color: var(--gold); margin-bottom: 0.6rem; }
 .card.quiet { box-shadow: none; background: var(--cream); }
@@ -234,6 +238,11 @@ form.bk input:focus, form.bk select:focus, form.bk textarea:focus { border-color
 /* ---------- CTA band & footer ---------- */
 .cta-band { background: var(--navy); color: #F4EFE6; padding: clamp(2.5rem, 6vw, 4rem) 0; }
 .cta-band h2 { color: #fff; }
+.cta-band .lede { color: #E8E0D2; }
+.cta-band .eyebrow { color: #E9C877; }
+.cta-band .small { color: #C4BBA9; }
+.cta-band ul.checks > li::before { color: #E9C877; }
+.cta-band a:not(.btn) { color: #F5DFA8; }
 .site-footer { background: var(--navy-deep); color: #D9D2C4; padding: 3rem 0 2rem; font-size: 0.98rem; }
 .site-footer h3 { color: #fff; font-size: 1.05rem; font-family: var(--sans); letter-spacing: 0.06em; text-transform: uppercase; }
 .site-footer a { color: #F0E7D4; }

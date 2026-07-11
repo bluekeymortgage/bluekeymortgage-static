@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- BLOG POST TEMPLATE, copy, replace every {{TOKEN}}, delete this comment.
+     Paths are relative to /blog/, hence the ../ prefixes. -->
+<html lang="en-CA">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{{META_TITLE}}</title>
+	<meta name="description" content="{{META_DESCRIPTION}}" />
+	<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+	<link rel="canonical" href="https://bluekeymortgage.ca/blog/{{SLUG}}.html" />
+	<link rel="stylesheet" href="../assets/css/bluekey.css" />
+	<style>
+	.byline { font-family: var(--sans); font-size: 0.95rem; color: var(--ink-soft); border-bottom: 1px solid var(--line); padding-bottom: 1.2rem; margin-bottom: 1.8rem; }
+	article h2 { margin-top: 2.2rem; }
+	article h3 { margin-top: 1.6rem; }
+	.related { border-top: 1px solid var(--line); margin-top: 2.5rem; padding-top: 1.5rem; }
+	</style>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": "{{H1}}",
+		"description": "{{META_DESCRIPTION}}",
+		"datePublished": "{{DATE_ISO}}",
+		"dateModified": "{{DATE_ISO}}",
+		"inLanguage": "en-CA",
+		"author": { "@type": "Person", "name": "Ragini Domenichini", "jobTitle": "Mortgage Agent Level 2", "url": "https://bluekeymortgage.ca/about.html" },
+		"publisher": { "@type": "Organization", "name": "Blue Key Mortgage", "url": "https://bluekeymortgage.ca" },
+		"mainEntityOfPage": "https://bluekeymortgage.ca/blog/{{SLUG}}.html"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bluekeymortgage.ca/" },
+			{ "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://bluekeymortgage.ca/blog.html" },
+			{ "@type": "ListItem", "position": 3, "name": "{{H1}}", "item": "https://bluekeymortgage.ca/blog/{{SLUG}}.html" }
+		]
+	}
+	</script>
+	{{FAQPAGE_SCHEMA_SCRIPT}}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="trust-bar">Licensed mortgage agent with <strong>BRX Mortgage Inc. (FSRA #13549)</strong> &nbsp;·&nbsp; Free, no-obligation consultations</div>
+
+<header class="site-header">
+	<div class="wrap bar">
+		<a class="brand" href="../index.html" aria-label="Blue Key Mortgage home">
+			<svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="9" stroke="#B8862D" stroke-width="4"/><path d="M20 20 L34 34 M28 28 L33 23 M24 24 L29 19" stroke="#1C3D5A" stroke-width="4" stroke-linecap="round"/></svg>
+			<span class="name">Blue Key Mortgage<span class="tag">Reverse mortgage guidance for Ontario families</span></span>
+		</a>
+		<div class="header-cta">
+			<a class="call-link" href="tel:+16472313910">
+				<span class="call-label">Call Ragini, free &amp; friendly</span>
+				<span class="call-number">647-231-3910</span>
+			</a>
+			<a class="btn gold no-print" href="../guide.html">Free Guide</a>
+			<button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" onclick="bkNav(this)">Menu ☰</button>
+		</div>
+	</div>
+</header>
+<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+	<div class="wrap">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../reverse-mortgage.html">Reverse Mortgages</a></li>
+			<li><a href="../right-for-you.html">Is It Right for You?</a></li>
+			<li><a href="../for-adult-children.html">For Adult Children</a></li>
+			<li><a href="../faq.html">Your Questions</a></li>
+			<li><a href="../about.html">About Ragini</a></li>
+			<li><a href="../contact.html">Contact</a></li>
+		</ul>
+	</div>
+</nav>
+
+<main id="main">
+	<div class="wrap crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../blog.html">Articles</a></li><li>{{CRUMB_SHORT_TITLE}}</li></ol></div>
+
+	<article>
+		<section class="hero" style="padding-bottom:1rem;">
+			<div class="wrap prose">
+				<p class="eyebrow">{{CLUSTER_EYEBROW}}</p>
+				<h1>{{H1}}</h1>
+				<p class="byline">By Ragini Domenichini, Mortgage Agent Level 2 · {{DATE_HUMAN}} · {{READ_MINUTES}}-minute read</p>
+				<p class="lede">{{LEDE}}</p>
+			</div>
+		</section>
+
+		<section class="band" style="padding-top:0;">
+			<div class="wrap prose">
+
+{{BODY}}
+
+				<div class="note" style="margin-top:2.5rem;">
+					<strong>Wondering what this means for your own home?</strong> A 15-minute call with me is free, unhurried, and obligation-free, and if the honest answer is "this isn't for you," that's exactly what you'll hear. Call <a href="tel:+16472313910"><strong>647-231-3910</strong></a>, or start with the <a href="../guide.html">free 20-page guide</a>.
+				</div>
+
+				<h2>Questions people ask about this</h2>
+{{FAQ_DETAILS_BLOCKS}}
+
+				<div class="related">
+					<h2 style="margin-top:0;">Keep reading</h2>
+					<ul>
+{{RELATED_LINKS_LIS}}
+					</ul>
+				</div>
+
+				<p class="small" style="margin-top:2rem;">This article is general education for Ontario residents, current to {{DATE_HUMAN}}, and is not legal, tax, or investment advice. Reverse mortgage features vary by lender; approval, rates, and amounts are never guaranteed. Please consult an independent legal or financial advisor about your personal situation.</p>
+			</div>
+		</section>
+	</article>
+
+	<section class="cta-band">
+		<div class="wrap prose">
+			<h2>The free guide covers all of this, in large print</h2>
+			<p class="lede">"The Ontario Homeowner's Guide to Unlocking Home Equity Without Selling", honest pros and cons, every option compared, and the red flags that protect you.</p>
+			<ul class="actions">
+				<li><a class="btn big gold" href="../guide.html">Get the Free Guide</a></li>
+				<li><a class="btn big ghost" href="tel:+16472313910">Call 647-231-3910</a></li>
+			</ul>
+		</div>
+	</section>
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<div class="footer-cols">
+			<div>
+				<h3>Blue Key Mortgage</h3>
+				<p>Plain-English reverse mortgage guidance for Ontario homeowners 55+ and the families who love them.</p>
+				<p><strong><a href="tel:+16472313910">647-231-3910</a></strong><br />
+				<a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a><br />
+				<a href="https://www.instagram.com/bluekeymortgage_on" rel="noopener">Instagram: @bluekeymortgage_on</a></p>
+			</div>
+			<div>
+				<h3>Learn</h3>
+				<ul>
+					<li><a href="../reverse-mortgage.html">Reverse Mortgages</a></li>
+					<li><a href="../right-for-you.html">Is It Right for You?</a></li>
+					<li><a href="../for-adult-children.html">For Adult Children</a></li>
+					<li><a href="../faq.html">Your Questions, Answered</a></li>
+					<li><a href="../guide.html">Free Guide</a></li>
+					<li><a href="../blog.html">Articles</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>More</h3>
+				<ul>
+					<li><a href="../about.html">About Ragini</a></li>
+					<li><a href="../services.html">Services</a></li>
+					<li><a href="../retirement-planning.html">Retirement Planning</a></li>
+					<li><a href="../home-care-support.html">Home Care &amp; Support</a></li>
+					<li><a href="../resources.html">Ontario Resources</a></li>
+					<li><a href="../referral-partners.html">Referral Partners</a></li>
+					<li><a href="../contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Communities Served</h3>
+				<ul>
+					<li><a href="../reverse-mortgage-toronto.html">Toronto</a> · <a href="../reverse-mortgage-etobicoke.html">Etobicoke</a> · <a href="../reverse-mortgage-scarborough.html">Scarborough</a> · <a href="../reverse-mortgage-north-york.html">North York</a></li>
+					<li><a href="../reverse-mortgage-mississauga-oakville.html">Mississauga &amp; Oakville</a> · <a href="../reverse-mortgage-brampton.html">Brampton</a> · <a href="../reverse-mortgage-burlington.html">Burlington</a></li>
+					<li><a href="../reverse-mortgage-vaughan-richmond-hill-markham.html">Vaughan, Richmond Hill &amp; Markham</a></li>
+					<li><a href="../reverse-mortgage-durham.html">Ajax, Pickering, Whitby &amp; Oshawa</a></li>
+					<li><a href="../reverse-mortgage-hamilton.html">Hamilton</a> · <a href="../reverse-mortgage-london.html">London</a> · <a href="../reverse-mortgage-ottawa.html">Ottawa</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-legal">
+			<p><strong>Blue Key Mortgage</strong>, Ragini Domenichini, Mortgage Agent Level 2, powered by BRX Mortgage Inc. (FSRA #13549).</p>
+			<p>A reverse mortgage is a loan secured against your home. It must be repaid when you sell your home, move out permanently, or pass away. Interest accrues over time and reduces the equity remaining in your home. Terms, conditions, and lender qualification apply; approval, rates, and amounts are never guaranteed. A reverse mortgage is not a government program or benefit.</p>
+			<p>The information on this website is general education, not legal, tax, or investment advice. Please consult an independent legal or financial advisor about your personal situation. Independent legal advice is required before completing any reverse mortgage in Ontario.</p>
+			<p><a href="../privacy.html">Privacy Policy</a> · © 2026 Blue Key Mortgage. All rights reserved.</p>
+		</div>
+	</div>
+</footer>
+
+<script>
+function bkNav(btn){var n=document.getElementById('site-nav');var open=n.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');}
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Is a Reverse Mortgage Right for You? Honest Self-Assessment | Blue Key Mortgage</title>
-	<meta name="description" content="A free three-minute self-assessment for Ontario homeowners 55+. Honest signs a reverse mortgage may fit — and clear signs it may not. Nothing recorded, no email required." />
+	<meta name="description" content="A free three-minute self-assessment for Ontario homeowners 55+. Honest signs a reverse mortgage may fit, and clear signs it may not. Nothing recorded, no email required." />
 	<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 	<link rel="canonical" href="https://bluekeymortgage.ca/right-for-you.html" />
 	<link rel="stylesheet" href="assets/css/bluekey.css" />
@@ -49,7 +49,7 @@
 		</a>
 		<div class="header-cta">
 			<a class="call-link" href="tel:+16472313910">
-				<span class="call-label">Call Ragini — free &amp; friendly</span>
+				<span class="call-label">Call Ragini, free &amp; friendly</span>
 				<span class="call-number">647-231-3910</span>
 			</a>
 			<a class="btn gold no-print" href="guide.html">Free Guide</a>
@@ -78,7 +78,7 @@
 		<div class="wrap prose">
 			<p class="eyebrow">A three-minute honest look</p>
 			<h1>Is a reverse mortgage right for you?</h1>
-			<p class="lede">Tick every statement that sounds like you. Nothing here is recorded or sent anywhere — this is just between you and your screen. At the end you'll get an honest read, including "probably not for you."</p>
+			<p class="lede">Tick every statement that sounds like you. Nothing here is recorded or sent anywhere, this is just between you and your screen. At the end you'll get an honest read, including "probably not for you."</p>
 		</div>
 	</section>
 
@@ -87,10 +87,10 @@
 			<h2>Signs it may fit</h2>
 			<div id="fit-list">
 				<div class="quiz-item"><input type="checkbox" id="q1" data-group="fit" /><label for="q1">I'm 55 or older (and so is everyone on the home's title), and this home is where I live most of the year.</label></div>
-				<div class="quiz-item"><input type="checkbox" id="q2" data-group="fit" /><label for="q2">I want to stay in this home and this neighbourhood for the foreseeable future — years, not months.</label></div>
+				<div class="quiz-item"><input type="checkbox" id="q2" data-group="fit" /><label for="q2">I want to stay in this home and this neighbourhood for the foreseeable future, years, not months.</label></div>
 				<div class="quiz-item"><input type="checkbox" id="q3" data-group="fit" /><label for="q3">Most of my wealth is in my home, and my monthly income feels tighter than I'd like.</label></div>
 				<div class="quiz-item"><input type="checkbox" id="q4" data-group="fit" /><label for="q4">There's a specific need on my mind: ending a monthly mortgage payment, paying for care or renovations, helping family, or clearing expensive debt.</label></div>
-				<div class="quiz-item"><input type="checkbox" id="q5" data-group="fit" /><label for="q5">Monthly loan payments would strain my budget — or I simply don't want another bill.</label></div>
+				<div class="quiz-item"><input type="checkbox" id="q5" data-group="fit" /><label for="q5">Monthly loan payments would strain my budget, or I simply don't want another bill.</label></div>
 				<div class="quiz-item"><input type="checkbox" id="q6" data-group="fit" /><label for="q6">I'd rather use some of my home's value while I'm alive than leave every dollar of it behind.</label></div>
 			</div>
 			<h2 style="margin-top:2.5rem;">Signs it may not</h2>
@@ -103,7 +103,7 @@
 			</div>
 			<p style="margin-top:2rem;"><button class="btn big" onclick="quizResult()">Show me my honest read</button></p>
 			<div id="quiz-result" class="note" role="status" aria-live="polite"></div>
-			<p class="small" style="margin-top:1.5rem;">This self-assessment is general education, not advice, and doesn't decide anything — it just tells you whether a longer conversation is worth your time. Nothing you tick is collected or transmitted.</p>
+			<p class="small" style="margin-top:1.5rem;">This self-assessment is general education, not advice, and doesn't decide anything, it just tells you whether a longer conversation is worth your time. Nothing you tick is collected or transmitted.</p>
 		</div>
 	</section>
 
@@ -125,15 +125,15 @@ function quizResult(){
   var el = document.getElementById('quiz-result');
   var msg;
   if (document.getElementById('q11').checked) {
-    msg = "<strong>First things first:</strong> you ticked \"someone is rushing me.\" Whatever else is true, slow everything down. No legitimate reverse mortgage requires speed — pressure is the single clearest warning sign there is. If you'd like, call me and I'll help you look at whatever you've been offered, no strings attached.";
+    msg = "<strong>First things first:</strong> you ticked \"someone is rushing me.\" Whatever else is true, slow everything down. No legitimate reverse mortgage requires speed, pressure is the single clearest warning sign there is. If you'd like, call me and I'll help you look at whatever you've been offered, no strings attached.";
   } else if (caution >= 2 && caution >= fit) {
-    msg = "<strong>Honest read: probably not the right tool for you right now.</strong> The statements you ticked point toward alternatives — a line of credit, downsizing on your own schedule, or simply leaving things as they are. That's a good outcome; the best financial decision is often the one you don't make. If you want to sanity-check that conclusion, I'm happy to.";
+    msg = "<strong>Honest read: probably not the right tool for you right now.</strong> The statements you ticked point toward alternatives, a line of credit, downsizing on your own schedule, or simply leaving things as they are. That's a good outcome; the best financial decision is often the one you don't make. If you want to sanity-check that conclusion, I'm happy to.";
   } else if (fit >= 3) {
-    msg = "<strong>Honest read: worth a proper look.</strong> Your answers match the families a reverse mortgage genuinely helps — equity-rich, payment-averse, planning to stay. The next step isn't signing anything; it's seeing your real numbers in writing and taking them home. That's exactly what a free consultation is for.";
+    msg = "<strong>Honest read: worth a proper look.</strong> Your answers match the families a reverse mortgage genuinely helps, equity-rich, payment-averse, planning to stay. The next step isn't signing anything; it's seeing your real numbers in writing and taking them home. That's exactly what a free consultation is for.";
   } else if (fit + caution === 0) {
-    msg = "<strong>Nothing ticked yet.</strong> Work through the statements above — or if reading is easier than clicking, the free guide covers the same ground at your own pace.";
+    msg = "<strong>Nothing ticked yet.</strong> Work through the statements above, or if reading is easier than clicking, the free guide covers the same ground at your own pace.";
   } else {
-    msg = "<strong>Honest read: too close to call from a checklist.</strong> You have some fit and some friction, which is true of many real families. This is where an actual conversation earns its keep — fifteen minutes, real numbers, no obligation.";
+    msg = "<strong>Honest read: too close to call from a checklist.</strong> You have some fit and some friction, which is true of many real families. This is where an actual conversation earns its keep, fifteen minutes, real numbers, no obligation.";
   }
   el.innerHTML = msg;
   el.classList.add('show');
@@ -188,7 +188,7 @@ function quizResult(){
 			</div>
 		</div>
 		<div class="footer-legal">
-			<p><strong>Blue Key Mortgage</strong> — Ragini Domenichini, Mortgage Agent Level 2, powered by BRX Mortgage Inc. (FSRA #13549).</p>
+			<p><strong>Blue Key Mortgage</strong>, Ragini Domenichini, Mortgage Agent Level 2, powered by BRX Mortgage Inc. (FSRA #13549).</p>
 			<p>A reverse mortgage is a loan secured against your home. It must be repaid when you sell your home, move out permanently, or pass away. Interest accrues over time and reduces the equity remaining in your home. Terms, conditions, and lender qualification apply; approval, rates, and amounts are never guaranteed. A reverse mortgage is not a government program or benefit.</p>
 			<p>The information on this website is general education, not legal, tax, or investment advice. Please consult an independent legal or financial advisor about your personal situation. Independent legal advice is required before completing any reverse mortgage in Ontario.</p>
 			<p><a href="privacy.html">Privacy Policy</a> · © 2026 Blue Key Mortgage. All rights reserved.</p>

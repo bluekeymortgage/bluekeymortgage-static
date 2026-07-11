@@ -49,10 +49,10 @@ tbody th { background: #F5EBDC; }
 .cover .keyart { margin: 0.4in 0; }
 .two-col { display: flex; gap: 1.5em; }
 .two-col > div { flex: 1; }
-.pro-box, .con-box { border-radius: 10px; padding: 0.9em 1em; }
+.pro-box.con-box { border-radius: 10px; padding: 0.9em 1em; }
 .pro-box { background: #EAF2EA; border: 1.5px solid #7B9E7B; }
 .con-box { background: #F7E9E4; border: 1.5px solid #B98A75; }
-.pro-box h3, .con-box h3 { margin-top: 0; }
+.pro-box h3.con-box h3 { margin-top: 0; }
 @media screen and (max-width: 700px) {
 	.page { min-height: 0; padding: 6vw; margin: 0; box-shadow: none; }
 	.pagefoot { position: static; margin-top: 2em; }
@@ -68,7 +68,7 @@ tbody th { background: #F5EBDC; }
 	.pagefoot { display: none; }
 	h1 { font-size: 27pt; } h2 { font-size: 19pt; } h3 { font-size: 14pt; }
 	h2, h3 { break-after: avoid; }
-	table, .note, .pro-box, .con-box, tr { break-inside: avoid; }
+	table.note.pro-box.con-box, tr { break-inside: avoid; }
 	.two-col { display: block; }
 	.pro-box { margin-bottom: 1em; }
 	table { font-size: 10.5pt; }
@@ -84,7 +84,7 @@ tbody th { background: #F5EBDC; }
 	<div>
 		<p class="eyebrow">A plain-English guide for homeowners 55+ and their families</p>
 		<h1 style="font-size:34pt;">The Ontario Homeowner's Guide to Unlocking Home Equity <em>Without</em> Selling</h1>
-		<p style="font-size:15pt; color:var(--ink-soft); margin-top:0.8em;">How reverse mortgages really work in Canada — the honest pros, the honest cons, every alternative compared, and how to protect yourself along the way.</p>
+		<p style="font-size:15pt; color:var(--ink-soft); margin-top:0.8em;">How reverse mortgages really work in Canada, the honest pros, the honest cons, every alternative compared, and how to protect yourself along the way.</p>
 	</div>
 	<div class="keyart">
 		<svg width="120" height="120" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="9" stroke="#B8862D" stroke-width="3.5"/><path d="M20 20 L34 34 M28 28 L33 23 M24 24 L29 19" stroke="#1C3D5A" stroke-width="3.5" stroke-linecap="round"/></svg>
@@ -100,8 +100,8 @@ tbody th { background: #F5EBDC; }
 <!-- ============ PAGE 2: LETTER ============ -->
 <div class="page">
 	<h2>A letter before we start</h2>
-	<p>Hello — I'm Ragini.</p>
-	<p>Before I became a mortgage agent, I spent more than twenty years inside Canada's biggest financial institutions — CIBC, BMO, Scotiabank, and OMERS — working in compliance. My job, for my entire career, was making sure financial products were sold honestly and that the rules protecting ordinary people were actually followed.</p>
+	<p>Hello, I'm Ragini.</p>
+	<p>Before I became a mortgage agent, I spent more than twenty years inside Canada's biggest financial institutions: CIBC, BMO, Scotiabank, and OMERS. For years of that career I worked on compliance projects, making sure financial products were sold honestly and that the rules protecting ordinary people were actually followed.</p>
 	<p>So I'll tell you the same thing I'd tell my own mother if she asked about reverse mortgages:</p>
 	<p><strong>It's a genuinely useful tool for some families, a genuinely poor choice for others, and the difference is knowable in advance.</strong> That's what this guide is for.</p>
 	<p>Here's my promise for the next twenty pages or so:</p>
@@ -110,11 +110,11 @@ tbody th { background: #F5EBDC; }
 		<li><strong>The cons get equal billing.</strong> Compounding interest is real, and you'll see it in actual numbers, not fine print.</li>
 		<li><strong>No pressure, anywhere.</strong> There's no countdown clock, no "act now." Home decisions deserve slow thinking, family dinners, and second opinions.</li>
 	</ul>
-	<p>You'll notice I suggest more than once that you involve your family and your own lawyer. That's not politeness — it's the compliance officer in me. Good decisions survive scrutiny. Anyone who discourages scrutiny is telling you something.</p>
+	<p>You'll notice I suggest more than once that you involve your family and your own lawyer. That's not politeness; it's how I was trained. Good decisions survive scrutiny. Anyone who discourages scrutiny is telling you something.</p>
 	<p>If anything in these pages raises a question, my number is on every page footer. Calling it costs nothing and obligates you to nothing.</p>
 	<p>Warmly,<br /><strong>Ragini</strong></p>
 	<div class="note navy">
-		<strong>Who this guide is for:</strong> Ontario homeowners aged 55 and over — and, just as much, the adult sons and daughters doing careful research on a parent's behalf. If that's you: welcome, and good on you.
+		<strong>Who this guide is for:</strong> Ontario homeowners aged 55 and over, and, just as much, the adult sons and daughters doing careful research on a parent's behalf. If that's you: welcome, and good on you.
 	</div>
 	<div class="pagefoot"><span>The Ontario Homeowner's Guide to Unlocking Home Equity Without Selling</span><span>2</span></div>
 </div>
@@ -122,19 +122,19 @@ tbody th { background: #F5EBDC; }
 <!-- ============ PAGE 3: WHAT IT IS ============ -->
 <div class="page">
 	<h2>1. What a reverse mortgage actually is</h2>
-	<p>A reverse mortgage is a loan secured against your home — like the mortgage you may have had for years, with three big differences:</p>
+	<p>A reverse mortgage is a loan secured against your home, like the mortgage you may have had for years, with three big differences:</p>
 	<ol>
-		<li><strong>No monthly payments are required.</strong> The loan, plus the interest that builds up, is repaid later — when you sell, move out permanently, or pass away.</li>
+		<li><strong>No monthly payments are required.</strong> The loan, plus the interest that builds up, is repaid later, when you sell, move out permanently, or pass away.</li>
 		<li><strong>You qualify mainly on age and home equity,</strong> not income. Everyone on title must be 55 or older, and the home must be your principal residence.</li>
-		<li><strong>The money is tax-free.</strong> It's borrowed money, not income — so it isn't taxed and doesn't, by itself, reduce OAS or GIS benefits.</li>
+		<li><strong>The money is tax-free.</strong> It's borrowed money, not income, so it isn't taxed and doesn't, by itself, reduce OAS or GIS benefits.</li>
 	</ol>
 	<h3>What stays exactly the same</h3>
 	<ul>
-		<li><strong>You own your home.</strong> Your name stays on title. The lender registers a mortgage — that's all. Any growth in your home's value belongs to you.</li>
-		<li><strong>Your responsibilities.</strong> Property taxes, home insurance, and reasonable upkeep remain yours — same as today. Meet those, keep living there, and the loan cannot be called.</li>
+		<li><strong>You own your home.</strong> Your name stays on title. The lender registers a mortgage, that's all. Any growth in your home's value belongs to you.</li>
+		<li><strong>Your responsibilities.</strong> Property taxes, home insurance, and reasonable upkeep remain yours, same as today. Meet those, keep living there, and the loan cannot be called.</li>
 	</ul>
 	<h3>How much can you access?</h3>
-	<p>Between roughly 20% and 55% of your home's appraised value. The single biggest factor is age — the older you are, the more you can access:</p>
+	<p>Between roughly 20% and 55% of your home's appraised value. The single biggest factor is age, the older you are, the more you can access:</p>
 	<table>
 		<thead><tr><th>Age of youngest owner</th><th>Typical share of home value</th><th>On a $900,000 home</th></tr></thead>
 		<tbody>
@@ -143,36 +143,36 @@ tbody th { background: #F5EBDC; }
 			<tr><th>75+</th><td>Up to about 55%</td><td>≈ $495,000</td></tr>
 		</tbody>
 	</table>
-	<p class="small">Illustration only. Actual amounts depend on age, property type, location, and lender qualification — never guaranteed in advance. Be wary of anyone who promises a number without a lender assessment.</p>
-	<h3>How you receive the money — your choice</h3>
+	<p class="small">Illustration only. Actual amounts depend on age, property type, location, and lender qualification, never guaranteed in advance. Be wary of anyone who promises a number without a lender assessment.</p>
+	<h3>How you receive the money, your choice</h3>
 	<ul>
-		<li><strong>Lump sum</strong> — for example, to pay out an existing mortgage or fund a renovation.</li>
-		<li><strong>Scheduled advances</strong> — like a monthly top-up to your income.</li>
-		<li><strong>A combination</strong> — some now, more later. You pay interest only on what you've actually taken.</li>
+		<li><strong>Lump sum</strong>, for example, to pay out an existing mortgage or fund a renovation.</li>
+		<li><strong>Scheduled advances</strong>, like a monthly top-up to your income.</li>
+		<li><strong>A combination</strong>, some now, more later. You pay interest only on what you've actually taken.</li>
 	</ul>
 	<div class="pagefoot"><span>Blue Key Mortgage · 647-231-3910 · bluekeymortgage.ca</span><span>3</span></div>
 </div>
 
 <!-- ============ PAGE 4: CANADA vs US + LENDERS ============ -->
 <div class="page">
-	<h2>2. This is Canada — ignore the American internet</h2>
-	<p>Much of what you'll read online about reverse mortgages describes the <strong>American</strong> product — the "HECM," a US government-insured program with different rules, different protections, and a history of problems that shaped its scary reputation. <strong>None of that applies here.</strong></p>
-	<p>In Canada, reverse mortgages are offered by exactly three federally regulated lenders:</p>
+	<h2>2. This is Canada, ignore the American internet</h2>
+	<p>Much of what you'll read online about reverse mortgages describes the <strong>American</strong> product, the "HECM," a US government-insured program with different rules, different protections, and a history of problems that shaped its scary reputation. <strong>None of that applies here.</strong></p>
+	<p>In Canada, reverse mortgages are offered by a small group of federally regulated lenders. The market has grown to roughly five; these three are the largest:</p>
 	<table>
 		<thead><tr><th>Lender</th><th>Product</th><th>Worth knowing</th></tr></thead>
 		<tbody>
-			<tr><th>HomeEquity Bank</th><td>CHIP Reverse Mortgage</td><td>Canada's oldest and largest reverse mortgage lender — since 1986. A Schedule I Canadian bank.</td></tr>
+			<tr><th>HomeEquity Bank</th><td>CHIP Reverse Mortgage</td><td>Canada's oldest and largest reverse mortgage lender, since 1986. A Schedule I Canadian bank.</td></tr>
 			<tr><th>Equitable Bank</th><td>Flex Reverse Mortgage</td><td>A Schedule I Canadian bank; often competitive on rates and prepayment flexibility.</td></tr>
 			<tr><th>Bloom Financial</th><td>Bloom Reverse Mortgage</td><td>A newer Canadian lender with a streamlined process and its own home equity guarantee.</td></tr>
 		</tbody>
 	</table>
 	<h3>The protection that matters most: no negative equity</h3>
 	<p>Canada's reverse mortgage lenders build a <strong>no-negative-equity guarantee</strong> into their contracts: provided you've met the loan's obligations, the amount owing at repayment cannot exceed the fair market value of the home when it's sold. Your family can never inherit a shortfall as personal debt.</p>
-	<p class="small">Note: this is a <em>lender guarantee written into the contract</em> — not a government program or provincial law. It's standard with Canada's reverse mortgage lenders, and you should see it in writing in any offer you consider.</p>
+	<p class="small">Note: this is a <em>lender guarantee written into the contract</em>, not a government program or provincial law. It's standard with Canada's reverse mortgage lenders, and you should see it in writing in any offer you consider.</p>
 	<h3>And a second layer: a lawyer of your own</h3>
-	<p>Before a reverse mortgage completes in Ontario, lenders require you to receive <strong>independent legal advice</strong> — a lawyer you choose, paid by you (typically $300–$700), working only for you. Their job is to confirm you understand the terms and that nobody is pressuring you. Treat this as a feature, not a hurdle: it's a built-in circuit breaker against every bad scenario you've heard about.</p>
+	<p>Before a reverse mortgage completes in Ontario, lenders require you to receive <strong>independent legal advice</strong>, a lawyer you choose, paid by you (typically $300–$700), working only for you. Their job is to confirm you understand the terms and that nobody is pressuring you. Treat this as a feature, not a hurdle: it's a built-in circuit breaker against every bad scenario you've heard about.</p>
 	<div class="note">
-		<strong>Where I fit in:</strong> as a licensed mortgage agent, I compare all three lenders for your situation and handle the process end to end. A bank branch can only show you its own product. You don't pay me a fee — the lender pays the brokerage when a mortgage funds, and I'll always show you exactly how that works.
+		<strong>Where I fit in:</strong> newer entrants, including Home Trust, have also joined the market. As a licensed mortgage agent, I compare the whole market for your situation and handle the process end to end. A bank branch can only show you its own product. You don't pay me a fee; the lender pays the brokerage when a mortgage funds, and I'll always show you exactly how that works.
 	</div>
 	<div class="pagefoot"><span>The Ontario Homeowner's Guide to Unlocking Home Equity Without Selling</span><span>4</span></div>
 </div>
@@ -180,23 +180,23 @@ tbody th { background: #F5EBDC; }
 <!-- ============ PAGE 5: LIVING INHERITANCE ============ -->
 <div class="page">
 	<h2>3. The "living inheritance"</h2>
-	<p>Here's a pattern I see constantly in Ontario: a couple in their seventies, mortgage-free home worth $800,000 or more, careful savers their whole lives — watching their forty-year-old kids battle a housing market and cost of living unlike anything they faced at that age.</p>
+	<p>Here's a pattern I see constantly in Ontario: a couple in their seventies, mortgage-free home worth $800,000 or more, careful savers their whole lives, watching their forty-year-old kids battle a housing market and cost of living unlike anything they faced at that age.</p>
 	<p>The traditional plan is: live carefully, protect the house, leave it all behind someday. And for some families that's exactly right.</p>
 	<p>But more and more families are asking a different question: <strong>what if some of that help arrived while everyone's alive to enjoy it?</strong></p>
 	<h3>What a living inheritance looks like</h3>
 	<ul>
-		<li><strong>A down payment for a child</strong> — turning years of their rent into equity of their own, when it changes their life the most.</li>
-		<li><strong>A grandchild's education</strong> — paid without anyone taking on student debt.</li>
-		<li><strong>Your own comfort, guilt-free</strong> — the home care, the renovation, the trip, the breathing room. Your kids would rather see you comfortable now than inherit slightly more later. (Ask them. Really.)</li>
+		<li><strong>A down payment for a child</strong>, turning years of their rent into equity of their own, when it changes their life the most.</li>
+		<li><strong>A grandchild's education</strong>, paid without anyone taking on student debt.</li>
+		<li><strong>Your own comfort, guilt-free</strong>, the home care, the renovation, the trip, the breathing room. Your kids would rather see you comfortable now than inherit slightly more later. (Ask them. Really.)</li>
 	</ul>
 	<h3>The honest trade-off, in one sentence</h3>
-	<p>A living inheritance means <strong>giving from your home's value now, at the cost of a smaller estate later</strong> — because the loan balance grows with compounding interest until it's repaid. Section 5 shows you exactly what that looks like in numbers, because you should see the price of generosity before choosing it.</p>
+	<p>A living inheritance means <strong>giving from your home's value now, at the cost of a smaller estate later</strong>, because the loan balance grows with compounding interest until it's repaid. Section 5 shows you exactly what that looks like in numbers, because you should see the price of generosity before choosing it.</p>
 	<div class="note navy">
-		<strong>A thought worth sitting with:</strong> an inheritance at 60 renovates a kitchen. Help at 35 changes the trajectory of a life. Neither is wrong — but only one of them do you get to watch.
+		<strong>A thought worth sitting with:</strong> an inheritance at 60 renovates a kitchen. Help at 35 changes the trajectory of a life. Neither is wrong, but only one of them do you get to watch.
 	</div>
 	<h3>Two guardrails if you're considering this</h3>
 	<ol>
-		<li><strong>Your security comes first.</strong> I will never recommend gifting equity you may need for your own care later. We plan for that explicitly — it's Section 7 of this guide.</li>
+		<li><strong>Your security comes first.</strong> I will never recommend gifting equity you may need for your own care later. We plan for that explicitly, it's Section 7 of this guide.</li>
 		<li><strong>Tell the whole family.</strong> Gifts that surprise siblings at the estate stage cause the fights you're trying to prevent. Openness now is cheaper than lawyers later.</li>
 	</ol>
 	<div class="pagefoot"><span>Blue Key Mortgage · 647-231-3910 · bluekeymortgage.ca</span><span>5</span></div>
@@ -210,40 +210,40 @@ tbody th { background: #F5EBDC; }
 			<h3>✓ The real advantages</h3>
 			<ul>
 				<li><strong>No monthly payments.</strong> Cash flow relief you can't get from any loan that requires servicing.</li>
-				<li><strong>You stay home.</strong> Same house, same neighbours, same garden — with the financial pressure lowered.</li>
+				<li><strong>You stay home.</strong> Same house, same neighbours, same garden, with the financial pressure lowered.</li>
 				<li><strong>Tax-free money</strong> that doesn't, by itself, touch OAS or GIS.</li>
-				<li><strong>No income qualification stress</strong> — retirement income that would sink a HELOC application doesn't block a reverse mortgage.</li>
+				<li><strong>No income qualification stress</strong>, retirement income that would sink a HELOC application doesn't block a reverse mortgage.</li>
 				<li><strong>Can't owe more than the home</strong> (lender's no-negative-equity guarantee, obligations met).</li>
-				<li><strong>Flexible</strong> — lump sum, monthly advances, or both; interest-only payments allowed if you want to hold the balance flat.</li>
+				<li><strong>Flexible</strong>, lump sum, monthly advances, or both; interest-only payments allowed if you want to hold the balance flat.</li>
 			</ul>
 		</div>
 		<div class="con-box">
 			<h3>✗ The real disadvantages</h3>
 			<ul>
-				<li><strong>Higher interest rates</strong> than regular mortgages or HELOCs — typically one to two percentage points more.</li>
-				<li><strong>Compounding works against you.</strong> With no payments, interest is charged on interest. The balance grows every year — see the next page.</li>
+				<li><strong>Higher interest rates</strong> than regular mortgages or HELOCs, typically one to two percentage points more.</li>
+				<li><strong>Compounding works against you.</strong> With no payments, interest is charged on interest. The balance grows every year, see the next page.</li>
 				<li><strong>A smaller estate.</strong> Every dollar of balance growth is a dollar your heirs don't receive.</li>
-				<li><strong>Set-up costs</strong> — roughly $2,100–$3,800 all-in (appraisal, lender fee, your lawyer).</li>
-				<li><strong>Prepayment charges</strong> can apply if you repay in the first few years — expensive money for a short stay.</li>
+				<li><strong>Set-up costs</strong>, roughly $2,100–$3,800 all-in (appraisal, lender fee, your lawyer).</li>
+				<li><strong>Prepayment charges</strong> can apply if you repay in the first few years, expensive money for a short stay.</li>
 				<li><strong>Less flexibility later.</strong> Spent equity is spent; if plans change dramatically, options narrow.</li>
 			</ul>
 		</div>
 	</div>
 	<div class="note">
-		<strong>The pattern behind good outcomes:</strong> people who use a reverse mortgage for a clear purpose, at a sustainable amount, planning to stay in the home for years — do well. People who take the maximum at 55 to cover general overspending — don't. The tool is neutral; the plan is everything.
+		<strong>The pattern behind good outcomes:</strong> people who use a reverse mortgage for a clear purpose, at a sustainable amount, planning to stay in the home for years, do well. People who take the maximum at 55 to cover general overspending, don't. The tool is neutral; the plan is everything.
 	</div>
 	<div class="pagefoot"><span>The Ontario Homeowner's Guide to Unlocking Home Equity Without Selling</span><span>6</span></div>
 </div>
 
 <!-- ============ PAGE 7: COSTS & COMPOUNDING ============ -->
 <div class="page">
-	<h2>5. What it costs — and how the balance grows</h2>
+	<h2>5. What it costs, and how the balance grows</h2>
 	<h3>One-time set-up costs</h3>
 	<table>
 		<thead><tr><th>Item</th><th>Typical range</th><th>Notes</th></tr></thead>
 		<tbody>
 			<tr><th>Property appraisal</th><td>$300–$600</td><td>Some lenders cover it if you proceed</td></tr>
-			<tr><th>Lender set-up / legal fee</th><td>$1,500–$2,500</td><td>Deducted from your funds — nothing out of pocket</td></tr>
+			<tr><th>Lender set-up / legal fee</th><td>$1,500–$2,500</td><td>Deducted from your funds, nothing out of pocket</td></tr>
 			<tr><th>Independent legal advice</th><td>$300–$700</td><td>Your own lawyer, required in Ontario</td></tr>
 		</tbody>
 	</table>
@@ -257,14 +257,14 @@ tbody th { background: #F5EBDC; }
 			<tr><th>After 10 years</th><td>≈ $563,000</td><td>≈ $1,210,000</td><td>≈ $647,000</td></tr>
 		</tbody>
 	</table>
-	<p class="small">Illustration only — not an offer or a projection. Real rates vary over time, home values can fall as well as rise, and your numbers will differ. Ask for a personalized projection in writing before deciding; any professional should provide one gladly.</p>
+	<p class="small">Illustration only, not an offer or a projection. Real rates vary over time, home values can fall as well as rise, and your numbers will differ. Ask for a personalized projection in writing before deciding; any professional should provide one gladly.</p>
 	<p>Two honest things to notice:</p>
 	<ol>
 		<li><strong>The balance nearly doubles in ten years.</strong> That's compounding. It is the true cost of "no monthly payments," and you should decide with eyes open.</li>
-		<li><strong>In this illustration, equity holds roughly steady</strong> — because modest home appreciation happened to offset interest growth. That is luck, not law: if home values stall, equity erodes year over year. Never count on appreciation to pay for a loan.</li>
+		<li><strong>In this illustration, equity holds roughly steady</strong>, because modest home appreciation happened to offset interest growth. That is luck, not law: if home values stall, equity erodes year over year. Never count on appreciation to pay for a loan.</li>
 	</ol>
 	<div class="note">
-		<strong>Want the balance to stop growing?</strong> All three lenders allow optional interest payments. Families sometimes split this: the parents take the mortgage, the kids cover the interest ($1,600/month on the example above at the start), and the estate stays whole. There are many shapes — that's what planning conversations are for.
+		<strong>Want the balance to stop growing?</strong> The major lenders allow optional interest payments. Families sometimes split this: the parents take the mortgage, the kids cover the interest ($1,600/month on the example above at the start), and the estate stays whole. There are many shapes, that's what planning conversations are for.
 	</div>
 	<div class="pagefoot"><span>Blue Key Mortgage · 647-231-3910 · bluekeymortgage.ca</span><span>7</span></div>
 </div>
@@ -276,8 +276,8 @@ tbody th { background: #F5EBDC; }
 	<table style="font-size:10.5pt;">
 		<thead><tr><th style="width:19%;"></th><th>Reverse mortgage</th><th>HELOC</th><th>Refinance / new mortgage</th><th>Downsize (sell &amp; move)</th></tr></thead>
 		<tbody>
-			<tr><th>Monthly payments</th><td><strong>None required</strong></td><td>Interest due monthly</td><td>Full payments monthly</td><td>None — you're out of debt</td></tr>
-			<tr><th>Qualify on income?</th><td>No — age &amp; equity based</td><td>Yes — many retirees fail this</td><td>Yes — strictest test</td><td>n/a</td></tr>
+			<tr><th>Monthly payments</th><td><strong>None required</strong></td><td>Interest due monthly</td><td>Full payments monthly</td><td>None, you're out of debt</td></tr>
+			<tr><th>Qualify on income?</th><td>No, age &amp; equity based</td><td>Yes, many retirees fail this</td><td>Yes, strictest test</td><td>n/a</td></tr>
 			<tr><th>Interest rate</th><td>Highest of the three loans</td><td>Lowest of the three</td><td>Low-middle</td><td>n/a</td></tr>
 			<tr><th>Risk of being called / frozen</th><td>Cannot be called if obligations met</td><td>Bank can reduce or freeze the line</td><td>Renewal risk every term</td><td>n/a</td></tr>
 			<tr><th>Effect on estate</th><td>Balance compounds; estate shrinks over time</td><td>Small if paid; grows if you borrow to pay interest</td><td>Balance shrinks as you pay</td><td>Unlocks 100% of equity, minus moving costs</td></tr>
@@ -288,9 +288,9 @@ tbody th { background: #F5EBDC; }
 	</table>
 	<h3>My honest rules of thumb</h3>
 	<ul>
-		<li>If you can <strong>comfortably qualify for and service a HELOC</strong>, start there — it's cheaper money.</li>
+		<li>If you can <strong>comfortably qualify for and service a HELOC</strong>, start there, it's cheaper money.</li>
 		<li>If you're <strong>likely to move within 2–3 years</strong>, don't take a reverse mortgage; the set-up costs and prepayment charges make it expensive for a short window.</li>
-		<li>If you're <strong>ready to leave the house anyway</strong>, downsizing beats borrowing — it unlocks everything and ends carrying costs.</li>
+		<li>If you're <strong>ready to leave the house anyway</strong>, downsizing beats borrowing, it unlocks everything and ends carrying costs.</li>
 		<li>A reverse mortgage earns its keep when <strong>staying home matters most and monthly payments don't fit</strong>. That's its lane. In its lane, nothing else does the job.</li>
 	</ul>
 	<div class="pagefoot"><span>The Ontario Homeowner's Guide to Unlocking Home Equity Without Selling</span><span>8</span></div>
@@ -298,21 +298,21 @@ tbody th { background: #F5EBDC; }
 
 <!-- ============ PAGE 9: END OF LIFE ============ -->
 <div class="page">
-	<h2>7. What happens at the end — the questions families whisper</h2>
-	<p>These are the questions people are almost embarrassed to ask. They shouldn't be — they're the most important ones.</p>
+	<h2>7. What happens at the end, the questions families whisper</h2>
+	<p>These are the questions people are almost embarrassed to ask. They shouldn't be, they're the most important ones.</p>
 	<h3>"What happens when I die?"</h3>
-	<p>Your estate repays the loan — almost always by selling the home — and <strong>everything left over goes to your beneficiaries exactly as your will directs</strong>. Lenders give the estate time to do this properly (typically around six months, with flexibility in practice). Your executor handles one payout figure; there are no ongoing payments to manage.</p>
+	<p>Your estate repays the loan, almost always by selling the home, and <strong>everything left over goes to your beneficiaries exactly as your will directs</strong>. Lenders give the estate time to do this properly (typically around six months, with flexibility in practice). Your executor handles one payout figure; there are no ongoing payments to manage.</p>
 	<h3>"What if my husband or wife outlives me?"</h3>
-	<p>If you're both on the loan — and you should be — <strong>nothing changes</strong>. The survivor stays in the home under the same terms, same rate, no requalification. This is a crucial set-up detail; I check it on every file.</p>
+	<p>If you're both on the loan, and you should be, <strong>nothing changes</strong>. The survivor stays in the home under the same terms, same rate, no requalification. This is a crucial set-up detail; I check it on every file.</p>
 	<h3>"What if I need a retirement home or long-term care someday?"</h3>
 	<ul>
 		<li><strong>One spouse moves to care, one stays home:</strong> nothing changes. The loan continues as-is.</li>
-		<li><strong>Everyone on title moves out permanently:</strong> the home is sold (or refinanced by family), the loan is repaid, and all remaining equity follows you — often becoming exactly the money that pays for care. Section 8 is about this.</li>
+		<li><strong>Everyone on title moves out permanently:</strong> the home is sold, the loan is repaid from the proceeds, and all remaining equity follows you, often becoming exactly the money that pays for care. (Family members who want to keep the property can repay the loan with financing of their own.) Section 8 is about this.</li>
 	</ul>
 	<h3>"Can my kids keep the house?"</h3>
-	<p>Yes — the estate (or the children directly) can repay the reverse mortgage with other funds or a new mortgage in their own names, and keep the property. The reverse mortgage doesn't force a sale; it just must be repaid, one way or another.</p>
+	<p>Yes, the estate (or the children directly) can repay the reverse mortgage with other funds or a new mortgage in their own names, and keep the property. The reverse mortgage doesn't force a sale; it just must be repaid, one way or another.</p>
 	<h3>"Could my children end up owing money?"</h3>
-	<p>No. The no-negative-equity guarantee means that even if home values fell dramatically, the repayment can't exceed the home's fair market value at sale (obligations met). The worst case for heirs is inheriting less — never inheriting a debt.</p>
+	<p>No. The no-negative-equity guarantee means that even if home values fell dramatically, the repayment can't exceed the home's fair market value at sale (obligations met). The worst case for heirs is inheriting less, never inheriting a debt.</p>
 	<div class="note navy">
 		<strong>Estate-planning note:</strong> if leaving specific dollar amounts to specific people matters to you, tell your estate lawyer about the reverse mortgage so your will's math still works as the balance grows. This is exactly the kind of question your independent legal advice appointment is for.
 	</div>
@@ -321,41 +321,41 @@ tbody th { background: #F5EBDC; }
 
 <!-- ============ PAGE 10: PAYING FOR CARE ============ -->
 <div class="page">
-	<h2>8. Paying for care in Ontario — where equity bridges the gap</h2>
-	<p>This is the chapter I most wish every Ontario family would read <em>before</em> a health crisis, because care costs surprise almost everyone. Approximate figures as of early 2026 — always verify current rates:</p>
+	<h2>8. Paying for care in Ontario, where equity bridges the gap</h2>
+	<p>This is the chapter I most wish every Ontario family would read <em>before</em> a health crisis, because care costs surprise almost everyone. Approximate figures as of early 2026, always verify current rates:</p>
 	<table>
 		<thead><tr><th>Care option</th><th>Typical cost</th><th>Who pays</th></tr></thead>
 		<tbody>
-			<tr><th>Government home care<br />(Ontario Health atHome)</th><td>Publicly funded</td><td>OHIP — but hours are limited and waitlists are real; most families supplement privately</td></tr>
-			<tr><th>Private home care (PSW)</th><td>Roughly $35–$50/hour</td><td>You — e.g., 4 hours a day ≈ $4,500+/month</td></tr>
-			<tr><th>Retirement home (private)</th><td>Roughly $4,000–$7,000+/month; memory care higher</td><td>You — retirement homes are private-pay in Ontario</td></tr>
+			<tr><th>Government home care<br />(Ontario Health atHome)</th><td>Publicly funded</td><td>OHIP, but hours are limited and waitlists are real; most families supplement privately</td></tr>
+			<tr><th>Private home care (PSW)</th><td>Roughly $35–$50/hour</td><td>You, e.g., 4 hours a day ≈ $4,500+/month</td></tr>
+			<tr><th>Retirement home (private)</th><td>Roughly $4,000–$7,000+/month; memory care higher</td><td>You, retirement homes are private-pay in Ontario</td></tr>
 			<tr><th>Long-term care home</th><td>Accommodation co-payment roughly $2,100–$3,100/month (subsidies exist for basic rooms)</td><td>Care is OHIP-funded; you pay accommodation. Waitlists can be long</td></tr>
 		</tbody>
 	</table>
 	<h3>The gap, and the bridge</h3>
-	<p>A typical Ontario retirement income — CPP, OAS, maybe a modest pension — often covers $3,000–$4,500 a month. Quality care can cost $5,000–$8,000. The difference has to come from somewhere, and for most Ontario seniors, <strong>the somewhere is the house</strong>. The only question is how:</p>
+	<p>A typical Ontario retirement income, CPP, OAS, maybe a modest pension, often covers $3,000–$4,500 a month. Quality care can cost $5,000–$8,000. The difference has to come from somewhere, and for most Ontario seniors, <strong>the somewhere is the house</strong>. The only question is how:</p>
 	<ul>
-		<li><strong>Sell and move to care</strong> — unlocks everything, but ends the option of home, on a timeline a health event picks for you.</li>
-		<li><strong>Reverse mortgage to fund care at home</strong> — monthly advances pay for PSWs, adaptations, and support, letting you age in place. This is the "pay for care with the house, while keeping the house" option.</li>
-		<li><strong>Bridge scenario</strong> — one spouse needs a retirement residence, the other stays home. A reverse mortgage funds the residence fees without forcing the healthy spouse out of the family home. I see this heartbreaking math monthly; this tool was built for it.</li>
+		<li><strong>Sell and move to care</strong>, unlocks everything, but ends the option of home, on a timeline a health event picks for you.</li>
+		<li><strong>Reverse mortgage to fund care at home</strong>, monthly advances pay for PSWs, adaptations, and support, letting you age in place. This is the "pay for care with the house, while keeping the house" option.</li>
+		<li><strong>Bridge scenario</strong>, one spouse needs a retirement residence, the other stays home. A reverse mortgage funds the residence fees without forcing the healthy spouse out of the family home. I see this heartbreaking math monthly; this tool was built for it.</li>
 	</ul>
 	<div class="note">
-		<strong>Renovating to stay:</strong> stair lifts, walk-in showers, main-floor bedrooms — aging-in-place renovations often run $10,000–$60,000. Check the federal <strong>Multigenerational Home Renovation Tax Credit</strong> and Ontario's <strong>Seniors' Home Safety</strong> programs for current support before spending equity; your Ontario Health atHome care coordinator and an occupational therapist can advise what your home actually needs.
+		<strong>Renovating to stay:</strong> stair lifts, walk-in showers, main-floor bedrooms, aging-in-place renovations often run $10,000–$60,000. Check the federal <strong>Multigenerational Home Renovation Tax Credit</strong> and Ontario's <strong>Seniors' Home Safety</strong> programs for current support before spending equity; your Ontario Health atHome care coordinator and an occupational therapist can advise what your home actually needs.
 	</div>
 	<div class="pagefoot"><span>The Ontario Homeowner's Guide to Unlocking Home Equity Without Selling</span><span>10</span></div>
 </div>
 
 <!-- ============ PAGE 11: RED FLAGS ============ -->
 <div class="page">
-	<h2>9. Red flags — how predators target homeowners like you</h2>
-	<p>Seniors with home equity are the most targeted financial demographic in Canada. Most of what protects you is pattern recognition. Walk away — or better, call FSRA or the police non-emergency line — when you see:</p>
+	<h2>9. Red flags, how predators target homeowners like you</h2>
+	<p>Seniors with home equity are the most targeted financial demographic in Canada. Most of what protects you is pattern recognition. Walk away, or better, call FSRA or the police non-emergency line, when you see:</p>
 	<ol>
 		<li><strong>Urgency.</strong> "This rate expires Friday." Real reverse mortgages have no deadline. Pressure is the single most reliable warning sign in all of finance.</li>
-		<li><strong>Upfront fees to "secure" anything.</strong> Legitimate costs (appraisal, lawyer) are paid to the appraiser and the lawyer — never wired to an individual, never in gift cards, never "processing fees" to unlock funds.</li>
+		<li><strong>Upfront fees to "secure" anything.</strong> Legitimate costs (appraisal, lawyer) are paid to the appraiser and the lawyer, never wired to an individual, never in gift cards, never "processing fees" to unlock funds.</li>
 		<li><strong>Secrecy coaching.</strong> "No need to bother your kids with this." Reverse: legitimate professionals <em>encourage</em> family involvement. Isolation is the predator's first tool.</li>
 		<li><strong>Unverifiable people.</strong> Every legitimate mortgage professional in Ontario appears on FSRA's public registry (fsrao.ca), and every reverse mortgage comes from HomeEquity Bank, Equitable Bank, or Bloom. Two minutes of checking defeats most scams. Check me too: BRX Mortgage Inc., FSRA #13549.</li>
 		<li><strong>Guaranteed numbers before an appraisal.</strong> Nobody honest can promise "$400,000, guaranteed" without a lender assessment of your actual home.</li>
-		<li><strong>US terminology on "Canadian" sites.</strong> "HECM," "FHA-insured," "government-insured reverse mortgage" — American terms. A Canadian site using them is either careless or copied. Either way, leave.</li>
+		<li><strong>US terminology on "Canadian" sites.</strong> "HECM," "FHA-insured," "government-insured reverse mortgage", American terms. A Canadian site using them is either careless or copied. Either way, leave.</li>
 		<li><strong>Title transfers, joint accounts, powers of attorney</strong> requested by anyone in a sales process. A reverse mortgage never requires giving anyone else control of your home or money.</li>
 		<li><strong>Pushy bundling.</strong> "While we're at it, let's move your investments too." Mortgage agents arrange mortgages. Anyone reaching for the rest of your portfolio mid-transaction has told you their real business.</li>
 	</ol>
@@ -367,43 +367,43 @@ tbody th { background: #F5EBDC; }
 
 <!-- ============ PAGE 12: QUESTIONS CHECKLIST ============ -->
 <div class="page">
-	<h2>10. Questions to ask any mortgage agent — including me</h2>
+	<h2>10. Questions to ask any mortgage agent, including me</h2>
 	<p>Print this page and bring it to every conversation. Honest professionals enjoy these questions; the other kind squirm. Both reactions tell you what you need to know.</p>
 	<ul class="checkbox-line">
-		<li><strong>"Are you licensed, and with whom?"</strong> — Then verify the brokerage and agent on FSRA's public registry yourself. (Me: Ragini Domenichini, Mortgage Agent Level 2, BRX Mortgage Inc., FSRA #13549.)</li>
-		<li><strong>"How are you paid, and by whom?"</strong> — The answer should be immediate and specific. (Me: the lender pays the brokerage a fee when a mortgage funds; you pay me nothing.)</li>
-		<li><strong>"Which lenders did you compare for me?"</strong> — There are three in Canada. If only one was quoted, ask why.</li>
-		<li><strong>"Show me the balance in 5 and 10 years, in writing."</strong> — The compounding projection. Refusing or hand-waving this is disqualifying.</li>
-		<li><strong>"What are ALL the costs?"</strong> — Appraisal, lender fee, legal, and any prepayment charges by year.</li>
-		<li><strong>"What happens if I die next year? If my spouse does? If we move to care?"</strong> — The answers should match Section 7 of this guide.</li>
-		<li><strong>"When is this product wrong for someone like me?"</strong> — The most revealing question on this list. Anyone who says "it's right for everyone" is selling, not advising.</li>
-		<li><strong>"Can my daughter/son join our next call?"</strong> — Watch the reaction closely. Welcome = good sign. Hesitance = leave.</li>
-		<li><strong>"What alternatives should I rule out first?"</strong> — You should hear HELOC, refinancing, and downsizing discussed honestly, with real trade-offs.</li>
-		<li><strong>"Can I take less than the maximum?"</strong> — Yes, always — and often you should. An agent pushing the maximum is optimizing their number, not yours.</li>
+		<li><strong>"Are you licensed, and with whom?"</strong>, Then verify the brokerage and agent on FSRA's public registry yourself. (Me: Ragini Domenichini, Mortgage Agent Level 2, BRX Mortgage Inc., FSRA #13549.)</li>
+		<li><strong>"How are you paid, and by whom?"</strong>, The answer should be immediate and specific. (Me: the lender pays the brokerage a fee when a mortgage funds; you pay me nothing.)</li>
+		<li><strong>"Which lenders did you compare for me?"</strong>, The market has roughly five lenders, led by three majors. If only one was quoted, ask why.</li>
+		<li><strong>"Show me the balance in 5 and 10 years, in writing."</strong>, The compounding projection. Refusing or hand-waving this is disqualifying.</li>
+		<li><strong>"What are ALL the costs?"</strong>, Appraisal, lender fee, legal, and any prepayment charges by year.</li>
+		<li><strong>"What happens if I die next year? If my spouse does? If we move to care?"</strong>, The answers should match Section 7 of this guide.</li>
+		<li><strong>"When is this product wrong for someone like me?"</strong>, The most revealing question on this list. Anyone who says "it's right for everyone" is selling, not advising.</li>
+		<li><strong>"Can my daughter/son join our next call?"</strong>, Watch the reaction closely. Welcome = good sign. Hesitance = leave.</li>
+		<li><strong>"What alternatives should I rule out first?"</strong>, You should hear HELOC, refinancing, and downsizing discussed honestly, with real trade-offs.</li>
+		<li><strong>"Can I take less than the maximum?"</strong>, Yes, always, and often you should. An agent pushing the maximum is optimizing their number, not yours.</li>
 	</ul>
 	<div class="pagefoot"><span>The Ontario Homeowner's Guide to Unlocking Home Equity Without Selling</span><span>12</span></div>
 </div>
 
 <!-- ============ PAGE 13: FAMILY CONVERSATION ============ -->
 <div class="page">
-	<h2>11. The family conversation — a gentle script</h2>
-	<p>The most common reason good reverse mortgage decisions go sideways isn't the mortgage — it's the family finding out about it late, framed as a done deal. Here's how to do it well, whichever side of the conversation you're on.</p>
+	<h2>11. The family conversation, a gentle script</h2>
+	<p>The most common reason good reverse mortgage decisions go sideways isn't the mortgage, it's the family finding out about it late, framed as a done deal. Here's how to do it well, whichever side of the conversation you're on.</p>
 	<h3>If you're the homeowner telling your kids</h3>
 	<ul>
-		<li><strong>Lead with the why, not the product.</strong> "I want to stop worrying about money every month" or "I'd rather help you with a house now than leave you one later" — the goal makes sense before the tool does.</li>
+		<li><strong>Lead with the why, not the product.</strong> "I want to stop worrying about money every month" or "I'd rather help you with a house now than leave you one later", the goal makes sense before the tool does.</li>
 		<li><strong>Bring the numbers.</strong> Show the written projection (Section 5). Vagueness breeds worry; specifics settle it.</li>
-		<li><strong>Name the inheritance thing out loud.</strong> "This means the estate will be smaller. I want to hear how you feel about that." You may be surprised — most adult children care far more about your comfort than the residual.</li>
+		<li><strong>Name the inheritance thing out loud.</strong> "This means the estate will be smaller. I want to hear how you feel about that." You may be surprised, most adult children care far more about your comfort than the residual.</li>
 		<li><strong>Invite them into the process,</strong> not just the announcement: the consultation call, the lawyer meeting. Witnesses make good decisions better and bad ones impossible.</li>
 	</ul>
 	<h3>If you're the adult child raising it with a parent</h3>
 	<ul>
 		<li><strong>Ask, don't tell.</strong> "How are you feeling about money these days?" opens doors that "You should look at a reverse mortgage" slams shut. It's their home and their call.</li>
-		<li><strong>Do the protective homework together</strong> — verify licences, read this guide side by side, join the calls. Being an ally beats being a gatekeeper.</li>
-		<li><strong>Check your own conflict of interest, kindly.</strong> If the plan involves helping <em>you</em>, be the one who insists on the lawyer, the projection, and the pace. That protects your parent — and protects the plan from resentment later.</li>
+		<li><strong>Do the protective homework together</strong>, verify licences, read this guide side by side, join the calls. Being an ally beats being a gatekeeper.</li>
+		<li><strong>Check your own conflict of interest, kindly.</strong> If the plan involves helping <em>you</em>, be the one who insists on the lawyer, the projection, and the pace. That protects your parent, and protects the plan from resentment later.</li>
 		<li><strong>If siblings exist, loop them in early.</strong> The estate-stage surprise is the fight that breaks families. One honest group conversation now prevents it.</li>
 	</ul>
 	<div class="note">
-		<strong>Standing offer:</strong> I do family calls all the time — parents at the kitchen table, kids dialed in from Calgary or London or down the street. Everyone hears the same numbers at the same time, and every question gets answered in front of everyone. It's the single best scam-proofing and fight-proofing measure I know.
+		<strong>Standing offer:</strong> I do family calls all the time, parents at the kitchen table, kids dialed in from Calgary or London or down the street. Everyone hears the same numbers at the same time, and every question gets answered in front of everyone. It's the single best scam-proofing and fight-proofing measure I know.
 	</div>
 	<div class="pagefoot"><span>Blue Key Mortgage · 647-231-3910 · bluekeymortgage.ca</span><span>13</span></div>
 </div>
@@ -411,9 +411,9 @@ tbody th { background: #F5EBDC; }
 <!-- ============ PAGE 14: NEXT STEPS / BACK ============ -->
 <div class="page">
 	<h2>12. If you'd like to take one small step</h2>
-	<p>There's no rush and no obligation — but if this guide left you wanting your own numbers instead of illustrations, here's what happens:</p>
+	<p>There's no rush and no obligation, but if this guide left you wanting your own numbers instead of illustrations, here's what happens:</p>
 	<ol>
-		<li><strong>A 15–30 minute call.</strong> You tell me about your home and what you're trying to solve. I'll tell you honestly whether a reverse mortgage fits — or what I'd do instead.</li>
+		<li><strong>A 15–30 minute call.</strong> You tell me about your home and what you're trying to solve. I'll tell you honestly whether a reverse mortgage fits, or what I'd do instead.</li>
 		<li><strong>Real numbers, in writing.</strong> What you could access from each lender, all costs, and the 5- and 10-year balance picture. Take it home. Show your family. Sleep on it.</li>
 		<li><strong>You decide, at your pace.</strong> If you proceed, I handle the process end to end, including arranging your independent legal advice. If you don't, the folder goes in a drawer and we part friends.</li>
 	</ol>
@@ -422,10 +422,10 @@ tbody th { background: #F5EBDC; }
 	<p style="font-size:14pt;">📞 <strong>647-231-3910</strong><br />
 	✉️ ragini@bluekeymortgage.ca<br />
 	🌐 bluekeymortgage.ca</p>
-	<p class="small">Verify my licensing anytime on FSRA's public registry at fsrao.ca — and please, verify everyone else's too.</p>
+	<p class="small">Verify my licensing anytime on FSRA's public registry at fsrao.ca, and please, verify everyone else's too.</p>
 	<hr style="border:0; border-top:1px solid var(--line); margin:1.5em 0;" />
 	<h3 style="font-size:12pt;">The fine print, in plain sight</h3>
-	<p class="small">This guide is general education for Ontario residents, current to early 2026, and is not legal, tax, investment, or personalized financial advice. A reverse mortgage is a loan secured against your home: it must be repaid when you sell, move out permanently, or pass away; interest accrues and compounds over time and reduces your remaining equity; set-up costs and prepayment charges may apply. All figures shown are illustrations only. Approval, rates, and available amounts depend on lender qualification and are never guaranteed. A reverse mortgage is not a government program or benefit. Product features described (including the no-negative-equity guarantee) are those of individual lenders and are subject to their terms and conditions — confirm all features in writing with the lender. Before proceeding with any reverse mortgage, obtain independent legal advice, and consult an independent financial or tax advisor about your personal situation. Blue Key Mortgage is the practice of Ragini Domenichini, Mortgage Agent Level 2, licensed with BRX Mortgage Inc. (FSRA #13549). © 2026 Blue Key Mortgage. You're welcome to share this guide freely and unaltered with anyone it might help.</p>
+	<p class="small">This guide is general education for Ontario residents, current to early 2026, and is not legal, tax, investment, or personalized financial advice. A reverse mortgage is a loan secured against your home: it must be repaid when you sell, move out permanently, or pass away; interest accrues and compounds over time and reduces your remaining equity; set-up costs and prepayment charges may apply. All figures shown are illustrations only. Approval, rates, and available amounts depend on lender qualification and are never guaranteed. A reverse mortgage is not a government program or benefit. Product features described (including the no-negative-equity guarantee) are those of individual lenders and are subject to their terms and conditions, confirm all features in writing with the lender. Before proceeding with any reverse mortgage, obtain independent legal advice, and consult an independent financial or tax advisor about your personal situation. Blue Key Mortgage is the practice of Ragini Domenichini, Mortgage Agent Level 2, licensed with BRX Mortgage Inc. (FSRA #13549). © 2026 Blue Key Mortgage. You're welcome to share this guide freely and unaltered with anyone it might help.</p>
 	<div class="pagefoot"><span>The Ontario Homeowner's Guide to Unlocking Home Equity Without Selling</span><span>14</span></div>
 </div>
 
