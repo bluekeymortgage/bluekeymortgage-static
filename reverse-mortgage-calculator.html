@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>How Much Could You Get? Reverse Mortgage Estimator | Blue Key Mortgage</title>
+	<meta name="description" content="A free 60-second reverse mortgage estimator for Ontario homeowners 55+. See an honest estimate of the tax-free cash your home could unlock. No email, nothing recorded." />
+	<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+	<link rel="canonical" href="https://bluekeymortgage.ca/reverse-mortgage-calculator" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Blue Key Mortgage" />
+	<meta property="og:title" content="How Much Could You Get? Reverse Mortgage Estimator | Blue Key Mortgage" />
+	<meta property="og:description" content="A free 60-second reverse mortgage estimator for Ontario homeowners 55+. See an honest estimate of the tax-free cash your home could unlock. No email, nothing recorded." />
+	<meta property="og:url" content="https://bluekeymortgage.ca/reverse-mortgage-calculator" />
+	<meta property="og:image" content="https://bluekeymortgage.ca/images/og-image.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<link rel="stylesheet" href="assets/css/bluekey.css" />
+	<style>
+	.calc-field { margin-bottom: 2rem; }
+	.calc-field > label, .calc-field > .field-label { display:block; font-family:var(--sans); font-weight:700; font-size:1.15rem; color:var(--navy); margin-bottom:0.6rem; }
+	.calc-field .hint { font-size:0.95rem; color:var(--ink-soft); margin:0 0 0.8rem; }
+	.age-options { display:flex; flex-wrap:wrap; gap:0.6rem; }
+	.age-options label {
+		display:flex; align-items:center; gap:0.5rem; background:var(--white); border:2px solid var(--line);
+		border-radius:12px; padding:0.8rem 1.1rem; cursor:pointer; font-family:var(--sans); font-weight:600; font-size:1.05rem;
+	}
+	.age-options label:has(input:checked) { border-color:var(--navy); background:#EAF1F7; }
+	.age-options input { width:1.4rem; height:1.4rem; accent-color:#1C3D5A; }
+	.money-input { display:flex; align-items:center; max-width:20rem; background:var(--white); border:2px solid var(--line); border-radius:12px; overflow:hidden; }
+	.money-input span { padding:0 0 0 1rem; font-size:1.3rem; color:var(--ink-soft); font-family:var(--sans); }
+	.money-input input { border:none; outline:none; width:100%; padding:0.9rem 1rem 0.9rem 0.4rem; font-size:1.3rem; font-family:var(--sans); background:transparent; color:var(--ink); }
+	.money-input:focus-within { border-color:var(--navy); }
+	.quick-picks { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.7rem; }
+	.quick-picks button {
+		background:var(--cream-deep); border:1px solid var(--line); border-radius:999px; padding:0.45rem 1rem;
+		font-family:var(--sans); font-weight:600; font-size:0.98rem; color:var(--ink); cursor:pointer;
+	}
+	.quick-picks button:hover { border-color:var(--gold); }
+	#calc-result { display:none; margin-top:2rem; }
+	#calc-result.show { display:block; }
+	.result-figure { font-family:var(--serif, Georgia, serif); font-size:clamp(1.6rem, 4vw, 2.2rem); color:var(--navy); font-weight:700; margin:0.3rem 0 0.8rem; }
+	.result-line { margin:0.6rem 0; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://bluekeymortgage.ca/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "How Much Can I Get?",
+      "item": "https://bluekeymortgage.ca/reverse-mortgage-calculator"
+    }
+  ]
+}
+	</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="trust-bar">Licensed mortgage agent with <strong>BRX Mortgage Inc. (FSRA #13549)</strong> &nbsp;·&nbsp; Free, no-obligation consultations</div>
+
+<header class="site-header">
+	<div class="wrap bar">
+		<a class="brand" href="index.html" aria-label="Blue Key Mortgage home">
+			<svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="9" stroke="#B8862D" stroke-width="4"/><path d="M20 20 L34 34 M28 28 L33 23 M24 24 L29 19" stroke="#1C3D5A" stroke-width="4" stroke-linecap="round"/></svg>
+			<span class="name">Blue Key Mortgage<span class="tag">Reverse mortgage guidance for Ontario families</span><span class="brx-badge"><img src="images/brx-wordmark.png" alt="BRX Mortgage" width="48" height="16">Mortgage &nbsp;&middot;&nbsp; FSRA #13549</span></span>
+		</a>
+		<div class="header-cta">
+			<a class="call-link" href="tel:+16472313910">
+				<span class="call-label">Call Ragini, free &amp; friendly</span>
+				<span class="call-number">647-231-3910</span>
+			</a>
+			<a class="btn gold no-print" href="guide.html">Free Guide</a>
+			<button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" onclick="bkNav(this)">Menu ☰</button>
+		</div>
+	</div>
+</header>
+<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+	<div class="wrap">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="reverse-mortgage.html">Reverse Mortgages</a></li>
+			<li><a href="right-for-you.html">Is It Right for You?</a></li>
+			<li><a href="reverse-mortgage-calculator.html" aria-current="page">How Much Can I Get?</a></li>
+			<li><a href="for-adult-children.html">For Adult Children</a></li>
+			<li><a href="faq.html">Your Questions</a></li>
+			<li><a href="about.html">About Ragini</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+</nav>
+
+<main id="main">
+	<div class="wrap crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li>How Much Can I Get?</li></ol></div>
+
+	<section class="hero">
+		<div class="wrap prose">
+			<p class="eyebrow">A 60-second honest estimate</p>
+			<h1>How much could your home unlock?</h1>
+			<p class="lede">Answer two quick questions and see an honest range, right here on your screen. Nothing you enter is recorded or sent anywhere, and no one will call you afterwards.</p>
+		</div>
+	</section>
+
+	<section class="band alt">
+		<div class="wrap prose">
+			<div class="calc-field">
+				<span class="field-label" id="age-label">How old is the youngest owner of the home?</span>
+				<p class="hint">Lenders base the amount on the youngest person on title. The older you are, the more you can unlock.</p>
+				<div class="age-options" role="radiogroup" aria-labelledby="age-label">
+					<label><input type="radio" name="age" value="55" /> 55–59</label>
+					<label><input type="radio" name="age" value="60" /> 60–64</label>
+					<label><input type="radio" name="age" value="65" /> 65–69</label>
+					<label><input type="radio" name="age" value="70" /> 70–74</label>
+					<label><input type="radio" name="age" value="75" /> 75–79</label>
+					<label><input type="radio" name="age" value="80" /> 80 or older</label>
+				</div>
+			</div>
+
+			<div class="calc-field">
+				<label for="home-value">What is your home roughly worth today?</label>
+				<p class="hint">Your best guess is fine, a recent estimate from a realtor, your property assessment, or what similar homes nearby have sold for.</p>
+				<div class="money-input"><span>$</span><input type="text" id="home-value" inputmode="numeric" autocomplete="off" placeholder="800,000" aria-describedby="value-hint" /></div>
+				<div class="quick-picks" id="value-hint" aria-label="Quick amounts">
+					<button type="button" onclick="setValue(600000)">$600,000</button>
+					<button type="button" onclick="setValue(800000)">$800,000</button>
+					<button type="button" onclick="setValue(1000000)">$1,000,000</button>
+					<button type="button" onclick="setValue(1500000)">$1,500,000</button>
+				</div>
+			</div>
+
+			<div class="calc-field">
+				<label for="owing">Still owe anything on the home? <span style="font-weight:400;">(optional)</span></label>
+				<p class="hint">Any mortgage, HELOC, or secured line of credit. A reverse mortgage pays this off first, which is how many families end their monthly mortgage payment for good. Leave blank if your home is paid off.</p>
+				<div class="money-input"><span>$</span><input type="text" id="owing" inputmode="numeric" autocomplete="off" placeholder="0" /></div>
+			</div>
+
+			<p><button class="btn big gold" onclick="calcResult()">Show my estimate</button></p>
+			<div id="calc-result" class="note" role="status" aria-live="polite"></div>
+			<p class="small" style="margin-top:1.5rem;">This estimator is general education, not advice or an offer to lend. It uses typical age-based ranges across Canada's reverse mortgage lenders. Your actual amount depends on the lender, your property's type and location, and a professional appraisal, and can be higher or lower than this range. Nothing you enter is collected or transmitted.</p>
+		</div>
+	</section>
+
+	<section class="band">
+		<div class="wrap prose">
+			<h2>Why you can't borrow it all, and why that protects you</h2>
+			<p>Canadian reverse mortgage lenders cap what you can borrow, at most about 55% of your home's value, and less at younger ages. That cap isn't stinginess. It's the reason lenders can guarantee you'll <strong>never owe more than your home is worth</strong>, and it means a healthy share of your home's value stays yours as equity on day one.</p>
+			<p>The money you unlock is <strong>tax-free</strong>, because it's your own equity, not income. It generally doesn't affect Old Age Security or the Guaranteed Income Supplement either.</p>
+			<h2 style="margin-top:2.5rem;">What decides your real number</h2>
+			<ul>
+				<li><strong>The age of the youngest owner</strong>, older means more.</li>
+				<li><strong>Your home's appraised value, type, and location</strong>, urban homes in strong markets qualify for more.</li>
+				<li><strong>Which lender</strong>, HomeEquity Bank (CHIP), Equitable Bank (Flex), and Bloom each set their own limits. I compare all three for you, that's my job.</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="cta-band">
+		<div class="wrap prose">
+			<h2>Want your real number, in writing?</h2>
+			<p class="lede">A free 15-minute call gets you actual figures from all three Canadian lenders, on paper, to take home and sleep on. If a reverse mortgage isn't your best option, I'll tell you that too.</p>
+			<ul class="actions">
+				<li><a class="btn big gold" href="tel:+16472313910">Call 647-231-3910</a></li>
+				<li><a class="btn big ghost" href="right-for-you.html">Take the honest self-assessment</a></li>
+				<li><a class="btn big ghost" href="guide.html">Get the free guide</a></li>
+			</ul>
+		</div>
+	</section>
+
+<script>
+var LTV = { 55:[0.15,0.25], 60:[0.20,0.30], 65:[0.25,0.37], 70:[0.30,0.44], 75:[0.35,0.50], 80:[0.40,0.55] };
+
+function parseMoney(id){
+	var raw = (document.getElementById(id).value || '').replace(/[^0-9]/g, '');
+	return raw ? parseInt(raw, 10) : 0;
+}
+function fmt(n){ return '$' + n.toLocaleString('en-CA'); }
+function round5k(n){ return Math.round(n / 5000) * 5000; }
+function setValue(n){
+	document.getElementById('home-value').value = n.toLocaleString('en-CA');
+}
+['home-value','owing'].forEach(function(id){
+	document.getElementById(id).addEventListener('input', function(){
+		var raw = this.value.replace(/[^0-9]/g, '');
+		this.value = raw ? parseInt(raw,10).toLocaleString('en-CA') : '';
+	});
+});
+
+function calcResult(){
+	var el = document.getElementById('calc-result');
+	var ageEl = document.querySelector('input[name="age"]:checked');
+	var value = parseMoney('home-value');
+	var owing = parseMoney('owing');
+	var msg;
+
+	if (!ageEl || !value) {
+		msg = "<strong>Almost there.</strong> Choose an age range and enter a rough home value above, then press the button again.";
+	} else if (value < 200000) {
+		msg = "<strong>An honest note:</strong> reverse mortgage lenders usually need a home value of roughly $200,000 or more (it varies by lender and location). With a value below that, other options may serve you better, a conversation would sort it out quickly, with no obligation.";
+	} else {
+		var band = LTV[ageEl.value];
+		var low = round5k(value * band[0]);
+		var high = round5k(value * band[1]);
+		var keeps = value - high;
+		var keepsPct = Math.round(keeps / value * 100);
+
+		if (owing > 0 && owing >= high) {
+			msg = "<strong>An honest read:</strong> at this age and home value, the typical maximum (" + fmt(low) + "–" + fmt(high) + ") may not be enough to pay off the " + fmt(owing) + " you still owe, and paying off what's owing always comes first. Sometimes a different lender, an updated appraisal, or another tool entirely (like refinancing) changes the picture. This is exactly the kind of situation worth a free 15-minute conversation.";
+		} else if (owing > 0) {
+			var netLow = Math.max(round5k(low - owing), 0);
+			var netHigh = round5k(high - owing);
+			msg = "<strong>Your honest estimate:</strong>"
+				+ "<p class='result-figure'>" + fmt(netLow) + " – " + fmt(netHigh) + " for you, tax-free</p>"
+				+ "<p class='result-line'>That's after first paying off the " + fmt(owing) + " you owe now, <strong>which would end that monthly payment for good</strong>. In total, a lender would typically advance between " + fmt(low) + " and " + fmt(high) + " on a home worth " + fmt(value) + ".</p>"
+				+ "<p class='result-line'>And here's the part most people don't expect: even at the top of that range, roughly <strong>" + fmt(keeps) + " (about " + keepsPct + "%) of your home's value stays untouched as your equity</strong> on day one. You stay the owner. You stay home.</p>"
+				+ "<p class='result-line'>Interest does accrue on what you borrow, so the loan balance grows over time, that's the honest trade-off, and it's why the right structure (lump sum vs. monthly amounts) matters.</p>";
+		} else {
+			msg = "<strong>Your honest estimate:</strong>"
+				+ "<p class='result-figure'>" + fmt(low) + " – " + fmt(high) + " tax-free</p>"
+				+ "<p class='result-line'>That's the typical range lenders would advance at your age on a home worth " + fmt(value) + ", as a lump sum, monthly amounts, or a mix.</p>"
+				+ "<p class='result-line'>And here's the part most people don't expect: even at the top of that range, roughly <strong>" + fmt(keeps) + " (about " + keepsPct + "%) of your home's value stays untouched as your equity</strong> on day one. You stay the owner. You stay home.</p>"
+				+ "<p class='result-line'>Interest does accrue on what you borrow, so the loan balance grows over time, that's the honest trade-off, and it's why the right structure (lump sum vs. monthly amounts) matters.</p>";
+		}
+	}
+	el.innerHTML = msg;
+	el.classList.add('show');
+	el.scrollIntoView({block:'nearest'});
+}
+</script>
+
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<div class="footer-cols">
+			<div>
+				<h3>Blue Key Mortgage</h3>
+				<p>Plain-English reverse mortgage guidance for Ontario homeowners 55+ and the families who love them.</p>
+				<p><strong><a href="tel:+16472313910">647-231-3910</a></strong><br />
+				<a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a><br />
+				<a href="https://www.instagram.com/bluekeymortgage_on" rel="noopener">Instagram: @bluekeymortgage_on</a></p>
+			</div>
+			<div>
+				<h3>Learn</h3>
+				<ul>
+					<li><a href="reverse-mortgage.html">Reverse Mortgages</a></li>
+					<li><a href="right-for-you.html">Is It Right for You?</a></li>
+					<li><a href="reverse-mortgage-calculator.html">How Much Can I Get?</a></li>
+					<li><a href="for-adult-children.html">For Adult Children</a></li>
+					<li><a href="faq.html">Your Questions, Answered</a></li>
+					<li><a href="guide.html">Free Guide</a></li>
+					<li><a href="blog.html">Articles</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>More</h3>
+				<ul>
+					<li><a href="about.html">About Ragini</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="retirement-planning.html">Retirement Planning</a></li>
+					<li><a href="home-care-support.html">Home Care &amp; Support</a></li>
+					<li><a href="resources.html">Ontario Resources</a></li>
+					<li><a href="referral-partners.html">Referral Partners</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Communities Served</h3>
+				<ul>
+					<li><a href="reverse-mortgage-toronto.html">Toronto</a> · <a href="reverse-mortgage-etobicoke.html">Etobicoke</a> · <a href="reverse-mortgage-scarborough.html">Scarborough</a> · <a href="reverse-mortgage-north-york.html">North York</a></li>
+					<li><a href="reverse-mortgage-mississauga-oakville.html">Mississauga &amp; Oakville</a> · <a href="reverse-mortgage-brampton.html">Brampton</a> · <a href="reverse-mortgage-burlington.html">Burlington</a></li>
+					<li><a href="reverse-mortgage-vaughan-richmond-hill-markham.html">Vaughan, Richmond Hill &amp; Markham</a></li>
+					<li><a href="reverse-mortgage-durham.html">Ajax, Pickering, Whitby &amp; Oshawa</a></li>
+					<li><a href="reverse-mortgage-hamilton.html">Hamilton</a> · <a href="reverse-mortgage-london.html">London</a> · <a href="reverse-mortgage-ottawa.html">Ottawa</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-legal">
+			<p><strong>Blue Key Mortgage</strong>, Ragini Domenichini, Mortgage Agent Level 2, powered by BRX Mortgage Inc. (FSRA #13549).</p>
+			<p>A reverse mortgage is a loan secured against your home. It must be repaid when you sell your home, move out permanently, or pass away. Interest accrues over time and reduces the equity remaining in your home. Terms, conditions, and lender qualification apply; approval, rates, and amounts are never guaranteed. A reverse mortgage is not a government program or benefit.</p>
+			<p>The information on this website is general education, not legal, tax, or investment advice. Please consult an independent legal or financial advisor about your personal situation. Independent legal advice is required before completing any reverse mortgage in Ontario.</p>
+			<p><a href="privacy.html">Privacy Policy</a> · © 2026 Blue Key Mortgage. All rights reserved.</p>
+		</div>
+	</div>
+</footer>
+
+<script>
+function bkNav(btn){var n=document.getElementById('site-nav');var open=n.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');}
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f4200d63a52c4aaca84c13bcf1103ee2"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
