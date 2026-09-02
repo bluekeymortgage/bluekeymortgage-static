@@ -5,7 +5,7 @@
 
 ## Welcome to Your Retirement Planning Journey
 
-Retirement planning can feel overwhelming, but it doesn't have to be. Think of this guide as your friendly roadmap—not a rigid set of rules. Whether you're approaching retirement, recently retired, or have been retired for years, there's always room to adjust and improve your plan.
+Retirement planning can feel overwhelming, but it doesn't have to be. Think of this guide as your friendly roadmap, not a rigid set of rules. Whether you're approaching retirement, recently retired, or have been retired for years, there's always room to adjust and improve your plan.
 
 **My philosophy:** Retirement planning is about **creating the life you want**, not just managing numbers. Let's explore how to make your retirement years fulfilling, secure, and aligned with your values.
 
@@ -30,7 +30,7 @@ Before diving into numbers, let's dream a little. What does your ideal retiremen
 - **The Family Anchor:** Spending time with children and grandchildren
 - **The Hybrid:** A mix of all the above
 
-**There's no right or wrong answer**—only what's right for you.
+**There's no right or wrong answer,** only what's right for you.
 
 ---
 
@@ -82,7 +82,7 @@ Retirement income typically comes from several sources. Let's explore each one f
 
 ## Step 3: Create Your Retirement Budget
 
-A retirement budget isn't about restriction—it's about **conscious choice**.
+A retirement budget isn't about restriction. It's about **conscious choice**.
 
 ### Fixed Expenses (Typically Decrease in Retirement)
 - **Mortgage payments** (may be eliminated)
@@ -299,4 +299,4 @@ Retirement planning is a journey, not a destination. The most important step is 
 
 ---
 
-*This guide is for informational purposes only and does not constitute financial advice. Retirement planning involves complex decisions—consult with qualified professionals (financial planners, lawyers, accountants) before making significant financial decisions. FSRA Licensed Mortgage Agent #13549.*
+*This guide is for informational purposes only and does not constitute financial advice. Retirement planning involves complex decisions. Consult with qualified professionals (financial planners, lawyers, accountants) before making significant financial decisions. FSRA Licensed Mortgage Agent #13549.*

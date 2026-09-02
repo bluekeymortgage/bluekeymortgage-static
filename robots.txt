@@ -1,4 +1,4 @@
-# Blue Key Mortgage — bluekeymortgage.ca
+# Blue Key Mortgage, bluekeymortgage.ca
 User-agent: *
 Allow: /
 

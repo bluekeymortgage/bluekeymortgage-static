@@ -98,6 +98,15 @@ section.band.navy a { color: #F5DFA8; }
 .card h3 { margin-top: 0.2rem; }
 .card .icon { color: var(--gold); margin-bottom: 0.6rem; }
 .card.quiet { box-shadow: none; background: var(--cream); }
+.blog-grid .card { overflow: hidden; }
+.blog-grid .card::before {
+  content: ""; display: block; height: 150px;
+  margin: calc(-1 * clamp(1.3rem, 3vw, 1.8rem)) calc(-1 * clamp(1.3rem, 3vw, 1.8rem)) 1.2rem;
+  background-position: center; background-size: cover;
+}
+.blog-basics .card::before { background-image: url("../../images/blog/reverse-mortgage-basics.jpg"); }
+.blog-care .card::before { background-image: url("../../images/blog/paying-for-care-and-retirement.jpg"); }
+.blog-family .card::before { background-image: url("../../images/blog/family-and-estate.jpg"); }
 .note {
   background: var(--gold-pale); border-left: 6px solid var(--gold); border-radius: 0 10px 10px 0;
   padding: 1.1rem 1.3rem; margin: 1.4rem 0;
@@ -182,6 +191,11 @@ section.band.navy a { color: #F5DFA8; }
 /* ---------- Hero ---------- */
 .hero { padding: clamp(2.5rem, 6vw, 4.8rem) 0; }
 .hero .photo img { border-radius: var(--radius); box-shadow: var(--shadow); object-fit: cover; }
+.article-image { margin: 1.6rem 0 0; }
+.article-image img {
+  width: 100%; height: auto; aspect-ratio: 40 / 21; object-fit: cover;
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
 .trust-bar {
   background: var(--navy-deep); color: #E8E0D2; font-family: var(--sans); font-size: 0.98rem;
   padding: 0.65rem 0; text-align: center;

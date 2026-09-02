@@ -42,4 +42,4 @@ Many of my mortgage clients are exploring senior living options while also consi
 
 ---
 
-*This disclaimer is intended to ensure clear understanding of my role and the limitations of the information provided on this website. Your health, safety, and wellbeing are important—please consult with appropriate professionals for decisions about senior living arrangements.*
+*This disclaimer is intended to ensure clear understanding of my role and the limitations of the information provided on this website. Your health, safety, and wellbeing are important. Please consult with appropriate professionals for decisions about senior living arrangements.*

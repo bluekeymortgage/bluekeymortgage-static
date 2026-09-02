@@ -5,9 +5,9 @@
 
 ## The Desire to Age at Home
 
-Most seniors want to stay in their own homes as they age—surrounded by familiar surroundings, memories, and community. This guide helps you understand the **practical options** for making aging at home safe, comfortable, and sustainable.
+Most seniors want to stay in their own homes as they age, surrounded by familiar surroundings, memories, and community. This guide helps you understand the **practical options** for making aging at home safe, comfortable, and sustainable.
 
-**Important:** I'm a mortgage agent, not a healthcare professional. This information is educational—always consult with healthcare providers for personalized advice about your care needs.
+**Important:** I'm a mortgage agent, not a healthcare professional. This information is educational. Always consult with healthcare providers for personalized advice about your care needs.
 
 ---
 
@@ -320,7 +320,7 @@ I work closely with **Paul Rade and his team** at First Class Home Care to provi
 1. **Have open conversations** about needs and preferences
 2. **Respect autonomy** while ensuring safety
 3. **Build a support team** (don't try to do it all yourself)
-4. **Take care of yourself** too—caregiver burnout helps no one
+4. **Take care of yourself** too. Caregiver burnout helps no one.
 
 ---
 
