@@ -8,7 +8,7 @@
 - [ ] Address: Use Toronto/Mississauga location (or service area if home-based)
 - [ ] Phone: Your business phone number
 - [ ] Website: https://bluekeymortgage.ca
-- [ ] Hours: Monday-Friday 9am-5pm (adjust as needed)
+- [ ] Hours: Monday to Friday, 9:00 a.m. to 6:00 p.m.; Saturday, 10:00 a.m. to 3:30 p.m.; Sunday, closed
 
 ## 2. **Service Area Specification**
 - [ ] Service Cities: Toronto, Mississauga, Oakville
