@@ -1,5 +1,5 @@
 /* ============================================================
-   Blue Key Mortgage — senior-first design system (2026 rebuild)
+   Blue Key Mortgage senior-first design system (2026 rebuild)
    Design rules: 19px+ body type, WCAG AAA text contrast, 48px
    tap targets, no animation, no external fonts, print-friendly.
    ============================================================ */
@@ -8,9 +8,9 @@
   --cream: #FDF8F1;          /* page background */
   --cream-deep: #F5EBDC;     /* alternate band */
   --white: #FFFFFF;
-  --ink: #2A2620;            /* body text — 12.9:1 on cream */
-  --ink-soft: #4A443B;       /* secondary text — 8.6:1 on cream */
-  --navy: #1C3D5A;           /* brand blue — 9.2:1 white-on-navy */
+  --ink: #2A2620;            /* body text, 12.9:1 on cream */
+  --ink-soft: #4A443B;       /* secondary text, 8.6:1 on cream */
+  --navy: #1C3D5A;           /* brand blue, 9.2:1 white-on-navy */
   --navy-deep: #142C42;
   --gold: #B8862D;           /* large accents, borders, icons */
   --gold-deep: #7E5E1E;      /* gold that passes 4.5:1 as text */
@@ -99,14 +99,11 @@ section.band.navy a { color: #F5DFA8; }
 .card .icon { color: var(--gold); margin-bottom: 0.6rem; }
 .card.quiet { box-shadow: none; background: var(--cream); }
 .blog-grid .card { overflow: hidden; }
-.blog-grid .card::before {
-  content: ""; display: block; height: 150px;
+.card-thumb {
+  display: block; width: calc(100% + (2 * clamp(1.3rem, 3vw, 1.8rem))); max-width: none; height: 150px;
   margin: calc(-1 * clamp(1.3rem, 3vw, 1.8rem)) calc(-1 * clamp(1.3rem, 3vw, 1.8rem)) 1.2rem;
-  background-position: center; background-size: cover;
+  object-fit: cover; object-position: center;
 }
-.blog-basics .card::before { background-image: url("../../images/blog/reverse-mortgage-basics.jpg"); }
-.blog-care .card::before { background-image: url("../../images/blog/paying-for-care-and-retirement.jpg"); }
-.blog-family .card::before { background-image: url("../../images/blog/family-and-estate.jpg"); }
 .note {
   background: var(--gold-pale); border-left: 6px solid var(--gold); border-radius: 0 10px 10px 0;
   padding: 1.1rem 1.3rem; margin: 1.4rem 0;
