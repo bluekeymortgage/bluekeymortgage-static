@@ -364,4 +364,4 @@ Whether you're planning ahead or need solutions now, I'm here to help you explor
 
 ---
 
-*This guide is for informational purposes only and does not constitute healthcare or financial advice. Always consult with healthcare professionals about care needs and with financial professionals about funding options. I am a mortgage agent, not a healthcare provider or financial planner. FSRA Licensed Mortgage Agent #13549.*
+*This guide is for informational purposes only and does not constitute healthcare or financial advice. Always consult with healthcare professionals about care needs and with financial professionals about funding options. I am a mortgage agent, not a healthcare provider or financial planner. FSRA Licensed Mortgage Agent #13463.*

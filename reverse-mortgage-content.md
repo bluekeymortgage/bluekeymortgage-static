@@ -208,7 +208,7 @@ The amount depends on:
 - **Clear communication** in plain English
 
 ### My Credentials
-- **FSRA Licensed Mortgage Agent** (#13549)
+- **FSRA Licensed Mortgage Agent** (#13463)
 - **Specializing in senior mortgage solutions**
 - **Powered by BRX Mortgage**, one of Ontario's leading brokerages
 - **Commitment to ethical, client‑centered service**
@@ -228,4 +228,4 @@ The amount depends on:
 
 ---
 
-*This information is for educational purposes only and does not constitute financial advice. Reverse mortgage products and rates are subject to change. All applicants must qualify under lender guidelines. FSRA Licensed Mortgage Agent #13549. Powered by BRX Mortgage Inc.*
+*This information is for educational purposes only and does not constitute financial advice. Reverse mortgage products and rates are subject to change. All applicants must qualify under lender guidelines. FSRA Licensed Mortgage Agent #13463. Powered by BRX Mortgage Inc.*

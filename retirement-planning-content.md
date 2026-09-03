@@ -299,4 +299,4 @@ Retirement planning is a journey, not a destination. The most important step is 
 
 ---
 
-*This guide is for informational purposes only and does not constitute financial advice. Retirement planning involves complex decisions. Consult with qualified professionals (financial planners, lawyers, accountants) before making significant financial decisions. FSRA Licensed Mortgage Agent #13549.*
+*This guide is for informational purposes only and does not constitute financial advice. Retirement planning involves complex decisions. Consult with qualified professionals (financial planners, lawyers, accountants) before making significant financial decisions. FSRA Licensed Mortgage Agent #13463.*

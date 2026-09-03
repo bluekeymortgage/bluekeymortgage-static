@@ -129,7 +129,7 @@
 - **Professional Advice:** Consult with qualified professionals (financial advisors, lawyers, accountants) before making significant financial or legal decisions.
 
 ### About Blue Key Mortgage
-- **FSRA Licensed:** Ragini Domenichini is licensed by the Financial Services Regulatory Authority of Ontario (FSRA #13549).
+- **FSRA Licensed:** Ragini Domenichini is licensed by the Financial Services Regulatory Authority of Ontario (FSRA #13463).
 - **Mortgage Services Only:** Blue Key Mortgage provides mortgage brokerage services. We are not financial planners, lawyers, or senior living advisors.
 - **Independent Legal Advice:** We always recommend obtaining independent legal advice for significant financial decisions, including reverse mortgages.
 

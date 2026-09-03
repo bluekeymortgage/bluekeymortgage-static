@@ -202,4 +202,4 @@ Are you a senior‑focused professional interested in joining our referral netwo
 
 ---
 
-*This page highlights professionals I trust and often collaborate with. Referrals are provided as a service to clients and do not constitute endorsements or guarantees of service quality. Always conduct your own due diligence when selecting service providers. FSRA Licensed Mortgage Agent #13549.*
+*This page highlights professionals I trust and often collaborate with. Referrals are provided as a service to clients and do not constitute endorsements or guarantees of service quality. Always conduct your own due diligence when selecting service providers. FSRA Licensed Mortgage Agent #13463.*
