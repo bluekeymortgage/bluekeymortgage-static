@@ -4,14 +4,14 @@
 	<meta charset="utf-8" />
 	<meta name="robots" content="noindex" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Your Guide Is On Its Way | Blue Key Mortgage</title>
-	<meta name="description" content="Your free guide to unlocking home equity without selling is on its way to your inbox." />
+	<title>Your Free Guide | Blue Key Mortgage</title>
+	<meta name="description" content="Get your free guide to unlocking home equity without selling." />
 	<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 	<link rel="canonical" href="https://bluekeymortgage.ca/thank-you" />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Blue Key Mortgage" />
-	<meta property="og:title" content="Your Guide Is On Its Way | Blue Key Mortgage" />
-	<meta property="og:description" content="Your free guide to unlocking home equity without selling is on its way to your inbox." />
+	<meta property="og:title" content="Your Free Guide | Blue Key Mortgage" />
+	<meta property="og:description" content="Get your free guide to unlocking home equity without selling." />
 	<meta property="og:url" content="https://bluekeymortgage.ca/thank-you" />
 	<meta property="og:image" content="https://bluekeymortgage.ca/images/og-image.jpg" />
 	<meta property="og:image:width" content="1200" />
@@ -59,25 +59,40 @@
 <main id="main">
 
 	<section class="hero">
-		<div class="wrap prose">
+<div class="wrap prose" id="bk-guide-unconfirmed">
+            <p class="eyebrow">Free homeowner guide</p>
+            <h1>Get the free guide</h1>
+            <p class="lede">Request the guide with your name and email to get your download links.</p>
+            <p><a class="btn big gold" href="/guide">Request the guide</a></p>
+            <p class="small">Already sent a request but cannot see your links? Call <a href="tel:+16472313910">647-231-3910</a> for help before submitting again.</p>
+        </div>
+        <div class="wrap prose" id="bk-guide-confirmed" hidden>
 			<p class="eyebrow">You're all set</p>
-			<h1>The guide is on its way to your inbox</h1>
-			<p class="lede">Thank you, check your email in the next few minutes (and peek at the junk folder just in case; email filters can be overzealous).</p>
+			<h1>Your free guide is ready</h1>
+			<p class="lede">Your request was submitted. Download the PDF or read the guide in your browser below.</p>
 			<div class="card" style="margin-top:1.5rem;">
-				<h3 style="margin-top:0;">Can't wait? Read it right now:</h3>
+				<h3 style="margin-top:0;">Choose how you would like to read:</h3>
 				<ul class="actions">
-					<li><a class="btn big gold" href="guides/ontario-home-equity-guide.pdf">Download the PDF</a></li>
-					<li><a class="btn big ghost" href="guides/ontario-home-equity-guide.html">Read it in your browser</a></li>
+					<li><a class="btn big gold" href="/guides/ontario-home-equity-guide.pdf" download="ontario-home-equity-guide.pdf">Download the PDF</a></li>
+					<li><a class="btn big ghost" href="/guides/ontario-home-equity-guide.html">Read the guide online</a></li>
 				</ul>
 				<p class="small">The PDF prints beautifully, many readers print a copy for the kitchen table.</p>
 			</div>
 			<h2 style="margin-top:2.5rem;">What happens next</h2>
 			<ul class="checks">
-				<li>Over the coming days I'll send a short series of plain English notes, the living inheritance idea, the myths, real scenarios. One click unsubscribes you anytime, no hard feelings.</li>
+				<li>This guide request does not subscribe you to marketing emails.</li>
 				<li>No phone calls unless you ask for one. Requesting a guide is not a sales trigger here.</li>
 				<li>When you have questions, I'm at <a href="tel:+16472313910"><strong>647-231-3910</strong></a> or <a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a>.</li>
 			</ul>
-			<p><a href="index.html">← Back to the homepage</a></p>
+			<div class="card" style="margin-top:1.5rem;">
+                <h2 style="margin-top:0;">Would a conversation help?</h2>
+                <p>Ask Ragini about a no obligation phone or virtual consultation.</p>
+                <ul class="actions">
+                    <li><a class="btn big" href="tel:+16472313910">Call 647-231-3910</a></li>
+                    <li><a class="btn big ghost" href="/contact">Ask about a consultation</a></li>
+                </ul>
+            </div>
+            <p><a href="index.html">← Back to the homepage</a></p>
 		</div>
 	</section>
 
@@ -141,5 +156,6 @@
 function bkNav(btn){var n=document.getElementById('site-nav');var open=n.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');}
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f4200d63a52c4aaca84c13bcf1103ee2"}'></script><!-- End Cloudflare Web Analytics -->
+<script src="/assets/js/guide-handoff.js" defer></script>
 </body>
 </html>

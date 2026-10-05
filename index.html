@@ -325,17 +325,30 @@
 				</ul>
 			</div>
 			<div class="card" style="color: var(--ink);">
-				<h3 style="margin-top:0;">Send me the free guide</h3>
-				<form class="bk" method="POST" action="https://formspree.io/f/xwvwrrjd">
+				<h3 style="margin-top:0;">Get the free guide</h3>
+				<form class="bk" id="bk-guide-homepage" data-bk-form="guide" method="POST" action="https://formspree.io/f/xwvwrrjd">
 					<input type="hidden" name="_subject" value="Guide download request (homepage)" />
+                    <input type="hidden" name="request_type" value="guide" />
+                    <input type="hidden" name="form_source" value="guide-homepage" />
+                    <input type="hidden" name="request_purpose" value="guide-download-v1" />
+                    <input type="hidden" name="marketing_consent" value="not_requested" />
 					<input type="hidden" name="_next" value="https://bluekeymortgage.ca/thank-you" />
 					<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 					<label for="g-name">First name</label>
 					<input type="text" id="g-name" name="name" autocomplete="given-name" required />
 					<label for="g-email">Email address</label>
 					<input type="email" id="g-email" name="email" autocomplete="email" required />
-					<button class="btn gold big" type="submit" style="width:100%;">Email Me the Guide</button>
-					<p class="privacy-note" style="margin-top:1rem;">🔒 You'll get the guide plus a short series of plain English follow-up notes. Unsubscribe anytime with one click. Your information is never sold or shared.</p>
+					<button class="btn gold big" type="submit" style="width:100%;">Get My Guide</button>
+                    <p class="bk-form-status" data-bk-status role="status" aria-live="polite" aria-atomic="true" hidden></p>
+                    <section class="bk-guide-downloads" data-bk-downloads hidden aria-labelledby="bk-guide-homepage-ready">
+                        <h3 id="bk-guide-homepage-ready">Your free guide is ready</h3>
+                        <p class="small">Your request was submitted. Choose how you would like to read:</p>
+                        <ul class="actions">
+                            <li><a class="btn gold" href="/guides/ontario-home-equity-guide.pdf" download="ontario-home-equity-guide.pdf">Download the PDF</a></li>
+                            <li><a class="btn ghost" href="/guides/ontario-home-equity-guide.html">Read the guide online</a></li>
+                        </ul>
+                    </section>
+					<p class="privacy-note" style="margin-top:1rem;">Enter your name and email to get the guide. Your download links appear after your request is confirmed. This does not subscribe you to marketing emails or trigger a phone call. Form and email providers process your request. <a href="/privacy">Privacy policy</a>.</p>
 				</form>
 			</div>
 		</div>
@@ -354,8 +367,12 @@
 			</div>
 			<div class="card">
 				<h3 style="margin-top:0;">Send a message</h3>
-				<form class="bk" method="POST" action="https://formspree.io/f/xwvwrrjd">
+				<form class="bk" id="bk-inquiry-homepage" data-bk-form="inquiry" method="POST" action="https://formspree.io/f/xwvwrrjd">
 					<input type="hidden" name="_subject" value="Homepage inquiry" />
+                    <input type="hidden" name="request_type" value="inquiry" />
+                    <input type="hidden" name="form_source" value="inquiry-homepage" />
+                    <input type="hidden" name="request_purpose" value="enquiry-response-v1" />
+                    <input type="hidden" name="marketing_consent" value="not_requested" />
 					<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 					<label for="c-name">Name</label>
 					<input type="text" id="c-name" name="name" autocomplete="name" required />
@@ -366,7 +383,8 @@
 					<label for="c-msg">How can I help?</label>
 					<textarea id="c-msg" name="message" placeholder="Tell me a little about your situation…"></textarea>
 					<button class="btn big" type="submit" style="width:100%;">Send Message</button>
-					<p class="privacy-note" style="margin-top:1rem;">🔒 Your message goes only to Ragini. No obligation, no follow-up pressure.</p>
+                    <p class="bk-form-status" data-bk-status role="status" aria-live="polite" aria-atomic="true" hidden></p>
+					<p class="privacy-note" style="margin-top:1rem;">Your details are used to answer your enquiry. This does not subscribe you to marketing emails. Form and email providers process your request. <a href="/privacy">Privacy policy</a>.</p>
 				</form>
 			</div>
 		</div>
@@ -432,5 +450,6 @@
 function bkNav(btn){var n=document.getElementById('site-nav');var open=n.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');}
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f4200d63a52c4aaca84c13bcf1103ee2"}'></script><!-- End Cloudflare Web Analytics -->
+<script src="/assets/js/forms.js" defer></script>
 </body>
 </html>

@@ -119,8 +119,12 @@
 			</div>
 			<div class="card">
 				<h3 style="margin-top:0;">Send a message</h3>
-				<form class="bk" method="POST" action="https://formspree.io/f/xwvwrrjd">
+				<form class="bk" id="bk-inquiry-contact" data-bk-form="inquiry" method="POST" action="https://formspree.io/f/xwvwrrjd">
 					<input type="hidden" name="_subject" value="Contact page inquiry" />
+                    <input type="hidden" name="request_type" value="inquiry" />
+                    <input type="hidden" name="form_source" value="inquiry-contact" />
+                    <input type="hidden" name="request_purpose" value="enquiry-response-v1" />
+                    <input type="hidden" name="marketing_consent" value="not_requested" />
 					<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 					<label for="c-name">Name</label>
 					<input type="text" id="c-name" name="name" autocomplete="name" required />
@@ -139,7 +143,8 @@
 					<label for="c-msg">Your message</label>
 					<textarea id="c-msg" name="message" placeholder="Tell me a little about your situation…"></textarea>
 					<button class="btn big" type="submit" style="width:100%;">Send Message</button>
-					<p class="privacy-note" style="margin-top:1rem;">🔒 Your message goes only to Ragini and is never shared or sold. Sending it creates no obligation of any kind.</p>
+                    <p class="bk-form-status" data-bk-status role="status" aria-live="polite" aria-atomic="true" hidden></p>
+					<p class="privacy-note" style="margin-top:1rem;">Your details are used to answer your enquiry. This does not subscribe you to marketing emails. Form and email providers process your request. <a href="/privacy">Privacy policy</a>.</p>
 				</form>
 			</div>
 		</div>
@@ -205,5 +210,6 @@
 function bkNav(btn){var n=document.getElementById('site-nav');var open=n.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');}
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f4200d63a52c4aaca84c13bcf1103ee2"}'></script><!-- End Cloudflare Web Analytics -->
+<script src="/assets/js/forms.js" defer></script>
 </body>
 </html>

@@ -4,13 +4,13 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Free Reverse Mortgage Guide for Ontario | Blue Key Mortgage</title>
-	<meta name="description" content="Free 20-page guide for Ontario homeowners 55+: how reverse mortgages work, honest pros and cons, red flags, and a family conversation guide. No sales calls." />
+	<meta name="description" content="Free printable guide for Ontario homeowners 55+: how reverse mortgages work, honest pros and cons, red flags, and a family conversation guide. No sales calls." />
 	<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 	<link rel="canonical" href="https://bluekeymortgage.ca/guide" />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Blue Key Mortgage" />
 	<meta property="og:title" content="Free Reverse Mortgage Guide for Ontario | Blue Key Mortgage" />
-	<meta property="og:description" content="Free 20-page guide for Ontario homeowners 55+: how reverse mortgages work, honest pros and cons, red flags, and a family conversation guide. No sales calls." />
+	<meta property="og:description" content="Free printable guide for Ontario homeowners 55+: how reverse mortgages work, honest pros and cons, red flags, and a family conversation guide. No sales calls." />
 	<meta property="og:url" content="https://bluekeymortgage.ca/guide" />
 	<meta property="og:image" content="https://bluekeymortgage.ca/images/og-image.jpg" />
 	<meta property="og:image:width" content="1200" />
@@ -43,7 +43,7 @@
 	<section class="hero">
 		<div class="wrap split">
 			<div>
-				<p class="eyebrow">Free · 20 pages · Large print · No sales calls</p>
+				<p class="eyebrow">Free printable guide · No sales calls</p>
 				<h1>The Ontario Homeowner's Guide to Unlocking Home Equity Without Selling</h1>
 				<p class="lede">A plain English guide for homeowners 55+ and their families, including the parts other people's brochures leave out.</p>
 				<ul class="checks">
@@ -53,17 +53,30 @@
 				</ul>
 			</div>
 			<div class="card">
-				<h3 style="margin-top:0;">Send me the free guide</h3>
-				<form class="bk" method="POST" action="https://formspree.io/f/xwvwrrjd">
+				<h3 style="margin-top:0;">Get the free guide</h3>
+				<form class="bk" id="bk-guide-landing" data-bk-form="guide" method="POST" action="https://formspree.io/f/xwvwrrjd">
 					<input type="hidden" name="_subject" value="Guide download request (landing page)" />
+                    <input type="hidden" name="request_type" value="guide" />
+                    <input type="hidden" name="form_source" value="guide-landing" />
+                    <input type="hidden" name="request_purpose" value="guide-download-v1" />
+                    <input type="hidden" name="marketing_consent" value="not_requested" />
 					<input type="hidden" name="_next" value="https://bluekeymortgage.ca/thank-you" />
 					<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 					<label for="g-name">First name</label>
 					<input type="text" id="g-name" name="name" autocomplete="given-name" required />
 					<label for="g-email">Email address</label>
 					<input type="email" id="g-email" name="email" autocomplete="email" required />
-					<button class="btn gold big" type="submit" style="width:100%;">Email Me the Guide</button>
-					<p class="privacy-note" style="margin-top:1rem;">🔒 You'll receive the guide plus a short series of plain English follow-up notes. Unsubscribe anytime with one click. Your information is never sold or shared, and requesting the guide will not trigger a phone call.</p>
+					<button class="btn gold big" type="submit" style="width:100%;">Get My Guide</button>
+                    <p class="bk-form-status" data-bk-status role="status" aria-live="polite" aria-atomic="true" hidden></p>
+                    <section class="bk-guide-downloads" data-bk-downloads hidden aria-labelledby="bk-guide-landing-ready">
+                        <h3 id="bk-guide-landing-ready">Your free guide is ready</h3>
+                        <p class="small">Your request was submitted. Choose how you would like to read:</p>
+                        <ul class="actions">
+                            <li><a class="btn gold" href="/guides/ontario-home-equity-guide.pdf" download="ontario-home-equity-guide.pdf">Download the PDF</a></li>
+                            <li><a class="btn ghost" href="/guides/ontario-home-equity-guide.html">Read the guide online</a></li>
+                        </ul>
+                    </section>
+					<p class="privacy-note" style="margin-top:1rem;">Enter your name and email to get the guide. Your download links appear after your request is confirmed. This does not subscribe you to marketing emails or trigger a phone call. Form and email providers process your request. <a href="/privacy">Privacy policy</a>.</p>
 				</form>
 			</div>
 		</div>
@@ -110,5 +123,6 @@
 	</div>
 </footer>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f4200d63a52c4aaca84c13bcf1103ee2"}'></script><!-- End Cloudflare Web Analytics -->
+<script src="/assets/js/forms.js" defer></script>
 </body>
 </html>

@@ -304,3 +304,14 @@ form.bk input:focus, form.bk select:focus, form.bk textarea:focus { border-color
   details.faq { page-break-inside: avoid; }
   details.faq:not([open]) .answer { display: block; }
 }
+
+/* Confirmed form handoff */
+[hidden] { display: none !important; }
+.bk-form-status { padding: 0.85rem 1rem; border: 2px solid var(--navy); border-radius: 10px; color: var(--ink); background: #fff; }
+.bk-form-status[data-state="error"], .bk-form-status[data-state="uncertain"] { border-color: #8C352F; }
+form.bk .btn:disabled { opacity: 0.65; cursor: default; }
+form.bk .privacy-note { display: block; }
+.bk-guide-downloads { padding: 1rem; margin-top: 1rem; border: 2px solid var(--gold); border-radius: 10px; background: var(--cream); }
+.bk-guide-downloads .actions { flex-wrap: wrap; }
+.cta-band .card .privacy-note a { color: var(--navy); }
+form.bk [aria-invalid="true"] { border-color: #8C352F; }
