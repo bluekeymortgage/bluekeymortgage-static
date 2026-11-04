@@ -319,3 +319,7 @@ form.bk [aria-invalid="true"] { border-color: #8C352F; }
 /* Quick answer box (AEO) */
 .quick-answer{background:#f4f7fb;border-left:4px solid #c9a227;padding:1rem 1.25rem;margin:1.25rem 0;border-radius:6px;text-align:left}
 .quick-answer p{margin:0;color:#1d2b3a}
+.table-wrap{overflow-x:auto;margin:1rem 0}
+.table-wrap table{width:100%;border-collapse:collapse;font-size:1rem}
+.table-wrap th,.table-wrap td{border:1px solid #d9dee5;padding:.6rem .75rem;text-align:left;vertical-align:top}
+.table-wrap th{background:#f4f7fb}
