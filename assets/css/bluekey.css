@@ -315,3 +315,7 @@ form.bk .privacy-note { display: block; }
 .bk-guide-downloads .actions { flex-wrap: wrap; }
 .cta-band .card .privacy-note a { color: var(--navy); }
 form.bk [aria-invalid="true"] { border-color: #8C352F; }
+
+/* Quick answer box (AEO) */
+.quick-answer{background:#f4f7fb;border-left:4px solid #c9a227;padding:1rem 1.25rem;margin:1.25rem 0;border-radius:6px;text-align:left}
+.quick-answer p{margin:0;color:#1d2b3a}
