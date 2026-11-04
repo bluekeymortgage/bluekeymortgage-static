@@ -1,7 +1,7 @@
 # Blue Key Mortgage (bluekeymortgage.ca)
 
 Blue Key Mortgage is the practice of Ragini Domenichini, a licensed Mortgage
-Agent Level 2 with BRX Mortgage Inc. (FSRA #13463), specializing in reverse
+Agent Level 2 (FSRA licence M22004226) with BRX Mortgage Inc. (FSRA #13463), specializing in reverse
 mortgages for Ontario homeowners aged 55+. Plain English education, free
 no obligation consultations, and comparisons across all three Canadian
 reverse mortgage lenders: HomeEquity Bank (CHIP), Equitable Bank (Flex),
@@ -10,10 +10,16 @@ and Bloom Financial. Reverse mortgages in Canada differ from US HECM rules.
 Contact: 647-231-3910 · ragini@bluekeymortgage.ca
 
 ## Key pages
-- https://bluekeymortgage.ca/reverse-mortgage.html : How reverse mortgages work in Canada (eligibility, costs, repayment)
-- https://bluekeymortgage.ca/faq.html : 20 questions seniors and adult children ask, answered honestly
-- https://bluekeymortgage.ca/right-for-you.html : Honest self-assessment (including when a reverse mortgage is wrong)
-- https://bluekeymortgage.ca/reverse-mortgage-calculator.html : Free 60-second estimator of how much tax-free cash a home could unlock (no email required)
-- https://bluekeymortgage.ca/for-adult-children.html : Guide for adult children researching for a parent
-- https://bluekeymortgage.ca/guide.html : Free 20-page Ontario home equity guide
-- https://bluekeymortgage.ca/about.html : About Ragini Domenichini (20+ years in Canadian financial services)
+- https://bluekeymortgage.ca/reverse-mortgage : How reverse mortgages work in Canada (eligibility, costs, repayment)
+- https://bluekeymortgage.ca/faq : 20 questions seniors and adult children ask, answered honestly
+- https://bluekeymortgage.ca/right-for-you : Honest self-assessment (including when a reverse mortgage is wrong)
+- https://bluekeymortgage.ca/reverse-mortgage-calculator : Free 60-second estimator of how much tax-free cash a home could unlock (no email required)
+- https://bluekeymortgage.ca/for-adult-children : Guide for adult children researching for a parent
+- https://bluekeymortgage.ca/blog/stay-in-your-home-reverse-mortgage-ontario : Stay in the home you love: how a reverse mortgage can work for GTA homeowners 55+
+- https://bluekeymortgage.ca/guide : Free 20-page Ontario home equity guide
+- https://bluekeymortgage.ca/about : About Ragini Domenichini (20+ years in Canadian financial services)
+
+## Quick answers
+- Can I lose my home with a reverse mortgage? Not because of the loan itself, as long as you keep up your property taxes, home insurance and upkeep.
+- Who qualifies? Ontario homeowners 55+ (everyone on title), primary residence; amounts and approval set by the lender.
+- Costs: interest accrues on the balance, set-up/appraisal/legal fees apply, and remaining equity decreases over time.
