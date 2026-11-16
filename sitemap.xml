@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bluekeymortgage.ca/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -72,7 +72,7 @@
   </url>
   <url>
     <loc>https://bluekeymortgage.ca/blog</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -313,6 +313,11 @@
   <url>
     <loc>https://bluekeymortgage.ca/blog/stay-in-your-home-reverse-mortgage-ontario</loc>
     <lastmod>2026-11-04</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bluekeymortgage.ca/blog/reverse-mortgage-rural-property-ontario</loc>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
