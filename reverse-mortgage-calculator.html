@@ -21,13 +21,9 @@
 	.calc-field { margin-bottom: 2rem; }
 	.calc-field > label, .calc-field > .field-label { display:block; font-family:var(--sans); font-weight:700; font-size:1.15rem; color:var(--navy); margin-bottom:0.6rem; }
 	.calc-field .hint { font-size:0.95rem; color:var(--ink-soft); margin:0 0 0.8rem; }
-	.age-options { display:flex; flex-wrap:wrap; gap:0.6rem; }
-	.age-options label {
-		display:flex; align-items:center; gap:0.5rem; background:var(--white); border:2px solid var(--line);
-		border-radius:12px; padding:0.8rem 1.1rem; cursor:pointer; font-family:var(--sans); font-weight:600; font-size:1.05rem;
-	}
-	.age-options label:has(input:checked) { border-color:var(--navy); background:#EAF1F7; }
-	.age-options input { width:1.4rem; height:1.4rem; accent-color:#1C3D5A; }
+	.age-input { display:flex; align-items:center; max-width:12rem; background:var(--white); border:2px solid var(--line); border-radius:12px; overflow:hidden; }
+	.age-input input { border:none; outline:none; width:100%; padding:0.9rem 1rem; font-size:1.3rem; font-family:var(--sans); background:transparent; color:var(--ink); }
+	.age-input:focus-within { border-color:var(--navy); }
 	.money-input { display:flex; align-items:center; max-width:20rem; background:var(--white); border:2px solid var(--line); border-radius:12px; overflow:hidden; }
 	.money-input span { padding:0 0 0 1rem; font-size:1.3rem; color:var(--ink-soft); font-family:var(--sans); }
 	.money-input input { border:none; outline:none; width:100%; padding:0.9rem 1rem 0.9rem 0.4rem; font-size:1.3rem; font-family:var(--sans); background:transparent; color:var(--ink); }
@@ -111,7 +107,7 @@
    "name": "Is this reverse mortgage calculator a quote?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "No. It shows an illustrative range based on typical age based limits across Canadian reverse mortgage lenders. It is not a rate quote, an offer to lend or an approval. Your actual amount comes only from a lender after an application and appraisal."
+    "text": "No. It shows a ballpark range based on published lender maximums. It is not a quote, an offer to lend or an approval. Your actual amount comes only from a lender after an application and an appraisal."
    }
   },
   {
@@ -127,7 +123,7 @@
    "name": "What does a reverse mortgage cost?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Rates are usually higher than a regular mortgage or HELOC, and interest is added to the balance, so the amount owed grows over time. Other costs can include appraisal, setup, legal and closing fees, and prepayment charges. Ask for all costs in writing."
+    "text": "Interest is usually higher than on a regular mortgage or a home equity line of credit, and interest is added to the balance, so the amount owed grows over time and the equity left in the home decreases. Other costs can include appraisal, setup, legal and closing fees, and prepayment charges. Ask for all costs in writing."
    }
   }
  ]
@@ -148,7 +144,7 @@
 		<div class="header-cta">
 			<a class="call-link" href="tel:+16472313910">
 				<span class="call-label">Call Ragini, free &amp; friendly</span>
-				<span class="call-number">647-231-3910</span>
+				<span class="call-number">647 231 3910</span>
 			</a>
 			<a class="btn gold no-print" href="guide">Free Guide</a>
 			<button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" onclick="bkNav(this)">Menu ☰</button>
@@ -178,7 +174,7 @@
 		<div class="wrap prose">
 			<p class="eyebrow">Reverse mortgage calculator · Ontario</p>
 			<h1>Reverse mortgage calculator for Ontario: how much could your home unlock?</h1>
-			<div class="callout quick-answer"><p><strong>Quick answer:</strong> Ontario homeowners 55+ may usually borrow up to 55% of their home's value with a reverse mortgage (per the <a href="https://www.canada.ca/en/financial-consumer-agency/services/mortgages/reverse-mortgages.html" rel="noopener" target="_blank">Financial Consumer Agency of Canada</a>), and most qualify for less. The amount depends on the youngest owner's age, the home and the lender. Use the estimator below for an illustrative range. It is not a quote or approval.</p></div>
+			<div class="callout quick-answer"><p><strong>Quick answer:</strong> Ontario homeowners 55+ may usually borrow up to 55% of their home's value with a reverse mortgage, according to the <a href="https://www.canada.ca/en/financial-consumer-agency/services/mortgages/reverse-mortgages.html" rel="noopener" target="_blank">Financial Consumer Agency of Canada</a>, and most people qualify for less. Some lender products publish a higher maximum at older ages, up to 59% or 60%. The amount depends on the age of the youngest owner on title, the home and the lender. The estimator below shows a ballpark range using those published maximums. It is not a quote or an approval.</p></div>
 			<p class="lede">Answer two quick questions and see an honest range, right here on your screen. Nothing you enter is recorded or sent anywhere, and no one will call you afterwards.</p>
 		</div>
 	</section>
@@ -186,21 +182,15 @@
 	<section class="band alt">
 		<div class="wrap prose">
 			<div class="calc-field">
-				<span class="field-label" id="age-label">How old is the youngest owner of the home?</span>
-				<p class="hint">Lenders base the amount on the youngest person on title. The older you are, the more you can unlock.</p>
-				<div class="age-options" role="radiogroup" aria-labelledby="age-label">
-					<label><input type="radio" name="age" value="55" /> 55 to 59</label>
-					<label><input type="radio" name="age" value="60" /> 60 to 64</label>
-					<label><input type="radio" name="age" value="65" /> 65 to 69</label>
-					<label><input type="radio" name="age" value="70" /> 70 to 74</label>
-					<label><input type="radio" name="age" value="75" /> 75 to 79</label>
-					<label><input type="radio" name="age" value="80" /> 80 or older</label>
-				</div>
+				<label for="youngest-age">How old is the youngest person on title?</label>
+				<p class="hint">If more than one person owns the home, enter the age of the youngest owner. Lenders use that age to set the amount, not the age of the older owner.</p>
+				<div class="age-input"><input type="number" id="youngest-age" name="youngest-age" inputmode="numeric" autocomplete="off" min="55" max="120" step="1" placeholder="55" aria-describedby="age-hint" /></div>
+				<p class="hint" id="age-hint" style="margin-top:0.8rem;">All owners on title usually need to be 55 or older.</p>
 			</div>
 
 			<div class="calc-field">
 				<label for="home-value">What is your home roughly worth today?</label>
-				<p class="hint">Your best guess is fine, a recent estimate from a realtor, your property assessment, or what similar homes nearby have sold for.</p>
+				<p class="hint">Your best guess is fine, a recent estimate from a realtor, your property assessment, or what similar homes nearby have sold for. A lender will confirm the value with an appraisal.</p>
 				<div class="money-input"><span>$</span><input type="text" id="home-value" inputmode="numeric" autocomplete="off" placeholder="800,000" aria-describedby="value-hint" /></div>
 				<div class="quick-picks" id="value-hint" aria-label="Quick amounts">
 					<button type="button" onclick="setValue(600000)">$600,000</button>
@@ -212,63 +202,64 @@
 
 			<div class="calc-field">
 				<label for="owing">Still owe anything on the home? <span style="font-weight:400;">(optional)</span></label>
-				<p class="hint">Any mortgage, HELOC, or secured line of credit. A reverse mortgage pays this off first, which is how many families end their monthly mortgage payment for good. Leave blank if your home is paid off.</p>
+				<p class="hint">Any mortgage, HELOC, or other loan secured against the home. A reverse mortgage pays this off first, which is how many families end a monthly mortgage payment. Leave blank if the home is paid off.</p>
 				<div class="money-input"><span>$</span><input type="text" id="owing" inputmode="numeric" autocomplete="off" placeholder="0" /></div>
 			</div>
 
-			<p><button class="btn big gold" onclick="calcResult()">Show my estimate</button></p>
+			<p><button class="btn big gold" type="button" onclick="calcResult()">Show my estimate</button></p>
 			<div id="calc-result" class="note" role="status" aria-live="polite"></div>
 			<div class="note" style="margin-top:2rem;background:#EAF1F7;border-radius:12px;padding:1.5rem;">
 				<h2 style="margin-top:0;">Get your free personal estimate</h2>
-				<p>The range above is illustrative only. The real number for your home is almost always worth more than a screen can show, because it reflects your exact age, your appraised value and the right lender for you. I will run those real figures with you, in plain language, at no cost and with no obligation.</p>
+				<p>The range above is an illustrative estimate only. A personal estimate uses your exact age, an appraisal of your home and a comparison of lenders, which a screen cannot do on its own. I will walk through those figures with you, in plain language, at no cost and with no obligation.</p>
 				<ul class="actions">
 					<li><a class="btn big gold" href="contact">Get my free personal estimate</a></li>
-					<li><a class="btn big ghost" href="tel:+16472313910">Call Ragini at 647-231-3910</a></li>
+					<li><a class="btn big ghost" href="tel:+16472313910">Call Ragini at 647 231 3910</a></li>
 				</ul>
 				<p class="small" style="margin-top:0.5rem;">The contact form requests a friendly conversation. It does not book a time slot and it is not an application.</p>
 			</div>
-			<p class="small" style="margin-top:1.5rem;">This estimator is general education, not advice or an offer to lend. It uses typical age based ranges across Canada's reverse mortgage lenders. Your actual amount depends on the lender, your property's type and location, and a professional appraisal, and can be higher or lower than this range. Nothing you enter is collected or transmitted.</p>
+			<p class="small" style="margin-top:1.5rem;">This estimator is general education, not advice or an offer to lend. The range is based only on published lender maximums, which you can read in the sources below. Many people receive less than the top of the range. Your actual amount depends on the lender, the type and location of the property, and a professional appraisal, and can be higher or lower than this range. It is subject to appraisal and lender approval. Nothing you enter is collected or transmitted. This page does not quote interest rates.</p>
 		</div>
 	</section>
 
 	<section class="band">
 		<div class="wrap prose">
-			<h2>Why you can't borrow it all, and why that protects you</h2>
-			<p>Canadian reverse mortgage lenders cap what you can borrow, at most about 55% of your home's value, and less at younger ages. That cap isn't stinginess. It's part of why most Canadian reverse mortgage lenders say that, when the loan terms are met, you generally won't owe more than your home's fair market value, and it means a healthy share of your home's value stays yours as equity on day one.</p>
-			<p>The money you unlock is <strong>tax free</strong>, because it's your own equity, not income. FCAC states it doesn't affect Old Age Security or the Guaranteed Income Supplement either.</p>
+			<h2>Why you cannot borrow it all, and why that protects you</h2>
+			<p>Canadian reverse mortgage lenders cap what you can borrow. The Financial Consumer Agency of Canada says you may usually borrow up to 55% of the current value of the home, and most people qualify for less. Some products publish a higher maximum at older ages, up to 59% or 60%. That cap is part of why, when the loan terms are met, you generally will not owe more than the home's fair market value, and it means a share of the home's value stays yours as equity on day one.</p>
+			<p>The money you unlock is <strong>tax free</strong>, because it is your own equity, not income. The Financial Consumer Agency of Canada states it does not affect Old Age Security or the Guaranteed Income Supplement either.</p>
 			<h2 style="margin-top:2.5rem;">What affects your number</h2>
 			<ul>
-				<li><strong>The age of the youngest owner on title.</strong> Lenders base the amount on the youngest person on title, and older generally means a higher percentage.</li>
-				<li><strong>Your home's value, confirmed by appraisal.</strong> Your estimate gives a starting point, but the final number comes from a professional appraisal of your home.</li>
-				<li><strong>Location.</strong> Where your home is matters. Homes in larger centres and strong, liquid markets tend to qualify for more than homes in very remote areas.</li>
-				<li><strong>Property type.</strong> A detached home, a condo, a rural property or acreage can each be treated differently in underwriting.</li>
-				<li><strong>Any existing mortgage or secured debt.</strong> A reverse mortgage typically pays off and closes any current mortgage, HELOC or secured line first, so that balance comes off the top. For many families that also ends a monthly mortgage payment for good.</li>
-				<li><strong>Which lender.</strong> Eligibility and borrowing limits vary by lender and product. Through BRX Mortgage Inc. I can compare lenders and ask which options fit your situation, without quoting rates here.</li>
+				<li><strong>The age of the youngest owner on title.</strong> If more than one person owns the home, lenders use the age of the youngest owner. Older generally means a higher percentage.</li>
+				<li><strong>Your home's value, confirmed by appraisal.</strong> Your estimate gives a starting point, but the final number comes from a professional appraisal of your home. Several lenders publish a minimum appraised value of $250,000.</li>
+				<li><strong>Location.</strong> Where the home is matters. Homes in larger centres often qualify for more than homes in smaller or remote areas. Some lenders also limit where they lend.</li>
+				<li><strong>Property type and condition.</strong> A detached home, a condo, a rural property or an acreage can each be treated differently.</li>
+				<li><strong>Any existing mortgage or secured debt.</strong> A reverse mortgage typically pays off and closes any current mortgage, HELOC or other secured loan first, so that balance comes off the top. For many families that also ends a monthly mortgage payment.</li>
+				<li><strong>Which lender and which product.</strong> Eligibility and maximums vary. Through BRX Mortgage Inc., I can compare options from HomeEquity Bank (CHIP), Equitable Bank, Bloom Finance and Home Trust, without quoting interest rates here.</li>
 			</ul>
 			<p>Want the bigger picture first? See <a href="reverse-mortgage">how reverse mortgages work in Ontario</a>, read the plain English <a href="blog/reverse-mortgage-vs-heloc-ontario">reverse mortgage versus HELOC comparison</a>, or if you are in the city, my <a href="reverse-mortgage-toronto">Toronto reverse mortgage page</a>.</p>
 
-			<h2 style="margin-top:2.5rem;">What this estimator does and doesn't do</h2>
+			<h2 style="margin-top:2.5rem;">What this estimator does and does not do</h2>
 			<ul>
-				<li>It shows a <strong>range</strong>, using typical age based limits across Canadian reverse mortgage lenders. It is not a rate quote, an offer to lend or an approval.</li>
-				<li>It doesn't show interest costs. Interest is added to the balance, so the amount owed grows over time and the equity left in the home shrinks. Ask for the total cost in writing before you decide.</li>
-				<li>Through BRX Mortgage Inc., I can compare four lenders for you: HomeEquity Bank (CHIP), Equitable Bank, Bloom Financial and Home Trust.</li>
+				<li>It shows a <strong>ballpark range</strong> based only on published lender maximums. It is not a quote, an offer to lend or an approval.</li>
+				<li>It does not show interest costs. Interest accrues on what you borrow, and fees apply, so the amount owed grows and the equity left in the home decreases over time. Ask for the total cost in writing before you decide.</li>
+				<li>Through BRX Mortgage Inc., I can compare four lenders for you: HomeEquity Bank (CHIP), Equitable Bank, Bloom Finance and Home Trust.</li>
 			</ul>
 			<h2 style="margin-top:2.5rem;">Common questions</h2>
-			<details class="faq"><summary>How much can I borrow with a reverse mortgage in Ontario?</summary><div class="answer"><p>According to the Financial Consumer Agency of Canada, you may usually borrow up to 55% of your home's current value. The actual amount depends on the ages of everyone on title, the home's type, condition and appraised value, and the lender, and is subject to lender approval.</p></div></details>
-			<details class="faq"><summary>Is this reverse mortgage calculator a quote?</summary><div class="answer"><p>No. It shows an illustrative range based on typical age based limits across Canadian reverse mortgage lenders. It is not a rate quote, an offer to lend or an approval. Your actual amount comes only from a lender after an application and appraisal.</p></div></details>
+			<details class="faq"><summary>How much can I borrow with a reverse mortgage in Ontario?</summary><div class="answer"><p>According to the Financial Consumer Agency of Canada, you may usually borrow up to 55% of your home's current value, and most people qualify for less. Equitable Bank publishes a Flex Plus maximum of 45% to 59% from age 60. Home Trust publishes a maximum of up to 60% of home equity, with its Boost product from age 70. The actual amount depends on the ages of everyone on title, the home's type, condition and appraised value, and the lender, and is subject to appraisal and lender approval.</p></div></details>
+			<details class="faq"><summary>Is this reverse mortgage calculator a quote?</summary><div class="answer"><p>No. It shows a ballpark range based on published lender maximums. It is not a quote, an offer to lend or an approval. Your actual amount comes only from a lender after an application and an appraisal.</p></div></details>
+			<details class="faq"><summary>Why do you ask for the youngest owner on title?</summary><div class="answer"><p>If more than one person owns the home, lenders use the age of the youngest owner to set the amount, not the age of the older owner. All owners on title usually need to be 55 or older.</p></div></details>
 			<details class="faq"><summary>Does a reverse mortgage affect OAS or GIS?</summary><div class="answer"><p>The Financial Consumer Agency of Canada states that money borrowed through a reverse mortgage does not affect Old Age Security or Guaranteed Income Supplement benefits. Income earned by investing the funds may be treated differently.</p></div></details>
-			<details class="faq"><summary>What does a reverse mortgage cost?</summary><div class="answer"><p>Rates are usually higher than a regular mortgage or HELOC, and interest is added to the balance, so the amount owed grows over time. Other costs can include appraisal, setup, legal and closing fees, and prepayment charges. Ask for all costs in writing.</p></div></details>
-			<p class="small" style="margin-top:1.5rem;">Sources: <a href="https://www.canada.ca/en/financial-consumer-agency/services/mortgages/reverse-mortgages.html" rel="noopener" target="_blank">Financial Consumer Agency of Canada, Reverse mortgages</a>. Prepared by Ragini Domenichini, Mortgage Agent Level 2 (FSRA licence M22004226), BRX Mortgage Inc. (FSRA #13463). Updated November 16, 2026.</p>
+			<details class="faq"><summary>What does a reverse mortgage cost?</summary><div class="answer"><p>Interest is usually higher than on a regular mortgage or a home equity line of credit, and interest is added to the balance, so the amount owed grows over time and the equity left in the home decreases. Other costs can include appraisal, setup, legal and closing fees, and prepayment charges. This page does not quote interest rates. Ask for all costs in writing.</p></div></details>
+			<p class="small" style="margin-top:1.5rem;">Sources: <a href="https://www.canada.ca/en/financial-consumer-agency/services/mortgages/reverse-mortgages.html" rel="noopener" target="_blank">Financial Consumer Agency of Canada, Reverse mortgages</a>; <a href="https://www.eqbank.ca/reverse-mortgage/comparison-rates" rel="noopener" target="_blank">Equitable Bank (EQ Bank) reverse mortgage solutions</a>; <a href="https://www.chip.ca/chip-reverse-mortgage/" rel="noopener" target="_blank">HomeEquity Bank, CHIP Program</a>; <a href="https://www.bloomfin.ca/reverse-mortgage" rel="noopener" target="_blank">Bloom Finance</a>; <a href="https://legacy.hometrust.ca/reverse-mortgage/" rel="noopener" target="_blank">Home Trust EquityAccess</a>. Prepared by Ragini Domenichini, Mortgage Agent Level 2 (FSRA licence M22004226), BRX Mortgage Inc. (FSRA #13463). Updated 21 November 2026.</p>
 		</div>
 	</section>
 
 	<section class="cta-band">
 		<div class="wrap prose">
 			<h2>See your real number, free and with no obligation</h2>
-			<p class="lede">The estimate on this page is a starting point. The best way to see what your own home could unlock is a free personal estimate, where I run the real figures for your age, your property and the right lender, in plain language. No pressure, and nothing you share becomes an application.</p>
+			<p class="lede">The estimate on this page is a starting point. The best way to see what your own home could unlock is a free personal estimate, where I run the figures for your age, your property and the lenders available to you, in plain language. No pressure, and nothing you share becomes an application.</p>
 			<ul class="actions">
 				<li><a class="btn big gold" href="contact">Get my free personal estimate</a></li>
-				<li><a class="btn big ghost" href="tel:+16472313910">Call 647-231-3910</a></li>
+				<li><a class="btn big ghost" href="tel:+16472313910">Call 647 231 3910</a></li>
 				<li><a class="btn big ghost" href="right-for-you">Take the honest self assessment</a></li>
 				<li><a class="btn big ghost" href="guide">Get the free guide</a></li>
 			</ul>
@@ -276,63 +267,99 @@
 	</section>
 
 <script>
-var LTV = { 55:[0.15,0.25], 60:[0.20,0.30], 65:[0.25,0.37], 70:[0.30,0.44], 75:[0.35,0.50], 80:[0.40,0.55] };
+function publishedBand(age){
+	var low = 0.15;
+	var high = 0.55;
+	var highLabel = "55%";
+	var highCite = "the usual published maximum of 55% (Financial Consumer Agency of Canada, CHIP, Bloom Finance, and Equitable Bank Flex)";
+	if (age >= 70) {
+		high = 0.60;
+		highLabel = "60%";
+		highCite = "the highest published maximum at this age, 60% of home equity (Home Trust), alongside Equitable Bank Flex Plus at up to 59% from age 60";
+	} else if (age >= 60) {
+		high = 0.59;
+		highLabel = "59%";
+		highCite = "the highest published maximum at this age, 59% (Equitable Bank Flex Plus, from age 60)";
+	}
+	return { low: low, high: high, highLabel: highLabel, highCite: highCite };
+}
 
 function parseMoney(id){
-	var raw = (document.getElementById(id).value || '').replace(/[^0-9]/g, '');
+	var raw = (document.getElementById(id).value || "").replace(/[^0-9]/g, "");
 	return raw ? parseInt(raw, 10) : 0;
 }
-function fmt(n){ return '$' + n.toLocaleString('en-CA'); }
+function parseAge(){
+	var raw = (document.getElementById("youngest-age").value || "").replace(/[^0-9]/g, "");
+	return raw ? parseInt(raw, 10) : 0;
+}
+function fmt(n){ return "$" + n.toLocaleString("en-CA"); }
 function round5k(n){ return Math.round(n / 5000) * 5000; }
 function setValue(n){
-	document.getElementById('home-value').value = n.toLocaleString('en-CA');
+	document.getElementById("home-value").value = n.toLocaleString("en-CA");
 }
-['home-value','owing'].forEach(function(id){
-	document.getElementById(id).addEventListener('input', function(){
-		var raw = this.value.replace(/[^0-9]/g, '');
-		this.value = raw ? parseInt(raw,10).toLocaleString('en-CA') : '';
+["home-value","owing"].forEach(function(id){
+	document.getElementById(id).addEventListener("input", function(){
+		var raw = this.value.replace(/[^0-9]/g, "");
+		this.value = raw ? parseInt(raw,10).toLocaleString("en-CA") : "";
 	});
 });
 
+function caveatsHtml(){
+	return "<p class='result-line'>Interest accrues and fees apply, so the equity left in the home decreases over time. This estimate does not include interest rates. It is an illustrative estimate only, not a quote, an offer or an approval, and any amount is subject to appraisal and lender approval.</p>"
+		+ "<p class='result-line'><a href='contact'><strong>Get your free personal estimate</strong></a> from Ragini Domenichini, Mortgage Agent Level 2, BRX Mortgage, FSRA licence M22004226.</p>";
+}
+
+function minValueNote(value){
+	if (value < 250000) {
+		return "<p class='result-line'><strong>A note on home value:</strong> several lenders publish a minimum appraised value of $250,000. Your figure of " + fmt(value) + " is below that published minimum, so a lender may not be able to help with a reverse mortgage on this property. A conversation can still sort out whether another option is a better fit.</p>";
+	}
+	return "";
+}
+
 function calcResult(){
-	var el = document.getElementById('calc-result');
-	var ageEl = document.querySelector('input[name="age"]:checked');
-	var value = parseMoney('home-value');
-	var owing = parseMoney('owing');
+	var el = document.getElementById("calc-result");
+	var age = parseAge();
+	var value = parseMoney("home-value");
+	var owing = parseMoney("owing");
 	var msg;
 
-	if (!ageEl || !value) {
-		msg = "<strong>Almost there.</strong> Choose an age range and enter a rough home value above, then press the button again.";
-	} else if (value < 200000) {
-		msg = "<strong>An honest note:</strong> reverse mortgage lenders usually need a home value of roughly $200,000 or more (it varies by lender and location). With a value below that, other options may serve you better, a conversation would sort it out quickly, with no obligation.";
+	if (!age || !value) {
+		msg = "<strong>Almost there.</strong> Enter the age of the youngest person on title and a rough home value above, then press the button again.";
+	} else if (age < 55) {
+		msg = "<strong>An honest note:</strong> all owners on title usually need to be 55 or older to qualify for a reverse mortgage in Canada. If the youngest owner is under 55, a different option may be a better fit, or it may be a matter of waiting until that person turns 55. I am happy to talk it through, at no cost and with no obligation.";
+	} else if (age > 120) {
+		msg = "<strong>Please check the age.</strong> Enter the age of the youngest person on title as a whole number, then press the button again.";
 	} else {
-		var band = LTV[ageEl.value];
-		var low = round5k(value * band[0]);
-		var high = round5k(value * band[1]);
-		var keeps = value - high;
-		var keepsPct = Math.round(keeps / value * 100);
+		var band = publishedBand(age);
+		var low = round5k(value * band.low);
+		var high = round5k(value * band.high);
+		if (high < low) { high = low; }
+		var keeps = Math.max(value - high, 0);
+		var keepsPct = value ? Math.round(keeps / value * 100) : 0;
+		var rangeIntro = "<strong>Your ballpark estimate</strong> <span class='small'>(illustrative estimate only, not a quote or an offer; any amount is subject to appraisal and lender approval)</span>:";
+		var howBuilt = "<p class='result-line'>This range uses published lender maximums for a youngest owner aged " + age + ". It starts at 15% of the home value (the published floor for Equitable Bank Flex and Flex Lite) and goes up to " + band.highCite + ". Many people receive less than the top of this range. The exact figure depends on the home, its location, its type and the lender.</p>";
+		var equityLine = "<p class='result-line'>Even at the top of this published range, roughly <strong>" + fmt(keeps) + " (about " + keepsPct + "%) of the home's value would remain as equity</strong> on day one, before interest and fees. You remain the owner as long as you meet the loan terms.</p>";
 
 		if (owing > 0 && owing >= high) {
-			msg = "<strong>An honest read:</strong> at this age and home value, the typical maximum (" + fmt(low) + " to " + fmt(high) + ") may not be enough to pay off the " + fmt(owing) + " you still owe, and paying off what's owing always comes first. Sometimes a different lender, an updated appraisal, or another tool entirely (like refinancing) changes the picture. This is exactly the kind of situation worth a free 15 minute conversation.";
+			msg = "<strong>An honest read:</strong> at this age and home value, the published maximum range (" + fmt(low) + " to " + fmt(high) + ") may not be enough to pay off the " + fmt(owing) + " still owing, and paying off what is owing always comes first. Sometimes a different lender, an updated appraisal, or another option changes the picture. This is exactly the kind of situation worth a free conversation."
+				+ howBuilt + minValueNote(value) + caveatsHtml();
 		} else if (owing > 0) {
 			var netLow = Math.max(round5k(low - owing), 0);
-			var netHigh = round5k(high - owing);
-			msg = "<strong>Your illustrative estimate</strong> <span class='small'>(estimate only, not a quote or offer; any amount is subject to lender approval)</span>:"
+			var netHigh = Math.max(round5k(high - owing), 0);
+			msg = rangeIntro
 				+ "<p class='result-figure'>" + fmt(netLow) + " to " + fmt(netHigh) + " for you, tax free</p>"
-				+ "<p class='result-line'>That's after first paying off the " + fmt(owing) + " you owe now, <strong>which would end that monthly payment for good</strong>. In total, a lender would typically advance between " + fmt(low) + " and " + fmt(high) + " on a home worth " + fmt(value) + ".</p>"
-				+ "<p class='result-line'>And here's the part most people don't expect: even at the top of that range, roughly <strong>" + fmt(keeps) + " (about " + keepsPct + "%) of your home's value stays untouched as your equity</strong> on day one. You remain the owner as long as you meet the loan terms.</p>"
-				+ "<p class='result-line'>Interest does accrue on what you borrow, so the loan balance grows over time, that's the honest tradeoff, and it's why the right structure (lump sum or monthly amounts) matters.</p>";
+				+ "<p class='result-line'>That is after first paying off the " + fmt(owing) + " owing now, <strong>which would end that monthly payment</strong>. In total, the published maximum range on a home worth " + fmt(value) + " is " + fmt(low) + " to " + fmt(high) + ".</p>"
+				+ howBuilt + equityLine + minValueNote(value) + caveatsHtml();
 		} else {
-			msg = "<strong>Your illustrative estimate</strong> <span class='small'>(estimate only, not a quote or offer; any amount is subject to lender approval)</span>:"
+			msg = rangeIntro
 				+ "<p class='result-figure'>" + fmt(low) + " to " + fmt(high) + " tax free</p>"
-				+ "<p class='result-line'>That's the typical range lenders would advance at your age on a home worth " + fmt(value) + ", as a lump sum, monthly amounts, or a mix.</p>"
-				+ "<p class='result-line'>And here's the part most people don't expect: even at the top of that range, roughly <strong>" + fmt(keeps) + " (about " + keepsPct + "%) of your home's value stays untouched as your equity</strong> on day one. You remain the owner as long as you meet the loan terms.</p>"
-				+ "<p class='result-line'>Interest does accrue on what you borrow, so the loan balance grows over time, that's the honest tradeoff, and it's why the right structure (lump sum or monthly amounts) matters.</p>";
+				+ "<p class='result-line'>That is the published maximum range on a home worth " + fmt(value) + ", which you might take as a lump sum, as regular amounts, or as a mix, if a lender approves it.</p>"
+				+ howBuilt + equityLine + minValueNote(value) + caveatsHtml();
 		}
 	}
 	el.innerHTML = msg;
-	el.classList.add('show');
-	el.scrollIntoView({block:'nearest'});
+	el.classList.add("show");
+	el.scrollIntoView({block:"nearest"});
 }
 </script>
 
@@ -344,7 +371,7 @@ function calcResult(){
 			<div>
 				<h3>Blue Key Mortgage</h3>
 				<p>Plain English reverse mortgage guidance for Ontario homeowners 55+ and the families who love them.</p>
-				<p><strong><a href="tel:+16472313910">647-231-3910</a></strong><br />
+				<p><strong><a href="tel:+16472313910">647 231 3910</a></strong><br />
 				<a href="mailto:ragini@bluekeymortgage.ca">ragini@bluekeymortgage.ca</a><br />
 				<a href="https://www.instagram.com/bluekeymortgage_on" rel="noopener">Instagram: @bluekeymortgage_on</a></p>
 			</div>
