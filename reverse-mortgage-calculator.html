@@ -34,8 +34,9 @@
 		font-family:var(--sans); font-weight:600; font-size:0.98rem; color:var(--ink); cursor:pointer;
 	}
 	.quick-picks button:hover { border-color:var(--gold); }
-	#calc-result { display:none; margin-top:2rem; }
-	#calc-result.show { display:block; }
+	#calc-result { display:block; margin-top:2rem; scroll-margin-top:7rem; }
+	#calc-result .result-placeholder { margin:0; color:var(--ink-soft); }
+	#calc-result.is-ready { background:#EAF1F7; border-left-color:var(--navy); }
 	.result-figure { font-family:var(--serif, Georgia, serif); font-size:clamp(1.6rem, 4vw, 2.2rem); color:var(--navy); font-weight:700; margin:0.3rem 0 0.8rem; }
 	.result-line { margin:0.6rem 0; }
 	</style>
@@ -181,10 +182,11 @@
 
 	<section class="band alt">
 		<div class="wrap prose">
+			<form id="equity-estimator" action="#" method="get" novalidate>
 			<div class="calc-field">
 				<label for="youngest-age">How old is the youngest person on title?</label>
 				<p class="hint">If more than one person owns the home, enter the age of the youngest owner. Lenders use that age to set the amount, not the age of the older owner.</p>
-				<div class="age-input"><input type="number" id="youngest-age" name="youngest-age" inputmode="numeric" autocomplete="off" min="55" max="120" step="1" placeholder="55" aria-describedby="age-hint" /></div>
+				<div class="age-input"><input type="text" id="youngest-age" name="youngest-age" inputmode="numeric" autocomplete="off" placeholder="55" aria-describedby="age-hint" /></div>
 				<p class="hint" id="age-hint" style="margin-top:0.8rem;">All owners on title usually need to be 55 or older.</p>
 			</div>
 
@@ -193,10 +195,10 @@
 				<p class="hint">Your best guess is fine, a recent estimate from a realtor, your property assessment, or what similar homes nearby have sold for. A lender will confirm the value with an appraisal.</p>
 				<div class="money-input"><span>$</span><input type="text" id="home-value" inputmode="numeric" autocomplete="off" placeholder="800,000" aria-describedby="value-hint" /></div>
 				<div class="quick-picks" id="value-hint" aria-label="Quick amounts">
-					<button type="button" onclick="setValue(600000)">$600,000</button>
-					<button type="button" onclick="setValue(800000)">$800,000</button>
-					<button type="button" onclick="setValue(1000000)">$1,000,000</button>
-					<button type="button" onclick="setValue(1500000)">$1,500,000</button>
+					<button type="button" id="pick-600k">$600,000</button>
+					<button type="button" id="pick-800k">$800,000</button>
+					<button type="button" id="pick-1m">$1,000,000</button>
+					<button type="button" id="pick-15m">$1,500,000</button>
 				</div>
 			</div>
 
@@ -206,8 +208,9 @@
 				<div class="money-input"><span>$</span><input type="text" id="owing" inputmode="numeric" autocomplete="off" placeholder="0" /></div>
 			</div>
 
-			<p><button class="btn big gold" type="button" onclick="calcResult()">Show my estimate</button></p>
-			<div id="calc-result" class="note" role="status" aria-live="polite"></div>
+			<p><button class="btn big gold" type="submit" id="show-estimate">Show my estimate</button></p>
+			</form>
+			<div id="calc-result" class="note" role="status" aria-live="polite"><p class="result-placeholder">Your estimate will appear here as soon as you enter the youngest owner's age and a home value.</p></div>
 			<div class="note" style="margin-top:2rem;background:#EAF1F7;border-radius:12px;padding:1.5rem;">
 				<h2 style="margin-top:0;">Get your free personal estimate</h2>
 				<p>The range above is an illustrative estimate only. A personal estimate uses your exact age, an appraisal of your home and a comparison of lenders, which a screen cannot do on its own. I will walk through those figures with you, in plain language, at no cost and with no obligation.</p>
@@ -284,25 +287,29 @@ function publishedBand(age){
 	return { low: low, high: high, highLabel: highLabel, highCite: highCite };
 }
 
+function digitsOnly(raw){
+	return String(raw || "").replace(/[^0-9]/g, "");
+}
 function parseMoney(id){
-	var raw = (document.getElementById(id).value || "").replace(/[^0-9]/g, "");
+	var raw = digitsOnly(document.getElementById(id) && document.getElementById(id).value);
 	return raw ? parseInt(raw, 10) : 0;
 }
 function parseAge(){
-	var raw = (document.getElementById("youngest-age").value || "").replace(/[^0-9]/g, "");
+	var raw = digitsOnly(document.getElementById("youngest-age") && document.getElementById("youngest-age").value);
 	return raw ? parseInt(raw, 10) : 0;
 }
 function fmt(n){ return "$" + n.toLocaleString("en-CA"); }
 function round5k(n){ return Math.round(n / 5000) * 5000; }
 function setValue(n){
-	document.getElementById("home-value").value = n.toLocaleString("en-CA");
+	var el = document.getElementById("home-value");
+	if (!el) return;
+	el.value = n.toLocaleString("en-CA");
+	calcResult({ silent: true });
 }
-["home-value","owing"].forEach(function(id){
-	document.getElementById(id).addEventListener("input", function(){
-		var raw = this.value.replace(/[^0-9]/g, "");
-		this.value = raw ? parseInt(raw,10).toLocaleString("en-CA") : "";
-	});
-});
+function formatMoneyField(el){
+	var raw = digitsOnly(el.value);
+	el.value = raw ? parseInt(raw, 10).toLocaleString("en-CA") : "";
+}
 
 function caveatsHtml(){
 	return "<p class='result-line'>Interest accrues and fees apply, so the equity left in the home decreases over time. This estimate does not include interest rates. It is an illustrative estimate only, not a quote, an offer or an approval, and any amount is subject to appraisal and lender approval.</p>"
@@ -316,50 +323,122 @@ function minValueNote(value){
 	return "";
 }
 
-function calcResult(){
+function showResult(html, opts){
 	var el = document.getElementById("calc-result");
+	if (!el) return;
+	var firstReady = !el.classList.contains("is-ready");
+	el.innerHTML = html;
+	el.classList.add("is-ready");
+	if (!opts || !opts.silent || firstReady) {
+		el.scrollIntoView({ block: "start", behavior: "smooth" });
+	}
+}
+
+function placeholderResult(){
+	var el = document.getElementById("calc-result");
+	if (!el) return;
+	el.innerHTML = "<p class='result-placeholder'>Your estimate will appear here as soon as you enter the youngest owner's age and a home value.</p>";
+	el.classList.remove("is-ready");
+}
+
+function calcResult(opts){
+	opts = opts || {};
 	var age = parseAge();
 	var value = parseMoney("home-value");
 	var owing = parseMoney("owing");
 	var msg;
 
 	if (!age || !value) {
-		msg = "<strong>Almost there.</strong> Enter the age of the youngest person on title and a rough home value above, then press the button again.";
-	} else if (age < 55) {
-		msg = "<strong>An honest note:</strong> all owners on title usually need to be 55 or older to qualify for a reverse mortgage in Canada. If the youngest owner is under 55, a different option may be a better fit, or it may be a matter of waiting until that person turns 55. I am happy to talk it through, at no cost and with no obligation.";
-	} else if (age > 120) {
-		msg = "<strong>Please check the age.</strong> Enter the age of the youngest person on title as a whole number, then press the button again.";
-	} else {
-		var band = publishedBand(age);
-		var low = round5k(value * band.low);
-		var high = round5k(value * band.high);
-		if (high < low) { high = low; }
-		var keeps = Math.max(value - high, 0);
-		var keepsPct = value ? Math.round(keeps / value * 100) : 0;
-		var rangeIntro = "<strong>Your ballpark estimate</strong> <span class='small'>(illustrative estimate only, not a quote or an offer; any amount is subject to appraisal and lender approval)</span>:";
-		var howBuilt = "<p class='result-line'>This range uses published lender maximums for a youngest owner aged " + age + ". It starts at 15% of the home value (the published floor for Equitable Bank Flex and Flex Lite) and goes up to " + band.highCite + ". Many people receive less than the top of this range. The exact figure depends on the home, its location, its type and the lender.</p>";
-		var equityLine = "<p class='result-line'>Even at the top of this published range, roughly <strong>" + fmt(keeps) + " (about " + keepsPct + "%) of the home's value would remain as equity</strong> on day one, before interest and fees. You remain the owner as long as you meet the loan terms.</p>";
-
-		if (owing > 0 && owing >= high) {
-			msg = "<strong>An honest read:</strong> at this age and home value, the published maximum range (" + fmt(low) + " to " + fmt(high) + ") may not be enough to pay off the " + fmt(owing) + " still owing, and paying off what is owing always comes first. Sometimes a different lender, an updated appraisal, or another option changes the picture. This is exactly the kind of situation worth a free conversation."
-				+ howBuilt + minValueNote(value) + caveatsHtml();
-		} else if (owing > 0) {
-			var netLow = Math.max(round5k(low - owing), 0);
-			var netHigh = Math.max(round5k(high - owing), 0);
-			msg = rangeIntro
-				+ "<p class='result-figure'>" + fmt(netLow) + " to " + fmt(netHigh) + " for you, tax free</p>"
-				+ "<p class='result-line'>That is after first paying off the " + fmt(owing) + " owing now, <strong>which would end that monthly payment</strong>. In total, the published maximum range on a home worth " + fmt(value) + " is " + fmt(low) + " to " + fmt(high) + ".</p>"
-				+ howBuilt + equityLine + minValueNote(value) + caveatsHtml();
-		} else {
-			msg = rangeIntro
-				+ "<p class='result-figure'>" + fmt(low) + " to " + fmt(high) + " tax free</p>"
-				+ "<p class='result-line'>That is the published maximum range on a home worth " + fmt(value) + ", which you might take as a lump sum, as regular amounts, or as a mix, if a lender approves it.</p>"
-				+ howBuilt + equityLine + minValueNote(value) + caveatsHtml();
+		if (opts.silent) {
+			placeholderResult();
+			return;
 		}
+		msg = "<strong>Almost there.</strong> Enter the age of the youngest person on title and a rough home value above, then press the button again.";
+		showResult(msg, opts);
+		return;
+	} else if (age < 55) {
+		if (opts.silent) {
+			placeholderResult();
+			return;
+		}
+		msg = "<strong>An honest note:</strong> all owners on title usually need to be 55 or older to qualify for a reverse mortgage in Canada. If the youngest owner is under 55, a different option may be a better fit, or it may be a matter of waiting until that person turns 55. I am happy to talk it through, at no cost and with no obligation.";
+		showResult(msg, opts);
+		return;
+	} else if (age > 120) {
+		if (opts.silent) {
+			placeholderResult();
+			return;
+		}
+		msg = "<strong>Please check the age.</strong> Enter the age of the youngest person on title as a whole number, then press the button again.";
+		showResult(msg, opts);
+		return;
 	}
-	el.innerHTML = msg;
-	el.classList.add("show");
-	el.scrollIntoView({block:"nearest"});
+
+	var band = publishedBand(age);
+	var low = round5k(value * band.low);
+	var high = round5k(value * band.high);
+	if (high < low) { high = low; }
+	var keeps = Math.max(value - high, 0);
+	var keepsPct = value ? Math.round(keeps / value * 100) : 0;
+	var rangeIntro = "<strong>Your ballpark estimate</strong> <span class='small'>(illustrative estimate only, not a quote or an offer; any amount is subject to appraisal and lender approval)</span>:";
+	var howBuilt = "<p class='result-line'>This range uses published lender maximums for a youngest owner aged " + age + ". It starts at 15% of the home value (the published floor for Equitable Bank Flex and Flex Lite) and goes up to " + band.highCite + ". Many people receive less than the top of this range. The exact figure depends on the home, its location, its type and the lender.</p>";
+	var equityLine = "<p class='result-line'>Even at the top of this published range, roughly <strong>" + fmt(keeps) + " (about " + keepsPct + "%) of the home's value would remain as equity</strong> on day one, before interest and fees. You remain the owner as long as you meet the loan terms.</p>";
+
+	if (owing > 0 && owing >= high) {
+		msg = "<strong>An honest read:</strong> at this age and home value, the published maximum range (" + fmt(low) + " to " + fmt(high) + ") may not be enough to pay off the " + fmt(owing) + " still owing, and paying off what is owing always comes first. Sometimes a different lender, an updated appraisal, or another option changes the picture. This is exactly the kind of situation worth a free conversation."
+			+ howBuilt + minValueNote(value) + caveatsHtml();
+	} else if (owing > 0) {
+		var netLow = Math.max(round5k(low - owing), 0);
+		var netHigh = Math.max(round5k(high - owing), 0);
+		msg = rangeIntro
+			+ "<p class='result-figure'>" + fmt(netLow) + " to " + fmt(netHigh) + " for you, tax free</p>"
+			+ "<p class='result-line'>That is after first paying off the " + fmt(owing) + " owing now, <strong>which would end that monthly payment</strong>. In total, the published maximum range on a home worth " + fmt(value) + " is " + fmt(low) + " to " + fmt(high) + ".</p>"
+			+ howBuilt + equityLine + minValueNote(value) + caveatsHtml();
+	} else {
+		msg = rangeIntro
+			+ "<p class='result-figure'>" + fmt(low) + " to " + fmt(high) + " tax free</p>"
+			+ "<p class='result-line'>That is the published maximum range on a home worth " + fmt(value) + ", which you might take as a lump sum, as regular amounts, or as a mix, if a lender approves it.</p>"
+			+ howBuilt + equityLine + minValueNote(value) + caveatsHtml();
+	}
+	showResult(msg, opts);
+}
+
+function bindEstimator(){
+	var form = document.getElementById("equity-estimator");
+	if (form) {
+		form.addEventListener("submit", function(e){
+			e.preventDefault();
+			calcResult({ silent: false });
+		});
+	}
+	["home-value","owing"].forEach(function(id){
+		var el = document.getElementById(id);
+		if (!el) return;
+		el.addEventListener("input", function(){
+			formatMoneyField(this);
+			calcResult({ silent: true });
+		});
+	});
+	var ageEl = document.getElementById("youngest-age");
+	if (ageEl) {
+		ageEl.addEventListener("input", function(){
+			var raw = digitsOnly(this.value);
+			this.value = raw;
+			calcResult({ silent: true });
+		});
+	}
+	var picks = { "pick-600k": 600000, "pick-800k": 800000, "pick-1m": 1000000, "pick-15m": 1500000 };
+	Object.keys(picks).forEach(function(id){
+		var btn = document.getElementById(id);
+		if (!btn) return;
+		btn.addEventListener("click", function(){ setValue(picks[id]); });
+	});
+}
+
+if (document.readyState === "loading") {
+	document.addEventListener("DOMContentLoaded", bindEstimator);
+} else {
+	bindEstimator();
 }
 </script>
 
